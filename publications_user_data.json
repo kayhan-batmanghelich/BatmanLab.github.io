@@ -1,0 +1,175 @@
+{
+  "2024": [
+    {
+      "title": "MedSyn: Text-guided Anatomy-aware Synthesis of High-Fidelity 3D CT Images",
+      "authors": [
+        "Yanwu Xu",
+        "Li Sun",
+        "Wei Peng",
+        "Shuyue Jia",
+        "Katelyn Morrison",
+        "Adam Perer",
+        "Afrooz Zandifar",
+        "Shyam Visweswaran",
+        "Motahhare Eslami",
+        "Kayhan Batmanghelich"
+      ],
+      "paper_link": "https://ieeexplore.ieee.org/document/10566053",
+      "code_link": "https://github.com/batmanlab/MedSyn",
+      "preprint_link": "https://arxiv.org/abs/2310.03559",
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2024/10/Screenshot-2024-10-17-at-10.39.24%E2%80%AFPM-600x178.png",
+      "bibtex": "@article{xu2024medsyn,\n  title={MedSyn: text-guided anatomy-aware synthesis of high-fidelity 3-D CT images},\n  author={Xu, Yanwu and Sun, Li and Peng, Wei and Jia, Shuyue and Morrison, Katelyn and Perer, Adam and Zandifar, Afrooz and Visweswaran, Shyam and Eslami, Motahhare and Batmanghelich, Kayhan},\n  journal={IEEE Transactions on Medical Imaging},\n  volume={43},\n  number={10},\n  pages={3648--3660},\n  year={2024},\n  publisher={IEEE}\n}",
+      "venue": "IEEE Transactions on Medical Imaging"
+    },
+    {
+      "title": "Mammo-CLIP: A Vision Language Foundation Model to Enhance Data Efficiency and Robustness in Mammography",
+      "authors": [
+        "Shantanu Ghosh",
+        "Clare B Poynton",
+        "Shyam Visweswaran",
+        "Kayhan Batmanghelich"
+      ],
+      "paper_link": "https://papers.miccai.org/miccai-2024/488-Paper0926.html",
+      "code_link": "https://github.com/batmanlab/Mammo-CLIP",
+      "preprint_link": "https://arxiv.org/abs/2405.12255",
+      "image_icon_link": "https://batman-lab.com/wp-content/uploads/2024/10/Screenshot-2024-10-17-at-10.59.40%E2%80%AFPM-600x230.png",
+      "bibtex": "@inproceedings{ghosh2024mammo,\n  title={Mammo-clip: A vision language foundation model to enhance data efficiency and robustness in mammography},\n  author={Ghosh, Shantanu and Poynton, Clare B and Visweswaran, Shyam and Batmanghelich, Kayhan},\n  booktitle={International conference on medical image computing and computer-assisted intervention},\n  pages={632--642},\n  year={2024},\n  organization={Springer Nature Switzerland Cham}\n}",
+      "venue": "International conference on medical image computing and computer-assisted intervention"
+    },
+    {
+      "title": "Anatomy-specific Progression Classification in Chest Radiographs via Weakly Supervised Learning",
+      "authors": [
+        "Ke Yu",
+        "Shantanu Ghosh",
+        "Zhexiong Liu",
+        "Christopher Deible",
+        "Clare B Poynton",
+        "Kayhan Batmanghelich"
+      ],
+      "paper_link": "https://pubs.rsna.org/doi/10.1148/ryai.230277",
+      "code_link": null,
+      "preprint_link": null,
+      "image_icon_link": "https://batman-lab.com/wp-content/uploads/2024/10/Screenshot-2024-10-17-at-10.43.25%E2%80%AFPM-600x435.png",
+      "bibtex": "@article{yu2024anatomy,\n  title={Anatomy-specific Progression Classification in Chest Radiographs via Weakly Supervised Learning},\n  author={Yu, Ke and Ghosh, Shantanu and Liu, Zhexiong and Deible, Christopher and Poynton, Clare B and Batmanghelich, Kayhan},\n  journal={Radiology: Artificial Intelligence},\n  volume={6},\n  number={5},\n  pages={e230277},\n  year={2024},\n  publisher={Radiological Society of North America}\n}",
+      "venue": "Radiology: Artificial Intelligence"
+    }
+  ],
+  "2023": [
+    {
+      "title": "Beyond Distribution Shift: Spurious Features Through the Lens of Training Dynamics",
+      "authors": [
+        "Nihal Murali",
+        "Aahlad Puli",
+        "Ke Yu",
+        "Rajesh Ranganath",
+        "Kayhan Batmanghelich"
+      ],
+      "paper_link": "https://arxiv.org/abs/2301.06700",
+      "code_link": "https://github.com/batmanlab/SpuriousFeaturesTrainingDynamics",
+      "preprint_link": "https://arxiv.org/abs/2301.06700",
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2023/10/kmnist_expts-300x161.jpg",
+      "bibtex": "@article{murali2023beyond,\n  title={Beyond distribution shift: Spurious features through the lens of training dynamics},\n  author={Murali, Nihal and Puli, Aahlad and Yu, Ke and Ranganath, Rajesh and Batmanghelich, Kayhan},\n  journal={Transactions on machine learning research},\n  volume={2023},\n  pages={https--openreview},\n  year={2023}\n}",
+      "venue": "Transactions on machine learning research"
+    }
+  ],
+  "2022": [
+    {
+      "title": "Automated Detection of Premalignant Oral Lesions on Whole Slide Images Using CNN",
+      "authors": [
+        "Yingci Liu",
+        "Elizabeth Bilodeau",
+        "Brian Pollack",
+        "Kayhan Batmanghelich"
+      ],
+      "paper_link": "https://pubmed.ncbi.nlm.nih.gov/xxxx",
+      "code_link": null,
+      "preprint_link": null,
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2022/11/Screenshot-2022-11-06-at-8.42.48-PM-600x144.png",
+      "bibtex": "@article{liu2022automated,\n  title={Automated detection of premalignant oral lesions on whole slide images using convolutional neural networks},\n  author={Liu, Yingci and Bilodeau, Elizabeth and Pollack, Brian and Batmanghelich, Kayhan},\n  journal={Oral Oncology},\n  volume={134},\n  pages={106109},\n  year={2022},\n  publisher={Pergamon}\n}",
+      "venue": "Oral Oncology"
+    },
+    {
+      "title": "Anatomy-Guided Weakly-Supervised Abnormality Localization in Chest X-rays",
+      "authors": [
+        "Ke Yu",
+        "Shantanu Ghosh",
+        "Zhexiong Liu",
+        "Christopher Deible",
+        "Kayhan Batmanghelich"
+      ],
+      "paper_link": "https://arxiv.org/pdf/2206.12704.pdf",
+      "code_link": "https://github.com/batmanlab/AGXNet",
+      "preprint_link": "https://arxiv.org/abs/2206.12704",
+      "image_icon_link": "hhttps://www.batman-lab.com/wp-content/uploads/2022/10/Screen-Shot-2022-10-13-at-12.08.02-AM-600x420.png",
+      "bibtex": "@inproceedings{yu2022anatomy,\n  title={Anatomy-guided weakly-supervised abnormality localization in chest x-rays},\n  author={Yu, Ke and Ghosh, Shantanu and Liu, Zhexiong and Deible, Christopher and Batmanghelich, Kayhan},\n  booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention},\n  pages={658--668},\n  year={2022},\n  organization={Springer Nature Switzerland Cham}\n}",
+      "venue": "International Conference on Medical Image Computing and Computer-Assisted Intervention"
+    },
+    {
+      "title": "Adversarial Consistency for Single Domain Generalization in Medical Image Segmentation",
+      "authors": [
+        "Yanwu Xu",
+        "Shaoan Xie",
+        "Maxwell Reynolds",
+        "Matthew Ragoza",
+        "Mingming Gong",
+        "Kayhan Batmanghelich"
+      ],
+      "paper_link": "https://arxiv.org/pdf/2206.13737.pdf",
+      "code_link": "https://github.com/batmanlab/Adversarial-Single-Domain-Generalization",
+      "preprint_link": "https://arxiv.org/abs/2206.13737",
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2022/10/Screen-Shot-2022-10-12-at-11.38.41-PM-600x384.png",
+      "bibtex": "@inproceedings{xu2022adversarial,\n  title={Adversarial consistency for single domain generalization in medical image segmentation},\n  author={Xu, Yanwu and Xie, Shaoan and Reynolds, Maxwell and Ragoza, Matthew and Gong, Mingming and Batmanghelich, Kayhan},\n  booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention},\n  pages={671--681},\n  year={2022},\n  organization={Springer Nature Switzerland Cham}\n}",
+      "venue": "International Conference on Medical Image Computing and Computer-Assisted Intervention"
+    },
+    {
+      "title": "Hierarchical Amortized Training for Memory-efficient High-Resolution 3D GAN",
+      "authors": [
+        "Li Sun",
+        "Junxiang Chen",
+        "Yanwu Xu",
+        "Mingming Gong",
+        "Ke Yu",
+        "Kayhan Batmanghelich"
+      ],
+      "paper_link": "https://arxiv.org/pdf/2207.01234.pdf",
+      "code_link": "https://github.com/batmanlab/HierarchicalAmortized3DGAN",
+      "preprint_link": "https://arxiv.org/abs/2207.01234",
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2020/09/Screen-Shot-2020-09-16-at-7.53.39-PM-600x551.png",
+      "bibtex": "@article{sun2022hierarchical,\n  title={Hierarchical amortized GAN for 3D high resolution medical image synthesis},\n  author={Sun, Li and Chen, Junxiang and Xu, Yanwu and Gong, Mingming and Yu, Ke and Batmanghelich, Kayhan},\n  journal={IEEE journal of biomedical and health informatics},\n  volume={26},\n  number={8},\n  pages={3966--3975},\n  year={2022},\n  publisher={IEEE}\n}\n",
+      "venue": "IEEE journal of biomedical and health informatics"
+    },
+    {
+      "title": "Maximum Spatial Perturbation Consistency for Unpaired Image-to-Image Translation",
+      "authors": [
+        "Yanwu Xu",
+        "Shaoan Xie",
+        "Wenhao Wu",
+        "Kun Zhang",
+        "Mingming Gong",
+        "Kayhan Batmanghelich"
+      ],
+      "paper_link": "https://arxiv.org/pdf/2207.08999.pdf",
+      "code_link": "https://github.com/batmanlab/MaxSpatialPerturbationConsistency",
+      "preprint_link": "https://arxiv.org/abs/2207.08999",
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2022/03/Yanwu_CVPR22.png",
+      "bibtex": "@inproceedings{xu2022maximum,\n  title={Maximum spatial perturbation consistency for unpaired image-to-image translation},\n  author={Xu, Yanwu and Xie, Shaoan and Wu, Wenhao and Zhang, Kun and Gong, Mingming and Batmanghelich, Kayhan},\n  booktitle={Proceedings of the IEEE/CVF conference on computer vision and pattern recognition},\n  pages={18311--18320},\n  year={2022}\n}",
+      "venue": "Proceedings of the IEEE/CVF conference on computer vision and pattern recognition"
+    },
+    {
+      "title": "Knowledge Distillation via Constrained Variational Inference",
+      "authors": [
+        "Ardavan Saeedi",
+        "Yuria Utsumi",
+        "Li Sun",
+        "Kayhan Batmanghelich",
+        "Li-wei Lehman"
+      ],
+      "paper_link": "https://arxiv.org/pdf/2208.12345.pdf",
+      "code_link": null,
+      "preprint_link": "https://arxiv.org/abs/2208.12345",
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2022/03/ardavan_aaai22-600x248.png",
+      "bibtex": "@inproceedings{saeedi2022knowledge,\n  title={Knowledge distillation via constrained variational inference},\n  author={Saeedi, Ardavan and Utsumi, Yuria and Sun, Li and Batmanghelich, Kayhan and Lehman, Li-wei},\n  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},\n  volume={36},\n  number={7},\n  pages={8132--8140},\n  year={2022}\n}",
+      "venue": "Proceedings of the AAAI Conference on Artificial Intelligence"
+    }
+  ]
+}

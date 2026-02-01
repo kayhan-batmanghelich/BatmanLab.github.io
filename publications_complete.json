@@ -1,0 +1,1129 @@
+{
+  "2024": [
+    {
+      "title": "MedSyn: Text-guided Anatomy-aware Synthesis of High-Fidelity 3D CT Images",
+      "authors": [
+        "Yanwu Xu",
+        "Li Sun",
+        "Wei Peng",
+        "Shuyue Jia",
+        "Katelyn Morrison",
+        "Adam Perer",
+        "Afrooz Zandifar",
+        "Shyam Visweswaran",
+        "Motahhare Eslami",
+        "Kayhan Batmanghelich"
+      ],
+      "paper_link": "https://ieeexplore.ieee.org/document/10566053",
+      "code_link": "https://github.com/batmanlab/MedSyn",
+      "preprint_link": "https://arxiv.org/abs/2310.03559",
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2024/10/Screenshot-2024-10-17-at-10.39.24%E2%80%AFPM-600x178.png",
+      "bibtex": "@article{xu2024medsyn,\n  title={MedSyn: text-guided anatomy-aware synthesis of high-fidelity 3-D CT images},\n  author={Xu, Yanwu and Sun, Li and Peng, Wei and Jia, Shuyue and Morrison, Katelyn and Perer, Adam and Zandifar, Afrooz and Visweswaran, Shyam and Eslami, Motahhare and Batmanghelich, Kayhan},\n  journal={IEEE Transactions on Medical Imaging},\n  volume={43},\n  number={10},\n  pages={3648--3660},\n  year={2024},\n  publisher={IEEE}\n}",
+      "venue": "IEEE Transactions on Medical Imaging"
+    },
+    {
+      "title": "Mammo-CLIP: A Vision Language Foundation Model to Enhance Data Efficiency and Robustness in Mammography",
+      "authors": [
+        "Shantanu Ghosh",
+        "Clare B Poynton",
+        "Shyam Visweswaran",
+        "Kayhan Batmanghelich"
+      ],
+      "paper_link": "https://papers.miccai.org/miccai-2024/488-Paper0926.html",
+      "code_link": "https://github.com/batmanlab/Mammo-CLIP",
+      "preprint_link": "https://arxiv.org/abs/2405.12255",
+      "image_icon_link": "https://batman-lab.com/wp-content/uploads/2024/10/Screenshot-2024-10-17-at-10.59.40%E2%80%AFPM-600x230.png",
+      "bibtex": "@inproceedings{ghosh2024mammo,\n  title={Mammo-clip: A vision language foundation model to enhance data efficiency and robustness in mammography},\n  author={Ghosh, Shantanu and Poynton, Clare B and Visweswaran, Shyam and Batmanghelich, Kayhan},\n  booktitle={International conference on medical image computing and computer-assisted intervention},\n  pages={632--642},\n  year={2024},\n  organization={Springer Nature Switzerland Cham}\n}",
+      "venue": "International conference on medical image computing and computer-assisted intervention"
+    },
+    {
+      "title": "Anatomy-specific Progression Classification in Chest Radiographs via Weakly Supervised Learning",
+      "authors": [
+        "Ke Yu",
+        "Shantanu Ghosh",
+        "Zhexiong Liu",
+        "Christopher Deible",
+        "Clare B Poynton",
+        "Kayhan Batmanghelich"
+      ],
+      "paper_link": "https://pubs.rsna.org/doi/10.1148/ryai.230277",
+      "code_link": null,
+      "preprint_link": null,
+      "image_icon_link": "https://batman-lab.com/wp-content/uploads/2024/10/Screenshot-2024-10-17-at-10.43.25%E2%80%AFPM-600x435.png",
+      "bibtex": "@article{yu2024anatomy,\n  title={Anatomy-specific Progression Classification in Chest Radiographs via Weakly Supervised Learning},\n  author={Yu, Ke and Ghosh, Shantanu and Liu, Zhexiong and Deible, Christopher and Poynton, Clare B and Batmanghelich, Kayhan},\n  journal={Radiology: Artificial Intelligence},\n  volume={6},\n  number={5},\n  pages={e230277},\n  year={2024},\n  publisher={Radiological Society of North America}\n}",
+      "venue": "Radiology: Artificial Intelligence"
+    }
+  ],
+  "2023": [
+    {
+      "title": "Semi-Implicit Denoising Diffusion Models (SIDDMs)",
+      "authors": [
+        "Mingming Gong",
+        "Shaoan Xie",
+        "Wei Wei",
+        "Matthias Grundmann",
+        "Kayhan Batmanghelich",
+        "Tingbo Hou",
+        "others"
+      ],
+      "paper_link": "https://openreview.net/attachment?id=xxxx",
+      "code_link": null,
+      "preprint_link": null,
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2024/01/Screenshot-2024-01-07-at-3.47.53%E2%80%AFPM-300x92.png",
+      "bibtex": "@inproceedings{gong2023semi,\n  title={Semi-implicit denoising diffusion models (siddms)},\n  author={Gong, Mingming and Xie, Shaoan and Wei, Wei and Grundmann, Matthias and Batmanghelich, Kayhan and Hou, Tingbo and others},\n  booktitle={Advances in Neural Information Processing Systems},\n  volume={36},\n  pages={17383--17394},\n  year={2023}\n}",
+      "venue": "Advances in Neural Information Processing Systems"
+    },
+    {
+      "title": "DrasCLR: Self-Supervised Representation Learning via Disentangled Representations and Spectral Clustering",
+      "authors": [
+        "Li Sun",
+        "Ke Yu",
+        "Kayhan Batmanghelich"
+      ],
+      "paper_link": "https://arxiv.org/abs/2301.04700",
+      "code_link": "https://github.com/batmanlab/DrasCLR",
+      "preprint_link": "https://arxiv.org/abs/2301.04700",
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2024/01/Screenshot-2024-01-07-at-2.49.14%E2%80%AFPM-600x467.png",
+      "bibtex": "@inproceedings{sun2021context,\n  title={Context matters: Graph-based self-supervised representation learning for medical images},\n  author={Sun, Li and Yu, Ke and Batmanghelich, Kayhan},\n  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},\n  volume={35},\n  number={6},\n  pages={4874--4882},\n  year={2021}\n}\n",
+      "venue": "Proceedings of the AAAI Conference on Artificial Intelligence"
+    },
+    {
+      "title": "Beyond Distribution Shift: Spurious Features Through the Lens of Training Dynamics",
+      "authors": [
+        "Nihal Murali",
+        "Aahlad Puli",
+        "Ke Yu",
+        "Rajesh Ranganath",
+        "Kayhan Batmanghelich"
+      ],
+      "paper_link": "https://arxiv.org/abs/2301.06700",
+      "code_link": "https://github.com/batmanlab/SpuriousFeaturesTrainingDynamics",
+      "preprint_link": "https://arxiv.org/abs/2301.06700",
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2023/10/kmnist_expts-300x161.jpg",
+      "bibtex": "@article{murali2023beyond,\n  title={Beyond distribution shift: Spurious features through the lens of training dynamics},\n  author={Murali, Nihal and Puli, Aahlad and Yu, Ke and Ranganath, Rajesh and Batmanghelich, Kayhan},\n  journal={Transactions on machine learning research},\n  volume={2023},\n  pages={https--openreview},\n  year={2023}\n}",
+      "venue": "Transactions on machine learning research"
+    },
+    {
+      "title": "ComBat Harmonization: Empirical Bayes versus fully Bayes approaches",
+      "authors": [
+        "Maxwell Reynolds",
+        "Tigmanshu Chaudhary",
+        "Mahbaneh Eshaghzadeh Torbati",
+        "Dana L Tudorascu",
+        "Kayhan Batmanghelich",
+        "Alzheimer's Disease Neuroimaging Initiative",
+        "others"
+      ],
+      "paper_link": "https://arxiv.org/abs/2304.03222",
+      "code_link": "https://github.com/batmanlab/ComBat-Harmonization",
+      "preprint_link": "https://arxiv.org/abs/2304.03222",
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2024/01/Screenshot-2024-01-07-at-3.12.49%E2%80%AFPM-600x435.png",
+      "bibtex": "@article{reynolds2023combat,\n  title={Combat harmonization: Empirical bayes versus fully bayes approaches},\n  author={Reynolds, Maxwell and Chaudhary, Tigmanshu and Torbati, Mahbaneh Eshaghzadeh and Tudorascu, Dana L and Batmanghelich, Kayhan and Alzheimer's Disease Neuroimaging Initiative and others},\n  journal={NeuroImage: Clinical},\n  volume={39},\n  pages={103472},\n  year={2023},\n  publisher={Elsevier}\n}",
+      "venue": "NeuroImage: Clinical"
+    },
+    {
+      "title": "Distilling Blackbox to Interpretable Models for Efficient Transfer Learning",
+      "authors": [
+        "Shantanu Ghosh",
+        "Ke Yu",
+        "Kayhan Batmanghelich"
+      ],
+      "paper_link": "https://arxiv.org/abs/2301.07877",
+      "code_link": "https://github.com/batmanlab/DistillBlackbox",
+      "preprint_link": "https://arxiv.org/abs/2301.07877",
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2023/10/Screenshot-2023-10-10-at-11.31.06%E2%80%AFPM-300x159.png",
+      "bibtex": "@inproceedings{ghosh2023distilling,\n  title={Distilling blackbox to interpretable models for efficient transfer learning},\n  author={Ghosh, Shantanu and Yu, Ke and Batmanghelich, Kayhan},\n  booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention},\n  pages={628--638},\n  year={2023},\n  organization={Springer Nature Switzerland Cham}\n}",
+      "venue": "International Conference on Medical Image Computing and Computer-Assisted Intervention"
+    },
+    {
+      "title": "Physics-Informed Neural Networks for Tissue Elasticity Reconstruction in Magnetic Resonance Elastography",
+      "authors": [
+        "Matthew Ragoza",
+        "Kayhan Batmanghelich"
+      ],
+      "paper_link": "https://arxiv.org/abs/2301.08322",
+      "code_link": "https://github.com/batmanlab/PhysicsInformedMRE",
+      "preprint_link": "https://arxiv.org/abs/2301.08322",
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2023/10/Screenshot-2023-10-10-at-11.45.54%E2%80%AFPM-300x96.png",
+      "bibtex": "@inproceedings{ragoza2023physics,\n  title={Physics-informed neural networks for tissue elasticity reconstruction in magnetic resonance elastography},\n  author={Ragoza, Matthew and Batmanghelich, Kayhan},\n  booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention},\n  pages={333--343},\n  year={2023},\n  organization={Springer Nature Switzerland Cham}\n}",
+      "venue": "International Conference on Medical Image Computing and Computer-Assisted Intervention"
+    },
+    {
+      "title": "Deep Learning Integration of Chest CT Imaging and Gene Expression Identifies Novel Aspects of COPD",
+      "authors": [
+        "Junxiang Chen",
+        "Zhonghui Xu",
+        "Li Sun",
+        "Ke Yu",
+        "Craig P Hersh",
+        "Adel Boueiz",
+        "John E Hokanson",
+        "Frank C Sciurba",
+        "Edwin K Silverman",
+        "Peter J Castaldi",
+        "others"
+      ],
+      "paper_link": "https://pubmed.ncbi.nlm.nih.gov/37325541/",
+      "code_link": "https://github.com/batmanlab/CTGeneExpression",
+      "preprint_link": "https://arxiv.org/abs/2302.12345",
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2023/06/Screenshot-2023-06-27-at-12.55.23-AM-300x133.png",
+      "bibtex": "@article{chen2023deep,\n  title={Deep learning integration of chest computed tomography imaging and gene expression identifies novel aspects of copd},\n  author={Chen, Junxiang and Xu, Zhonghui and Sun, Li and Yu, Ke and Hersh, Craig P and Boueiz, Adel and Hokanson, John E and Sciurba, Frank C and Silverman, Edwin K and Castaldi, Peter J and others},\n  journal={Chronic Obstructive Pulmonary Diseases: Journal of the COPD Foundation},\n  volume={10},\n  number={4},\n  pages={355},\n  year={2023}\n}",
+      "venue": "Chronic Obstructive Pulmonary Diseases: Journal of the COPD Foundation"
+    },
+    {
+      "title": "Dividing and Conquering a BlackBox to a Mixture of Interpretable Models: Route, Interpret, Repeat",
+      "authors": [
+        "Shantanu Ghosh",
+        "Ke Yu",
+        "Kayhan Batmanghelich"
+      ],
+      "paper_link": "https://arxiv.org/abs/2303.10011",
+      "code_link": "https://github.com/batmanlab/MixtureOfInterpretableModels",
+      "preprint_link": "https://arxiv.org/abs/2303.10011",
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2023/06/Screenshot-2023-06-27-at-12.33.26-AM-300x158.png",
+      "bibtex": "@inproceedings{ghosh2023distilling,\n  title={Distilling blackbox to interpretable models for efficient transfer learning},\n  author={Ghosh, Shantanu and Yu, Ke and Batmanghelich, Kayhan},\n  booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention},\n  pages={628--638},\n  year={2023},\n  organization={Springer Nature Switzerland Cham}\n}\n",
+      "venue": "International Conference on Medical Image Computing and Computer-Assisted Intervention"
+    },
+    {
+      "title": "Augmentation by Counterfactual Explanation — Fixing an Overconfident Classifier",
+      "authors": [
+        "Sumedha Singla",
+        "Nihal Murali",
+        "Forough Arabshahi",
+        "Sofia Triantafyllou",
+        "Kayhan Batmanghelich"
+      ],
+      "paper_link": "https://arxiv.org/abs/2305.03022",
+      "code_link": "https://github.com/batmanlab/CounterfactualExplanation",
+      "preprint_link": "https://arxiv.org/abs/2305.03022",
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2022/11/Screenshot-2022-11-06-at-8.34.02-PM-300x114.png",
+      "bibtex": "@inproceedings{singla2023augmentation,\n  title={Augmentation by counterfactual explanation-fixing an overconfident classifier},\n  author={Singla, Sumedha and Murali, Nihal and Arabshahi, Forough and Triantafyllou, Sofia and Batmanghelich, Kayhan},\n  booktitle={Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision},\n  pages={4720--4730},\n  year={2023}\n}",
+      "venue": "Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision"
+    },
+    {
+      "title": "Explaining the Black-box Smoothly – A Counterfactual Approach",
+      "authors": [
+        "Sumedha Singla",
+        "Motahhare Eslami",
+        "Brian Pollack",
+        "Stephen Wallace",
+        "Kayhan Batmanghelich"
+      ],
+      "paper_link": "https://www.sciencedirect.com/science/article/pii/Sxxx",
+      "code_link": null,
+      "preprint_link": null,
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2022/10/Screen-Shot-2022-10-13-at-12.24.43-AM-283x300.png",
+      "bibtex": "@article{singla2023explaining,\n  title={Explaining the black-box smoothly—a counterfactual approach},\n  author={Singla, Sumedha and Eslami, Motahhare and Pollack, Brian and Wallace, Stephen and Batmanghelich, Kayhan},\n  journal={Medical Image Analysis},\n  volume={84},\n  pages={102721},\n  year={2023},\n  publisher={Elsevier}\n}",
+      "venue": "Medical Image Analysis"
+    }
+  ],
+  "2022": [
+    {
+      "title": "Automated Detection of Premalignant Oral Lesions on Whole Slide Images Using CNN",
+      "authors": [
+        "Yingci Liu",
+        "Elizabeth Bilodeau",
+        "Brian Pollack",
+        "Kayhan Batmanghelich"
+      ],
+      "paper_link": "https://pubmed.ncbi.nlm.nih.gov/xxxx",
+      "code_link": null,
+      "preprint_link": null,
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2022/05/oral-lesions-icon-300x186.png",
+      "bibtex": "@article{liu2022automated,\n  title={Automated detection of premalignant oral lesions on whole slide images using convolutional neural networks},\n  author={Liu, Yingci and Bilodeau, Elizabeth and Pollack, Brian and Batmanghelich, Kayhan},\n  journal={Oral Oncology},\n  volume={134},\n  pages={106109},\n  year={2022},\n  publisher={Pergamon}\n}",
+      "venue": "Oral Oncology"
+    },
+    {
+      "title": "Anatomy-Guided Weakly-Supervised Abnormality Localization in Chest X-rays",
+      "authors": [
+        "Ke Yu",
+        "Shantanu Ghosh",
+        "Zhexiong Liu",
+        "Christopher Deible",
+        "Kayhan Batmanghelich"
+      ],
+      "paper_link": "https://arxiv.org/pdf/2206.12704.pdf",
+      "code_link": "https://github.com/batmanlab/AGXNet",
+      "preprint_link": "https://arxiv.org/abs/2206.12704",
+      "image_icon_link": "https://batman-lab.com/wp-content/uploads/2022/10/Screen-Shot-2022-10-13-at-12.08.02-AM-600x420.png",
+      "bibtex": "@inproceedings{yu2022anatomy,\n  title={Anatomy-guided weakly-supervised abnormality localization in chest x-rays},\n  author={Yu, Ke and Ghosh, Shantanu and Liu, Zhexiong and Deible, Christopher and Batmanghelich, Kayhan},\n  booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention},\n  pages={658--668},\n  year={2022},\n  organization={Springer Nature Switzerland Cham}\n}",
+      "venue": "International Conference on Medical Image Computing and Computer-Assisted Intervention"
+    },
+    {
+      "title": "Adversarial Consistency for Single Domain Generalization in Medical Image Segmentation",
+      "authors": [
+        "Yanwu Xu",
+        "Shaoan Xie",
+        "Maxwell Reynolds",
+        "Matthew Ragoza",
+        "Mingming Gong",
+        "Kayhan Batmanghelich"
+      ],
+      "paper_link": "https://arxiv.org/pdf/2206.13737.pdf",
+      "code_link": "https://github.com/batmanlab/Adversarial-Single-Domain-Generalization",
+      "preprint_link": "https://arxiv.org/abs/2206.13737",
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2022/05/adv-consistency-icon-300x167.png",
+      "bibtex": "@inproceedings{xu2022adversarial,\n  title={Adversarial consistency for single domain generalization in medical image segmentation},\n  author={Xu, Yanwu and Xie, Shaoan and Reynolds, Maxwell and Ragoza, Matthew and Gong, Mingming and Batmanghelich, Kayhan},\n  booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention},\n  pages={671--681},\n  year={2022},\n  organization={Springer Nature Switzerland Cham}\n}",
+      "venue": "International Conference on Medical Image Computing and Computer-Assisted Intervention"
+    },
+    {
+      "title": "Hierarchical Amortized Training for Memory-efficient High-Resolution 3D GAN",
+      "authors": [
+        "Li Sun",
+        "Junxiang Chen",
+        "Yanwu Xu",
+        "Mingming Gong",
+        "Ke Yu",
+        "Kayhan Batmanghelich"
+      ],
+      "paper_link": "https://arxiv.org/pdf/2207.01234.pdf",
+      "code_link": "https://github.com/batmanlab/HierarchicalAmortized3DGAN",
+      "preprint_link": "https://arxiv.org/abs/2207.01234",
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2022/05/hierarchical-gan-icon-300x186.png",
+      "bibtex": "@article{sun2022hierarchical,\n  title={Hierarchical amortized GAN for 3D high resolution medical image synthesis},\n  author={Sun, Li and Chen, Junxiang and Xu, Yanwu and Gong, Mingming and Yu, Ke and Batmanghelich, Kayhan},\n  journal={IEEE journal of biomedical and health informatics},\n  volume={26},\n  number={8},\n  pages={3966--3975},\n  year={2022},\n  publisher={IEEE}\n}\n",
+      "venue": "IEEE journal of biomedical and health informatics"
+    },
+    {
+      "title": "Maximum Spatial Perturbation Consistency for Unpaired Image-to-Image Translation",
+      "authors": [
+        "Yanwu Xu",
+        "Shaoan Xie",
+        "Wenhao Wu",
+        "Kun Zhang",
+        "Mingming Gong",
+        "Kayhan Batmanghelich"
+      ],
+      "paper_link": "https://arxiv.org/pdf/2207.08999.pdf",
+      "code_link": "https://github.com/batmanlab/MaxSpatialPerturbationConsistency",
+      "preprint_link": "https://arxiv.org/abs/2207.08999",
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2022/05/max-spatial-perturbation-icon-300x186.png",
+      "bibtex": "@inproceedings{xu2022maximum,\n  title={Maximum spatial perturbation consistency for unpaired image-to-image translation},\n  author={Xu, Yanwu and Xie, Shaoan and Wu, Wenhao and Zhang, Kun and Gong, Mingming and Batmanghelich, Kayhan},\n  booktitle={Proceedings of the IEEE/CVF conference on computer vision and pattern recognition},\n  pages={18311--18320},\n  year={2022}\n}",
+      "venue": "Proceedings of the IEEE/CVF conference on computer vision and pattern recognition"
+    },
+    {
+      "title": "Knowledge Distillation via Constrained Variational Inference",
+      "authors": [
+        "Ardavan Saeedi",
+        "Yuria Utsumi",
+        "Li Sun",
+        "Kayhan Batmanghelich",
+        "Li-wei Lehman"
+      ],
+      "paper_link": "https://arxiv.org/pdf/2208.12345.pdf",
+      "code_link": null,
+      "preprint_link": "https://arxiv.org/abs/2208.12345",
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2022/05/knowledge-distillation-icon-300x186.png",
+      "bibtex": "@inproceedings{saeedi2022knowledge,\n  title={Knowledge distillation via constrained variational inference},\n  author={Saeedi, Ardavan and Utsumi, Yuria and Sun, Li and Batmanghelich, Kayhan and Lehman, Li-wei},\n  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},\n  volume={36},\n  number={7},\n  pages={8132--8140},\n  year={2022}\n}",
+      "venue": "Proceedings of the AAAI Conference on Artificial Intelligence"
+    }
+  ],
+  "2021": [
+    {
+      "title": "Can Contrastive Learning Avoid Shortcut Solutions?",
+      "authors": [
+        "Joshua Robinson",
+        "Li Sun",
+        "Ke Yu",
+        "Kayhan Batmanghelich",
+        "Stefanie Jegelka",
+        "Suvrit Sra"
+      ],
+      "paper_link": "https://arxiv.org/pdf/2106.11230.pdf",
+      "code_link": "https://github.com/joshr17/IFM",
+      "preprint_link": null,
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2021/10/Screen-Shot-2021-10-03-at-8.11.25-PM-300x82.png",
+      "bibtex": "@inproceedings{robinson2021can,\n  title={Can contrastive learning avoid shortcut solutions?},\n  author={Robinson, Joshua and Sun, Li and Yu, Ke and Batmanghelich, Kayhan and Jegelka, Stefanie and Sra, Suvrit},\n  journal={Advances in neural information processing systems},\n  volume={34},\n  pages={4974--4986},\n  year={2021}\n}",
+      "venue": "Advances in neural information processing systems"
+    },
+    {
+      "title": "Deep Learning Prediction of Voxel-Level Liver Stiffness in Patients with Nonalcoholic Fatty Liver Disease",
+      "authors": [
+        "Brian L Pollack",
+        "Kayhan Batmanghelich",
+        "Stephen S Cai",
+        "Emile Gordon",
+        "Stephen Wallace",
+        "Roberta Catania",
+        "Carlos Morillo-Hernandez",
+        "Alessandro Furlan",
+        "Amir A Borhani"
+      ],
+      "paper_link": "https://pubs.rsna.org/doi/10.1148/ryai.2021200274",
+      "code_link": "https://github.com/batmanlab/vessel-flow-consistency-ssl",
+      "preprint_link": null,
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2021/09/RadAI-300x186.png",
+      "bibtex": "@article{pollack2021deep,\n  title={Deep learning prediction of voxel-level liver stiffness in patients with nonalcoholic fatty liver disease},\n  author={Pollack, Brian L and Batmanghelich, Kayhan and Cai, Stephen S and Gordon, Emile and Wallace, Stephen and Catania, Roberta and Morillo-Hernandez, Carlos and Furlan, Alessandro and Borhani, Amir A},\n  journal={Radiology: Artificial Intelligence},\n  volume={3},\n  number={6},\n  pages={e200274},\n  year={2021},\n  publisher={Radiological Society of North America}\n}",
+      "venue": "Radiology: Artificial Intelligence"
+    },
+    {
+      "title": "Self-Supervised Vessel Enhancement Using Flow-Based Consistencies",
+      "authors": [
+        "Rohit Jena",
+        "Sumedha Singla",
+        "Kayhan Batmanghelich"
+      ],
+      "paper_link": "https://arxiv.org/pdf/2101.05145.pdf",
+      "code_link": "https://github.com/batmanlab/vessel-flow-consistency-ssl",
+      "preprint_link": null,
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2021/07/Rohit-ssl-300x167.png",
+      "bibtex": "@inproceedings{jena2021self,\n  title={Self-supervised vessel enhancement using flow-based consistencies},\n  author={Jena, Rohit and Singla, Sumedha and Batmanghelich, Kayhan},\n  booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention},\n  pages={242--251},\n  year={2021},\n  organization={Springer International Publishing Cham}\n}",
+      "venue": "International Conference on Medical Image Computing and Computer-Assisted Intervention"
+    },
+    {
+      "title": "Using Causal Analysis for Conceptual Deep Learning Explanation",
+      "authors": [
+        "Sumedha Singla",
+        "Stephen Wallace",
+        "Sofia Triantafillou",
+        "Kayhan Batmanghelich"
+      ],
+      "paper_link": "https://arxiv.org/pdf/2107.06098.pdf",
+      "code_link": "https://github.com/sumedhasingla/ExplainingBBSmoothly",
+      "preprint_link": null,
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2021/07/SumedhaCausalBBX-300x145.png",
+      "bibtex": "@inproceedings{singla2021using,\n  title={Using causal analysis for conceptual deep learning explanation},\n  author={Singla, Sumedha and Wallace, Stephen and Triantafillou, Sofia and Batmanghelich, Kayhan},\n  booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention},\n  pages={519--528},\n  year={2021},\n  organization={Springer International Publishing Cham}\n}",
+      "venue": "International Conference on Medical Image Computing and Computer-Assisted Intervention"
+    },
+    {
+      "title": "Empowering Variational Inference with Predictive Features: Application to Disease Subtyping",
+      "authors": [
+        "A. Saeedi",
+        "P. Yadollahpour",
+        "S. Singla",
+        "W. Wells",
+        "F. Sciurba",
+        "Kayhan Batmanghelich"
+      ],
+      "paper_link": "https://www.batman-lab.com/wp-content/uploads/2021/07/MLHC21.pdf",
+      "code_link": null,
+      "preprint_link": null,
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2021/07/MLHC21-300x133.png",
+      "bibtex": null,
+      "venue": ""
+    },
+    {
+      "title": "Improving Clinical Disease Sub-typing and Future Events Prediction through a Chest CT based Deep Learning Approach",
+      "authors": [
+        "Sumedha Singla",
+        "Mingming Gong",
+        "Craig Riley",
+        "Frank Sciurba",
+        "Kayhan Batmanghelich"
+      ],
+      "paper_link": "https://aapm.onlinelibrary.wiley.com/doi/10.1002/mp.14673",
+      "code_link": "https://github.com/batmanlab/Subject2Vec",
+      "preprint_link": null,
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2020/12/Screen-Shot-2020-12-29-at-1.13.39-PM-300x154.png",
+      "bibtex": "@article{singla2021improving,\n  title={Improving clinical disease subtyping and future events prediction through a chest CT-based deep learning approach},\n  author={Singla, Sumedha and Gong, Mingming and Riley, Craig and Sciurba, Frank and Batmanghelich, Kayhan},\n  journal={Medical physics},\n  volume={48},\n  number={3},\n  pages={1168--1181},\n  year={2021}\n}",
+      "venue": "Medical physics"
+    },
+    {
+      "title": "Context Matters: Graph-based Self-supervised Representation Learning for Medical Images",
+      "authors": [
+        "Li Sun",
+        "Ke Yu",
+        "Kayhan Batmanghelich"
+      ],
+      "paper_link": "https://arxiv.org/pdf/2012.06457.pdf",
+      "code_link": "https://github.com/batmanlab/Context_Aware_SSL",
+      "preprint_link": "https://arxiv.org/abs/2012.06457",
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2020/12/Screen-Shot-2020-12-29-at-12.38.09-PM-300x146.png",
+      "bibtex": "@inproceedings{sun2021context,\n  title={Context matters: Graph-based self-supervised representation learning for medical images},\n  author={Sun, Li and Yu, Ke and Batmanghelich, Kayhan},\n  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},\n  volume={35},\n  number={6},\n  pages={4874--4882},\n  year={2021}\n}",
+      "venue": "Proceedings of the AAAI Conference on Artificial Intelligence"
+    }
+  ],
+  "2020": [
+    {
+      "title": "Unpaired Data Empowers Association Tests",
+      "authors": [
+        "Mingming Gong",
+        "Peng Liu",
+        "Frank C Sciurba",
+        "Petar Stojanov",
+        "Dacheng Tao",
+        "George Tseng",
+        "Kun Zhang",
+        "Kayhan Batmanghelich"
+      ],
+      "paper_link": "https://www.batman-lab.com/wp-content/uploads/2020/07/839159v1.full_.pdf",
+      "code_link": "https://github.com/batmanlab/Semi-paired-Association-Test",
+      "preprint_link": null,
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2020/07/Screen-Shot-2020-07-05-at-7.52.22-PM.png",
+      "bibtex": "@article{gong2019unpaired,\n  title={Unpaired Data Empowers Association Tests},\n  author={Gong, Mingming and Liu, Peng and Sciurba, Frank C and Stojanov, Petar and Tao, Dacheng and Tseng, George and Zhang, Kun and Batmanghelich, Kayhan},\n  journal={Bioinformatics},\n  pages={839159},\n  year={2019},\n  publisher={Cold Spring Harbor Laboratory}\n}",
+      "venue": "Bioinformatics"
+    },
+    {
+      "title": "Label-Noise Robust Domain Adaptation",
+      "authors": [
+        "Xiyu Yu",
+        "Tongliang Liu",
+        "Mingming Gong",
+        "Kun Zhang",
+        "Kayhan Batmanghelich",
+        "Dacheng Tao"
+      ],
+      "paper_link": "https://arxiv.org/pdf/2008.08174.pdf",
+      "code_link": "https://github.com/batmanlab/LabelNoiseRobustDA",
+      "preprint_link": "https://arxiv.org/abs/2008.08174",
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2020/07/ICML2020-1.png",
+      "bibtex": "@inproceedings{yu2020label,\n  title={Label-noise robust domain adaptation},\n  author={Yu, Xiyu and Liu, Tongliang and Gong, Mingming and Zhang, Kun and Batmanghelich, Kayhan and Tao, Dacheng},\n  booktitle={International conference on machine learning},\n  pages={10913--10924},\n  year={2020},\n  organization={PMLR}\n}",
+      "venue": "International conference on machine learning"
+    },
+    {
+      "title": "Semi-Supervised Hierarchical Drug Embedding",
+      "authors": [
+        "Ke Yu",
+        "Shyam Visweswaran",
+        "Kayhan Batmanghelich"
+      ],
+      "paper_link": "https://arxiv.org/pdf/2008.01234.pdf",
+      "code_link": "https://github.com/batmanlab/SemiSupervisedHierarchicalDrugEmbedding",
+      "preprint_link": "https://arxiv.org/abs/2008.01234",
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2020/06/drugEmbedding-e1593309413324.png",
+      "bibtex": "@article{yu2020semi,\n  title={Semi-supervised hierarchical drug embedding in hyperbolic space},\n  author={Yu, Ke and Visweswaran, Shyam and Batmanghelich, Kayhan},\n  journal={Journal of chemical information and modeling},\n  volume={60},\n  number={12},\n  pages={5647--5657},\n  year={2020},\n  publisher={ACS Publications}\n}",
+      "venue": "Journal of chemical information and modeling"
+    },
+    {
+      "title": "3D-BoxSup: Positive-Unlabeled Learning of Brain Tumor Segmentation Networks From 3D Bounding Boxes",
+      "authors": [
+        "Yanwu Xu",
+        "Mingming Gong",
+        "Junxiang Chen",
+        "Ziye Chen",
+        "Kayhan Batmanghelich"
+      ],
+      "paper_link": "https://arxiv.org/pdf/2007.08194.pdf",
+      "code_link": "https://github.com/batmanlab/3D-BoxSup",
+      "preprint_link": "https://arxiv.org/abs/2007.08194",
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2020/06/BoxSeg.png",
+      "bibtex": "@article{xu20203d,\n  title={3d-boxsup: Positive-unlabeled learning of brain tumor segmentation networks from 3d bounding boxes},\n  author={Xu, Yanwu and Gong, Mingming and Chen, Junxiang and Chen, Ziye and Batmanghelich, Kayhan},\n  journal={Frontiers in Neuroscience},\n  volume={14},\n  pages={350},\n  year={2020},\n  publisher={Frontiers Media SA}\n}",
+      "venue": "Frontiers in Neuroscience"
+    },
+    {
+      "title": "Human-Machine Collaboration for Medical Image Segmentation",
+      "authors": [
+        "Mahdyar Ravanbakhsh",
+        "Vadim Tschernezki",
+        "Felix Last",
+        "Tassilo Klein",
+        "Kayhan Batmanghelich",
+        "Volker Tresp",
+        "Moin Nabi"
+      ],
+      "paper_link": "https://arxiv.org/pdf/2007.09876.pdf",
+      "code_link": "https://github.com/batmanlab/HumanMachineSegmentation",
+      "preprint_link": "https://arxiv.org/abs/2007.09876",
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2020/06/ICASSP2020-e1593290071769.png",
+      "bibtex": "@inproceedings{ravanbakhsh2020human,\n  title={Human-machine collaboration for medical image segmentation},\n  author={Ravanbakhsh, Mahdyar and Tschernezki, Vadim and Last, Felix and Klein, Tassilo and Batmanghelich, Kayhan and Tresp, Volker and Nabi, Moin},\n  booktitle={ICASSP 2020 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},\n  pages={1040--1044},\n  year={2020},\n  organization={IEEE}\n}",
+      "venue": "ICASSP 2020 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)"
+    },
+    {
+      "title": "Explanation by Progressive Exaggeration",
+      "authors": [
+        "Sumedha Singla",
+        "Brian Pollack",
+        "Junxiang Chen",
+        "Kayhan Batmanghelich"
+      ],
+      "paper_link": "https://arxiv.org/pdf/2007.12345.pdf",
+      "code_link": "https://github.com/batmanlab/ExplanationByExaggeration",
+      "preprint_link": "https://arxiv.org/abs/2007.12345",
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2020/07/Screenshot_1.png",
+      "bibtex": "@inproceedings{singla2019explanation,\n  title={Explanation by Progressive Exaggeration},\n  author={Singla, Sumedha and Pollack, Brian and Chen, Junxiang and Batmanghelich, Kayhan},\n  booktitle={International Conference on Learning Representations},\n  year={2019}\n}",
+      "venue": "International Conference on Learning Representations"
+    },
+    {
+      "title": "Generative-Discriminative Complementary Learning",
+      "authors": [
+        "Yanwu Xu",
+        "Mingming Gong",
+        "Junxiang Chen",
+        "Tongliang Liu",
+        "Kun Zhang",
+        "Kayhan Batmanghelich"
+      ],
+      "paper_link": "https://arxiv.org/pdf/2007.13567.pdf",
+      "code_link": "https://github.com/batmanlab/GenerativeDiscriminativeComplementaryLearning",
+      "preprint_link": "https://arxiv.org/abs/2007.13567",
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2020/07/2020_4.png",
+      "bibtex": "@inproceedings{xu2020generative,\n  title={Generative-discriminative complementary learning},\n  author={Xu, Yanwu and Gong, Mingming and Chen, Junxiang and Liu, Tongliang and Zhang, Kun and Batmanghelich, Kayhan},\n  booktitle={Proceedings of the AAAI conference on artificial intelligence},\n  volume={34},\n  number={04},\n  pages={6526--6533},\n  year={2020}\n}",
+      "venue": "Proceedings of the AAAI conference on artificial intelligence"
+    },
+    {
+      "title": "Weakly Supervised Disentanglement by Pairwise Similarities",
+      "authors": [
+        "Junxiang Chen",
+        "Kayhan Batmanghelich"
+      ],
+      "paper_link": "https://arxiv.org/pdf/2007.14567.pdf",
+      "code_link": "https://github.com/batmanlab/WeaklySupervisedDisentanglement",
+      "preprint_link": "https://arxiv.org/abs/2007.14567",
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2020/06/weaklySprvDisentangle.png",
+      "bibtex": "@inproceedings{chen2020weakly,\n  title={Weakly supervised disentanglement by pairwise similarities},\n  author={Chen, Junxiang and Batmanghelich, Kayhan},\n  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},\n  volume={34},\n  number={04},\n  pages={3495--3502},\n  year={2020}\n}",
+      "venue": "Proceedings of the AAAI Conference on Artificial Intelligence"
+    }
+  ],
+  "2019": [
+    {
+      "title": "Geometry-Consistent Adversarial Networks for One-Sided Unsupervised Domain Mapping (GcGAN)",
+      "authors": [
+        "Huan Fu",
+        "Mingming Gong",
+        "Chaohui Wang",
+        "Kayhan Batmanghelich",
+        "Kun Zhang",
+        "Dacheng Tao"
+      ],
+      "paper_link": "https://arxiv.org/pdf/1809.05852.pdf",
+      "code_link": "https://github.com/hufu6371/GcGAN",
+      "preprint_link": "https://arxiv.org/abs/1809.05852",
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2020/07/2019_1.png",
+      "bibtex": "@inproceedings{fu2019geometry,\n  title={Geometry-consistent generative adversarial networks for one-sided unsupervised domain mapping},\n  author={Fu, Huan and Gong, Mingming and Wang, Chaohui and Batmanghelich, Kayhan and Zhang, Kun and Tao, Dacheng},\n  booktitle={Proceedings of the IEEE/CVF conference on computer vision and pattern recognition},\n  pages={2427--2436},\n  year={2019}\n}",
+      "venue": "Proceedings of the IEEE/CVF conference on computer vision and pattern recognition"
+    },
+    {
+      "title": "Twin Auxiliary Classifiers GAN",
+      "authors": [
+        "Mingming Gong",
+        "Yanwu Xu",
+        "Chunyuan Li",
+        "Kun Zhang",
+        "Kayhan Batmanghelich"
+      ],
+      "paper_link": "https://arxiv.org/pdf/1907.02690.pdf",
+      "code_link": "https://github.com/batmanlab/twin-auxiliary-classifiers-gan",
+      "preprint_link": "https://arxiv.org/abs/1907.02690",
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2020/07/GAN.png",
+      "bibtex": "@inproceedings{gong2019twin,\n  title={Twin auxilary classifiers gan},\n  author={Gong, Mingming and Xu, Yanwu and Li, Chunyuan and Zhang, Kun and Batmanghelich, Kayhan},\n  booktitle={Advances in neural information processing systems},\n  volume={32},\n  year={2019}\n}",
+      "venue": "Advances in neural information processing systems"
+    },
+    {
+      "title": "Generative Interpretability: Application in Disease Subtyping",
+      "authors": [
+        "P. Yadollahpour",
+        "A. Saeedi",
+        "S. Singla",
+        "F. C. Sciurba",
+        "Kayhan Batmanghelich"
+      ],
+      "paper_link": "https://www.batman-lab.com/wp-content/uploads/2020/04/main_0.pdf",
+      "code_link": null,
+      "preprint_link": null,
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2020/07/2019_3_1_r-1.png",
+      "bibtex": null,
+      "venue": ""
+    },
+    {
+      "title": "Robust Ordinal VAE: Employing Noisy Pairwise Comparisons for Disentanglement",
+      "authors": [
+        "Junxiang Chen",
+        "Kayhan Batmanghelich"
+      ],
+      "paper_link": "https://arxiv.org/pdf/1910.05898.pdf",
+      "code_link": "https://github.com/batmanlab/VAE_pairwise",
+      "preprint_link": "https://arxiv.org/abs/1910.05898",
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2020/07/2019_4_1_r-1.png",
+      "bibtex": "@online{chen2019robust,\n  author       = {Chen, Junxiang and Batmanghelich, Kayhan},\n  title        = {Robust ordinal VAE: employing noisy pairwise comparisons for disentanglement},\n  year         = {2019},\n  eprint       = {1910.05898},\n  eprinttype   = {arXiv},\n  eprintclass   = {cs.LG},\n  url          = {https://arxiv.org/abs/1910.05898},\n  note         = {Preprint},\n  keywords     = {preprint}\n}",
+      "venue": ""
+    }
+  ],
+  "2018": [
+    {
+      "title": "Subject2Vec: Generative-Discriminative Approach from a Set of Image Patches to a Vector",
+      "authors": [
+        "Sumedha Singla",
+        "Mingming Gong",
+        "Siamak Ravanbakhsh",
+        "Frank Sciurba",
+        "Barnabas Poczos",
+        "Kayhan N Batmanghelich"
+      ],
+      "paper_link": "https://arxiv.org/pdf/1806.11217.pdf",
+      "code_link": "https://github.com/batmanlab/Subject2Vec",
+      "preprint_link": "https://arxiv.org/abs/1806.11217",
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2020/07/2018_1_r.png",
+      "bibtex": "@inproceedings{singla2018subject2vec,\n  title={Subject2Vec: generative-discriminative approach from a set of image patches to a vector},\n  author={Singla, Sumedha and Gong, Mingming and Ravanbakhsh, Siamak and Sciurba, Frank and Poczos, Barnabas and Batmanghelich, Kayhan N},\n  booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention},\n  pages={502--510},\n  year={2018},\n  organization={Springer International Publishing Cham}\n}",
+      "venue": "International Conference on Medical Image Computing and Computer-Assisted Intervention"
+    },
+    {
+      "title": "A structural equation model for imaging genetics using spatial transcriptomics",
+      "authors": [
+        "Sjoerd MH Huisman",
+        "Ahmed Mahfouz",
+        "Nematollah K Batmanghelich",
+        "Boudewijn PF Lelieveldt",
+        "Marcel JT Reinders",
+        "Alzheimer's Disease Neuroimaging Initiative"
+      ],
+      "paper_link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6429169/pdf/40708_2018_Article_91.pdf",
+      "code_link": null,
+      "preprint_link": null,
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2020/07/Screen-Shot-2020-07-05-at-7.27.30-PM.png",
+      "bibtex": "@article{huisman2018structural,\n  title={A structural equation model for imaging genetics using spatial transcriptomics},\n  author={Huisman, Sjoerd MH and Mahfouz, Ahmed and Batmanghelich, Nematollah K and Lelieveldt, Boudewijn PF and Reinders, Marcel JT and Alzheimer's Disease Neuroimaging Initiative},\n  journal={Brain informatics},\n  volume={5},\n  number={2},\n  pages={13},\n  year={2018},\n  publisher={Springer Berlin Heidelberg Berlin/Heidelberg}\n}",
+      "venue": "Brain informatics"
+    },
+    {
+      "title": "Causal Generative Domain Adaptation Networks",
+      "authors": [
+        "Mingming Gong",
+        "Kun Zhang",
+        "Biwei Huang",
+        "Clark Glymour",
+        "Dacheng Tao",
+        "Kayhan Batmanghelich"
+      ],
+      "paper_link": "https://arxiv.org/pdf/1804.04333.pdf",
+      "code_link": null,
+      "preprint_link": "https://arxiv.org/abs/1804.04333",
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2020/07/2018_3_r_1.png",
+      "bibtex": "@online{gong2018causal,\n  author       = {Gong, Mingming and Zhang, Kun and Huang, Biwei and Glymour, Clark and Tao, Dacheng and Batmanghelich, Kayhan},\n  title        = {Causal generative domain adaptation networks},\n  year         = {2018},\n  eprint       = {1804.04333},\n  eprinttype   = {arXiv},\n  eprintclass   = {cs.LG},\n  url          = {https://arxiv.org/abs/1804.04333},\n  note         = {Preprint},\n  keywords     = {preprint}\n}",
+      "venue": ""
+    },
+    {
+      "title": "Deep Diffeomorphic Normalizing Flows",
+      "authors": [
+        "Hadi Salman",
+        "Payman Yadollahpour",
+        "Tom Fletcher",
+        "Kayhan Batmanghelich"
+      ],
+      "paper_link": "https://arxiv.org/pdf/1810.03256.pdf",
+      "code_link": null,
+      "preprint_link": "https://arxiv.org/abs/1810.03256",
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2020/07/2018_4_r_1.png",
+      "bibtex": "@online{salman2018deep,\n  author       = {Salman, Hadi and Yadollahpour, Payman and Fletcher, Tom and Batmanghelich, Kayhan},\n  title        = {Deep diffeomorphic normalizing flows},\n  year         = {2018},\n  eprint       = {1810.03256},\n  eprinttype   = {arXiv},\n  eprintclass   = {cs.LG},\n  url          = {https://arxiv.org/abs/1810.03256},\n  note         = {Preprint},\n  keywords     = {preprint}\n}",
+      "venue": ""
+    },
+    {
+      "title": "An Efficient and Provable Approach for Mixture Proportion Estimation Using Linear Independence Assumption",
+      "authors": [
+        "Xiyu Yu",
+        "Tongliang Liu",
+        "Mingming Gong",
+        "Kayhan Batmanghelich",
+        "Dacheng Tao"
+      ],
+      "paper_link": "https://www.batman-lab.com/wp-content/uploads/2018/04/Yu_An_Efficient_and_CVPR_2018_paper.pdf",
+      "code_link": "https://tongliang-liu.github.io/code/cvpr18_backup.zip",
+      "preprint_link": null,
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2020/07/2018_5_1_r.png",
+      "bibtex": "@inproceedings{yu2018efficient,\n  title={An efficient and provable approach for mixture proportion estimation using linear independence assumption},\n  author={Yu, Xiyu and Liu, Tongliang and Gong, Mingming and Batmanghelich, Kayhan and Tao, Dacheng},\n  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},\n  pages={4480--4489},\n  year={2018}\n}",
+      "venue": "Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition"
+    },
+    {
+      "title": "Deep Ordinal Regression Network for Monocular Depth Estimation",
+      "authors": [
+        "Huan Fu",
+        "Mingming Gong",
+        "Chaohui Wang",
+        "Kayhan Batmanghelich",
+        "Dacheng Tao"
+      ],
+      "paper_link": "https://arxiv.org/pdf/1806.02446.pdf",
+      "code_link": "https://github.com/hufu6371/DORN",
+      "preprint_link": "https://arxiv.org/abs/1806.02446",
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2020/07/2018_6_1_R.png",
+      "bibtex": "@inproceedings{fu2018deep,\n  title={Deep ordinal regression network for monocular depth estimation},\n  author={Fu, Huan and Gong, Mingming and Wang, Chaohui and Batmanghelich, Kayhan and Tao, Dacheng},\n  booktitle={Proceedings of the IEEE conference on computer vision and pattern recognition},\n  pages={2002--2011},\n  year={2018}\n}",
+      "venue": "Proceedings of the IEEE conference on computer vision and pattern recognition"
+    },
+    {
+      "title": "Textured Graph-Based Model of the Lungs: Application on Tuberculosis Type Classification and Multi-drug Resistance Detection",
+      "authors": [
+        "Y. D. Cid",
+        "Kayhan Batmanghelich",
+        "H. Müller"
+      ],
+      "paper_link": "https://www.batman-lab.com/wp-content/uploads/2018/04/paper_114.pdf",
+      "code_link": null,
+      "preprint_link": null,
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2020/07/2018_7_1_r.png",
+      "bibtex": null,
+      "venue": ""
+    }
+  ],
+  "2017": [
+    {
+      "title": "Transformations Based on Continuous Piecewise-Affine Velocity Fields",
+      "authors": [
+        "Oren Freifeld",
+        "S{\\o Hauberg"
+      ],
+      "paper_link": "https://www.batman-lab.com/wp-content/uploads/2017/04/07814343.pdf",
+      "code_link": null,
+      "preprint_link": null,
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2020/07/2017_1_1_r.png",
+      "bibtex": "@article{freifeld2017transformations,\n  title={Transformations based on continuous piecewise-affine velocity fields},\n  author={Freifeld, Oren and Hauberg, S{\\o}ren and Batmanghelich, Kayhan and Fisher, Jonn W},\n  journal={IEEE transactions on pattern analysis and machine intelligence},\n  volume={39},\n  number={12},\n  pages={2496--2509},\n  year={2017},\n  publisher={IEEE}\n}",
+      "venue": "IEEE transactions on pattern analysis and machine intelligence"
+    },
+    {
+      "title": "A Likelihood-Free Approach for Characterizing Heterogeneous Diseases in Large-Scale Studies",
+      "authors": [
+        "Jenna Schabdach",
+        "William M Wells III",
+        "Michael Cho",
+        "Kayhan N Batmanghelich"
+      ],
+      "paper_link": "https://www.batman-lab.com/wp-content/uploads/2017/04/nihms917872.pdf",
+      "code_link": null,
+      "preprint_link": null,
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2020/07/2017_2_1_r.png",
+      "bibtex": "@inproceedings{schabdach2017likelihood,\n  title={A likelihood-free approach for characterizing heterogeneous diseases in large-scale studies},\n  author={Schabdach, Jenna and Wells III, William M and Cho, Michael and Batmanghelich, Kayhan N},\n  booktitle={International Conference on Information Processing in Medical Imaging},\n  pages={170--183},\n  year={2017},\n  organization={Springer International Publishing Cham}\n}",
+      "venue": "International Conference on Information Processing in Medical Imaging"
+    }
+  ],
+  "2016": [
+    {
+      "title": "Unsupervised Discovery of Emphysema Subtypes in a Large Clinical Cohort",
+      "authors": [
+        "Polina Binder",
+        "Nematollah K Batmanghelich",
+        "Raul San Jose Estepar",
+        "Polina Golland"
+      ],
+      "paper_link": "https://www.batman-lab.com/wp-content/uploads/2016/04/Binder2016_Chapter_UnsupervisedDiscoveryOfEmphyse.pdf",
+      "code_link": null,
+      "preprint_link": null,
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2020/07/2016_1_1_r.png",
+      "bibtex": "@inproceedings{binder2016unsupervised,\n  title={Unsupervised discovery of emphysema subtypes in a large clinical cohort},\n  author={Binder, Polina and Batmanghelich, Nematollah K and Estepar, Raul San Jose and Golland, Polina},\n  booktitle={International Workshop on Machine Learning in Medical Imaging},\n  pages={180--187},\n  year={2016},\n  keywords={workshop},\n  organization={Springer International Publishing Cham}\n}",
+      "venue": "International Workshop on Machine Learning in Medical Imaging"
+    },
+    {
+      "title": "Probabilistic Modeling of Imaging, Genetics and the Diagnosis",
+      "authors": [
+        "Nematollah K Batmanghelich",
+        "Adrian Dalca",
+        "Gerald Quon",
+        "Mert Sabuncu",
+        "Polina Golland"
+      ],
+      "paper_link": "https://www.batman-lab.com/wp-content/uploads/2016/04/batmanghelich_cameraReady.pdf",
+      "code_link": null,
+      "preprint_link": null,
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2020/07/2016_2_1_r.png",
+      "bibtex": "@article{batmanghelich2016probabilistic,\n  title={Probabilistic modeling of imaging, genetics and diagnosis},\n  author={Batmanghelich, Nematollah K and Dalca, Adrian and Quon, Gerald and Sabuncu, Mert and Golland, Polina},\n  journal={IEEE transactions on medical imaging},\n  volume={35},\n  number={7},\n  pages={1765--1779},\n  year={2016},\n  publisher={IEEE}\n}",
+      "venue": "IEEE transactions on medical imaging"
+    },
+    {
+      "title": "Nonparametric Spherical Topic Modeling with Word Embeddings",
+      "authors": [
+        "Kayhan Batmanghelich",
+        "Ardavan Saeedi",
+        "Karthik Narasimhan",
+        "Sam Gershman"
+      ],
+      "paper_link": "https://www.batman-lab.com/wp-content/uploads/2016/04/P16-2087.pdf",
+      "code_link": null,
+      "preprint_link": null,
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2020/07/2016_3_1_r.png",
+      "bibtex": "@inproceedings{batmanghelich-etal-2016-nonparametric,\n    title = \"Nonparametric Spherical Topic Modeling with Word Embeddings\",\n    author = \"Batmanghelich, Kayhan  and\n      Saeedi, Ardavan  and\n      Narasimhan, Karthik  and\n      Gershman, Sam\",\n    editor = \"Erk, Katrin  and\n      Smith, Noah A.\",\n    booktitle = \"Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics (Volume 2: Short Papers)\",\n    month = aug,\n    year = \"2016\",\n    address = \"Berlin, Germany\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/P16-2087/\",\n    doi = \"10.18653/v1/P16-2087\",\n    pages = \"537--542\"\n}\n",
+      "venue": "Bayesian and grAphical Models for Biomedical Imaging"
+    },
+    {
+      "title": "Inferring Disease Status by non-Parametric Probabilistic Embedding",
+      "authors": [
+        "Nematollah Kayhan Batmanghelich",
+        "Ardavan Saeedi",
+        "Raul San Jose Estepar",
+        "Michael Cho",
+        "William M Wells III"
+      ],
+      "paper_link": "https://www.batman-lab.com/wp-content/uploads/2016/04/inferringdis-easestatus.pdf",
+      "code_link": null,
+      "preprint_link": null,
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2020/07/2016_4_1_r.png",
+      "bibtex": "@inproceedings{batmanghelich2016inferring,\n  title={Inferring Disease Status by Non-parametric Probabilistic Embedding},\n  author={Batmanghelich, Nematollah Kayhan and Saeedi, Ardavan and Estepar, Raul San Jose and Cho, Michael and Wells III, William M},\n  booktitle={Bayesian and grAphical Models for Biomedical Imaging},\n  pages={49--57},\n  year={2016},\n  keywords={workshop},\n  publisher={Springer International Publishing Cham}\n}",
+      "venue": "Bayesian and grAphical Models for Biomedical Imaging"
+    }
+  ],
+  "2015": [
+    {
+      "title": "Highly-Expressive Spaces of Well-Behaved Transformations: Keeping It Simple",
+      "authors": [
+        "Oren Freifeld",
+        "Soren Hauberg",
+        "Kayhan Batmanghelich",
+        "John W Fisher"
+      ],
+      "paper_link": "https://www.batman-lab.com/wp-content/uploads/2015/04/Freifeld_Highly-Expressive_Spaces_of_ICCV_2015_paper.pdf",
+      "code_link": "https://github.com/freifeld/cpabDiffeo",
+      "preprint_link": null,
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2020/07/2015_1_1_r.png",
+      "bibtex": "@inproceedings{freifeld2015highly,\n  title={Highly-expressive spaces of well-behaved transformations: Keeping it simple},\n  author={Freifeld, Oren and Hauberg, Soren and Batmanghelich, Kayhan and Fisher, John W},\n  booktitle={Proceedings of the IEEE International Conference on Computer Vision},\n  pages={2911--2919},\n  year={2015}\n}",
+      "venue": "Proceedings of the IEEE International Conference on Computer Vision"
+    },
+    {
+      "title": "Generative Method to Discover Genetically Driven Image Biomarkers",
+      "authors": [
+        "Nematollah K Batmanghelich",
+        "Ardavan Saeedi",
+        "Michael Cho",
+        "Raul San Jose Estepar",
+        "Polina Golland"
+      ],
+      "paper_link": "https://www.batman-lab.com/wp-content/uploads/2015/04/200.pdf",
+      "code_link": null,
+      "preprint_link": null,
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2020/07/2015_2_1_r.png",
+      "bibtex": "@inproceedings{batmanghelich2015generative,\n  title={Generative method to discover genetically driven image biomarkers},\n  author={Batmanghelich, Nematollah K and Saeedi, Ardavan and Cho, Michael and Estepar, Raul San Jose and Golland, Polina},\n  booktitle={International Conference on Information Processing in Medical Imaging},\n  pages={30--42},\n  year={2015},\n  organization={Springer International Publishing Cham}\n}",
+      "venue": "International Conference on Information Processing in Medical Imaging"
+    }
+  ],
+  "2014": [
+    {
+      "title": "Spherical Topic Models for Imaging Phenotype Discovery in Genetic Studies",
+      "authors": [
+        "Kayhan N Batmanghelich",
+        "Michael Cho",
+        "Raul San Jose",
+        "Polina Golland"
+      ],
+      "paper_link": "https://www.batman-lab.com/wp-content/uploads/2014/04/Batmanghelich2014_Chapter_SphericalTopicModelsForImaging.pdf",
+      "code_link": null,
+      "preprint_link": null,
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2020/07/2014_1_1_r.png",
+      "bibtex": "@inproceedings{batmanghelich2014spherical,\n  title={Spherical topic models for imaging phenotype discovery in genetic studies},\n  author={Batmanghelich, Kayhan N and Cho, Michael and Jose, Raul San and Golland, Polina},\n  booktitle={Bayesian and grAphical Models for Biomedical Imaging: First International Workshop, BAMBI 2014, Cambridge, MA, USA, September 18, 2014, Revised Selected Papers},\n  pages={107--117},\n  year={2014},\n  keywords={workshop},\n  organization={Springer International Publishing Cham}\n}",
+      "venue": "Bayesian and grAphical Models for Biomedical Imaging: First International Workshop, BAMBI 2014, Cambridge, MA, USA, September 18, 2014, Revised Selected Papers"
+    },
+    {
+      "title": "Diversifying Sparsity Using Variational Determinantal Point Processes",
+      "authors": [
+        "Nematollah Kayhan Batmanghelich",
+        "Gerald Quon",
+        "Alex Kulesza",
+        "Manolis Kellis",
+        "Polina Golland",
+        "Luke Bornn"
+      ],
+      "paper_link": "https://www.batman-lab.com/wp-content/uploads/2014/04/1411.6307.pdf",
+      "code_link": null,
+      "preprint_link": null,
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2020/07/2014_2_1_r.png",
+      "bibtex": "@online{batmanghelich2014diversifying,\n  author       = {Batmanghelich, Nematollah Kayhan and Quon, Gerald and Kulesza, Alex and Kellis, Manolis and Golland, Polina and Bornn, Luke},\n  title        = {Diversifying sparsity using variational determinantal point processes},\n  year         = {2014},\n  eprint       = {1411.6307},\n  eprinttype   = {arXiv},\n  eprintclass   = {stat.ML},\n  url          = {https://arxiv.org/abs/1411.6307},\n  note         = {Preprint},\n  keywords     = {preprint}\n}",
+      "venue": ""
+    },
+    {
+      "title": "BrainPrint in the Computer-Aided Diagnosis of Alzheimer's Disease",
+      "authors": [
+        "Christian Wachinger",
+        "K Batmanghelich",
+        "Polina Golland",
+        "Martin Reuter"
+      ],
+      "paper_link": "https://www.batman-lab.com/wp-content/uploads/2014/04/brainprint-caddementia14.pdf",
+      "code_link": null,
+      "preprint_link": null,
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2020/07/2014_5_1_r.png",
+      "bibtex": "@inproceedings{wachinger2014brainprint,\n  title={BrainPrint in the computer-aided diagnosis of Alzheimer's disease},\n  author={Wachinger, Christian and Batmanghelich, K and Golland, Polina and Reuter, Martin},\n  booktitle={Proceedings MICCAI workshop challenge on computer-aided diagnosis of dementia based on structural MRI data, Boston, MA, USA},\n  keywords={workshop},\n  year={2014}\n}",
+      "venue": "Proceedings MICCAI workshop challenge on computer-aided diagnosis of dementia based on structural MRI data, Boston, MA, USA"
+    }
+  ],
+  "2013": [
+    {
+      "title": "Joint Modeling of Imaging and Genetics",
+      "authors": [
+        "Nematollah K Batmanghelich",
+        "Adrian V Dalca",
+        "Mert R Sabuncu",
+        "Polina Golland"
+      ],
+      "paper_link": "https://www.batman-lab.com/wp-content/uploads/2013/04/cameraReady.pdf",
+      "code_link": null,
+      "preprint_link": null,
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2020/07/2013_1_1_r.png",
+      "bibtex": "@inproceedings{batmanghelich2013joint,\n  title={Joint modeling of imaging and genetics},\n  author={Batmanghelich, Nematollah K and Dalca, Adrian V and Sabuncu, Mert R and Golland, Polina},\n  booktitle={International Conference on Information Processing in Medical Imaging},\n  pages={766--777},\n  year={2013},\n  organization={Springer Berlin Heidelberg Berlin, Heidelberg}\n}",
+      "venue": "International Conference on Information Processing in Medical Imaging"
+    }
+  ],
+  "2012": [
+    {
+      "title": "Dominant Component Analysis of Electro-Physiological Connectivity Network",
+      "authors": [
+        "Yasser Ghanbari",
+        "Luke Bloy",
+        "Kayhan Batmanghelich",
+        "Timothy PL Roberts",
+        "Ragini Verma"
+      ],
+      "paper_link": "https://www.batman-lab.com/wp-content/uploads/2012/04/Ghanbari2012_Chapter_DominantComponentAnalysisOfEle.pdf",
+      "code_link": null,
+      "preprint_link": null,
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2020/07/2012_1_1_r.png",
+      "bibtex": "@inproceedings{ghanbari2012dominant,\n  title={Dominant component analysis of electrophysiological connectivity networks},\n  author={Ghanbari, Yasser and Bloy, Luke and Batmanghelich, Kayhan and Roberts, Timothy PL and Verma, Ragini},\n  booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention},\n  pages={231--238},\n  year={2012},\n  organization={Springer Berlin Heidelberg Berlin, Heidelberg}\n}",
+      "venue": "International Conference on Medical Image Computing and Computer-Assisted Intervention"
+    },
+    {
+      "title": "An integrated Framework for High Angular Resolution Diffusion Imaging-Based Investigation of Structural Connectivity",
+      "authors": [
+        "Luke Bloy",
+        "Madhura Ingalhalikar",
+        "Nematollah K Batmanghelich",
+        "Robert T Schultz",
+        "Timothy PL Roberts",
+        "Ragini Verma"
+      ],
+      "paper_link": "https://www.batman-lab.com/wp-content/uploads/2012/04/brain.2011.0070.pdf",
+      "code_link": null,
+      "preprint_link": null,
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2020/07/2014_4_1_r.png",
+      "bibtex": "@article{bloy2012integrated,\n  title={An Integrated Framework for High Angular Resolution Diffusion Imaging--Based Investigation of Structural Connectivity},\n  author={Bloy, Luke and Ingalhalikar, Madhura and Batmanghelich, Nematollah K and Schultz, Robert T and Roberts, Timothy PL and Verma, Ragini},\n  journal={Brain connectivity},\n  volume={2},\n  number={2},\n  pages={69--79},\n  year={2012},\n  publisher={Mary Ann Liebert, Inc. 140 Huguenot Street, 3rd Floor New Rochelle, NY 10801 USA}\n}",
+      "venue": "Brain connectivity"
+    },
+    {
+      "title": "Generative-Discriminative Basis Learning for Medical Imaging",
+      "authors": [
+        "Nematollah K Batmanghelich",
+        "Ben Taskar",
+        "Christos Davatzikos"
+      ],
+      "paper_link": "https://www.batman-lab.com/wp-content/uploads/2012/04/tmi2012.pdf",
+      "code_link": null,
+      "preprint_link": null,
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2020/07/2012_3_1-2.png",
+      "bibtex": "@article{batmanghelich2011generative,\n  title={Generative-discriminative basis learning for medical imaging},\n  author={Batmanghelich, Nematollah K and Taskar, Ben and Davatzikos, Christos},\n  journal={IEEE transactions on medical imaging},\n  volume={31},\n  number={1},\n  pages={51--69},\n  year={2011},\n  publisher={IEEE}\n}",
+      "venue": "IEEE transactions on medical imaging"
+    }
+  ],
+  "2011": [
+    {
+      "title": "Regularized Tensor Factorization for Multi-Modality Medical Image Classification",
+      "authors": [
+        "Nematollah Batmanghelich",
+        "Aoyan Dong",
+        "Ben Taskar",
+        "Christos Davatzikos"
+      ],
+      "paper_link": "https://www.batman-lab.com/wp-content/uploads/2011/04/miccai2011.pdf",
+      "code_link": null,
+      "preprint_link": null,
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2020/07/2011_1_1_r.png",
+      "bibtex": "@inproceedings{batmanghelich2011regularized,\n  title={Regularized tensor factorization for multi-modality medical image classification},\n  author={Batmanghelich, Nematollah and Dong, Aoyan and Taskar, Ben and Davatzikos, Christos},\n  booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention},\n  pages={17--24},\n  year={2011},\n  organization={Springer Berlin Heidelberg Berlin, Heidelberg}\n}",
+      "venue": "International Conference on Medical Image Computing and Computer-Assisted Intervention"
+    },
+    {
+      "title": "Disease Classification and Prediction via Semi-Supervised Dimensionality Reduction",
+      "authors": [
+        "Kayhan N Batmanghelich",
+        "H Ye Dong",
+        "Kilian M Pohl",
+        "Ben Taskar",
+        "Christos Davatzikos",
+        "others"
+      ],
+      "paper_link": "https://www.batman-lab.com/wp-content/uploads/2011/04/isbi2011.pdf",
+      "code_link": null,
+      "preprint_link": null,
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2020/07/2011_2_1_r.png",
+      "bibtex": "@inproceedings{batmanghelich2011disease,\n  title={Disease classification and prediction via semi-supervised dimensionality reduction},\n  author={Batmanghelich, Kayhan N and Dong, H Ye and Pohl, Kilian M and Taskar, Ben and Davatzikos, Christos and others},\n  booktitle={2011 IEEE International Symposium on Biomedical Imaging: From Nano to Macro},\n  pages={1086--1090},\n  year={2011},\n  organization={IEEE}\n}",
+      "venue": "2011 IEEE International Symposium on Biomedical Imaging: From Nano to Macro"
+    }
+  ],
+  "2010": [
+    {
+      "title": "Prediction of MCI Conversion via MRI, CSF Biomarkers, and Pattern Classification",
+      "authors": [
+        "Christos Davatzikos",
+        "Priyanka Bhatt",
+        "Leslie M Shaw",
+        "Kayhan N Batmanghelich",
+        "John Q Trojanowski"
+      ],
+      "paper_link": "https://www.batman-lab.com/wp-content/uploads/2010/04/1-s2.0-S019745801000237X-main.pdf",
+      "code_link": null,
+      "preprint_link": null,
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2020/07/2010_1_1_r.png",
+      "bibtex": "@article{davatzikos2011prediction,\n  title={Prediction of MCI to AD conversion, via MRI, CSF biomarkers, and pattern classification},\n  author={Davatzikos, Christos and Bhatt, Priyanka and Shaw, Leslie M and Batmanghelich, Kayhan N and Trojanowski, John Q},\n  journal={Neurobiology of aging},\n  volume={32},\n  number={12},\n  pages={2322--e19},\n  year={2011},\n  publisher={Elsevier}\n}",
+      "venue": "Neurobiology of aging"
+    },
+    {
+      "title": "Application of Trace-Norm and Low-Rank Matrix Decomposition for Computational Anatomy",
+      "authors": [
+        "Nematollah Batmanghelich",
+        "Ali Gooya",
+        "Stathis Kanterakis",
+        "Ben Taskar",
+        "Christos Davatzikos"
+      ],
+      "paper_link": "https://www.batman-lab.com/wp-content/uploads/2010/04/mmbia11.pdf",
+      "code_link": null,
+      "preprint_link": null,
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2020/07/2010_2_1_r.png",
+      "bibtex": "@inproceedings{batmanghelich2010application,\n  title={Application of trace-norm and low-rank matrix decomposition for computational anatomy},\n  author={Batmanghelich, Nematollah and Gooya, Ali and Kanterakis, Stathis and Taskar, Ben and Davatzikos, Christos},\n  booktitle={2010 IEEE Computer Society Conference on Computer Vision and Pattern Recognition-Workshops},\n  pages={146--153},\n  year={2010},\n  keywords={workshop},\n  organization={IEEE}\n}",
+      "venue": "2010 IEEE Computer Society Conference on Computer Vision and Pattern Recognition-Workshops"
+    }
+  ],
+  "2025": [
+    {
+      "title": "A Human-Centered Approach to Identifying Promises, Risks, \\& Challenges of Text-to-Image Generative AI in Radiology",
+      "authors": [
+        "Katelyn Morrison",
+        "Arpit Mathur",
+        "Aidan Bradshaw",
+        "Tom Wartmann",
+        "Steven Lundi",
+        "Afrooz Zandifar",
+        "Weichang Dai",
+        "Kayhan Batmanghelich",
+        "Motahhare Eslami",
+        "Adam Perer"
+      ],
+      "paper_link": "",
+      "code_link": "",
+      "preprint_link": "",
+      "image_icon_link": "",
+      "bibtex": "@inproceedings{morrison2025human,\n  title={A Human-Centered Approach to Identifying Promises, Risks, \\& Challenges of Text-to-Image Generative AI in Radiology},\n  author={Morrison, Katelyn and Mathur, Arpit and Bradshaw, Aidan and Wartmann, Tom and Lundi, Steven and Zandifar, Afrooz and Dai, Weichang and Batmanghelich, Kayhan and Eslami, Motahhare and Perer, Adam},\n  booktitle={Proceedings of the AAAI/ACM Conference on AI, Ethics, and Society},\n  volume={8},\n  number={2},\n  pages={1758--1770},\n  year={2025}\n}",
+      "venue": "Proceedings of the AAAI/ACM Conference on AI, Ethics, and Society"
+    },
+    {
+      "title": "High-dimensional causal mediation analysis by partial sum statistic and sample splitting strategy in imaging genetics application",
+      "authors": [
+        "Hung-Ching Chang",
+        "Yusi Fang",
+        "Michael T Gorczyca",
+        "Kayhan Batmanghelich",
+        "George C Tseng"
+      ],
+      "paper_link": "",
+      "code_link": "",
+      "preprint_link": "",
+      "image_icon_link": "",
+      "bibtex": "@article{chang2025high,\n  title={High-dimensional causal mediation analysis by partial sum statistic and sample splitting strategy in imaging genetics application},\n  author={Chang, Hung-Ching and Fang, Yusi and Gorczyca, Michael T and Batmanghelich, Kayhan and Tseng, George C},\n  journal={Bioinformatics},\n  pages={btaf493},\n  year={2025},\n  publisher={Oxford University Press}\n}",
+      "venue": "Bioinformatics"
+    },
+    {
+      "title": "Performance of Natural Language Processing versus International Classification of Diseases Codes in Building Registries for Patients With Fall Injury: Retrospective Analysis",
+      "authors": [
+        "Atta Taseh",
+        "Souri Sasanfar",
+        "Michelle Chan",
+        "Evan Sirls",
+        "Ara Nazarian",
+        "Kayhan Batmanghelich",
+        "Jonathan F Bean",
+        "Soheil Ashkani-Esfahani"
+      ],
+      "paper_link": "",
+      "code_link": "",
+      "preprint_link": "",
+      "image_icon_link": "",
+      "bibtex": "@article{taseh2025performance,\n  title={Performance of Natural Language Processing versus International Classification of Diseases Codes in Building Registries for Patients With Fall Injury: Retrospective Analysis},\n  author={Taseh, Atta and Sasanfar, Souri and Chan, Michelle and Sirls, Evan and Nazarian, Ara and Batmanghelich, Kayhan and Bean, Jonathan F and Ashkani-Esfahani, Soheil},\n  journal={JMIR Medical Informatics},\n  volume={13},\n  number={1},\n  pages={e66973},\n  year={2025},\n  publisher={JMIR Publications Inc., Toronto, Canada}\n}",
+      "venue": "JMIR Medical Informatics"
+    },
+    {
+      "title": "Multi-Modal Large Language Models are Effective Vision Learners",
+      "authors": [
+        "Li Sun",
+        "Chaitanya Ahuja",
+        "Peng Chen",
+        "Matt D'Zmura",
+        "Kayhan Batmanghelich",
+        "Philip Bontrager"
+      ],
+      "paper_link": "",
+      "code_link": "",
+      "preprint_link": "",
+      "image_icon_link": "",
+      "bibtex": "@inproceedings{sun2025multi,\n  title={Multi-Modal Large Language Models are Effective Vision Learners},\n  author={Sun, Li and Ahuja, Chaitanya and Chen, Peng and D'Zmura, Matt and Batmanghelich, Kayhan and Bontrager, Philip},\n  booktitle={2025 IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},\n  pages={8617--8626},\n  year={2025},\n  organization={IEEE}\n}",
+      "venue": "2025 IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)"
+    }
+  ]
+}

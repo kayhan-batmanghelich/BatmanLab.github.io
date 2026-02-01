@@ -1,0 +1,2829 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description"
+          content="Kayhan Batmanghelich — Assistant Professor in Electrical and Computer Engineering at Boston University. Research in medical vision, machine learning, and bioinformatics."/>
+    <link rel="icon" href="images/bu-logo.png" type="image/x-icon"/>
+    <title>Kayhan Batmanghelich | Batman Lab</title>
+
+    <!-- Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+          crossorigin="anonymous">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+        :root {
+            --bg-soft: rgba(13, 27, 56, 0.06);
+            --card-border: rgba(0, 0, 0, 0.08);
+            --shadow: 0 10px 30px rgba(0, 0, 0, .08);
+            --shadow-soft: 0 6px 18px rgba(0, 0, 0, .06);
+            --accent: #2b3969; /* your original blue */
+            --accent-2: #0b5ed7; /* link-ish */
+        }
+
+        [data-bs-theme="dark"] {
+            --bg-soft: rgba(255, 255, 255, 0.06);
+            --card-border: rgba(255, 255, 255, 0.12);
+            --shadow: 0 10px 30px rgba(0, 0, 0, .35);
+            --shadow-soft: 0 6px 18px rgba(0, 0, 0, .25);
+            --accent: #7aa2ff;
+            --accent-2: #9ec5fe;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+            letter-spacing: -0.01em;
+            scroll-behavior: smooth;
+        }
+
+        /* Navbar */
+        .nav-glass {
+            background: rgba(43, 57, 105, 0.92);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .nav-glass .nav-link {
+            color: rgba(255, 255, 255, 0.82) !important;
+            font-weight: 600;
+        }
+
+        .nav-glass .nav-link:hover {
+            color: #fff !important;
+        }
+
+        .nav-glass .navbar-brand {
+            color: #fff !important;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        .nav-pill {
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: 999px;
+            padding: .25rem .5rem;
+        }
+
+        /* Page spacing */
+        main {
+            padding-top: 84px;
+        }
+
+        section {
+            scroll-margin-top: 92px;
+        }
+
+        /* Hero */
+        .hero {
+            border-radius: 18px;
+            padding: 28px;
+            background: radial-gradient(1200px 600px at 10% 0%, rgba(43, 57, 105, 0.15), transparent 60%),
+            radial-gradient(1000px 600px at 90% 20%, rgba(13, 110, 253, 0.12), transparent 55%),
+            var(--bg-soft);
+            border: 1px solid var(--card-border);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .headshot {
+            width: 280px;
+            max-width: 100%;
+            border-radius: 16px;
+            border: 1px solid var(--card-border);
+            box-shadow: var(--shadow-soft);
+            background: transparent;
+            object-fit: cover;
+        }
+
+        .muted {
+            color: rgba(0, 0, 0, 0.6);
+        }
+
+        [data-bs-theme="dark"] .muted {
+            color: rgba(255, 255, 255, 0.65);
+        }
+
+        .chip {
+            display: inline-flex;
+            align-items: center;
+            gap: .4rem;
+            padding: .35rem .6rem;
+            border-radius: 999px;
+            border: 1px solid var(--card-border);
+            background: rgba(255, 255, 255, 0.5);
+            font-weight: 600;
+            font-size: .9rem;
+            text-decoration: none;
+        }
+
+        [data-bs-theme="dark"] .chip {
+            background: rgba(0, 0, 0, 0.18);
+        }
+
+        a {
+            color: var(--accent-2);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Section headings */
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: .6rem;
+            margin: 0 0 14px 0;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+
+        .section-title i {
+            color: var(--accent);
+        }
+
+        /* Cards */
+        .cardx {
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            box-shadow: var(--shadow-soft);
+            background: var(--bs-body-bg);
+        }
+
+        .cardx-body {
+            padding: 18px;
+        }
+
+        /* Publications / Projects list */
+        .item-row {
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            gap: 16px;
+            align-items: start;
+            padding: 16px;
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            background: var(--bs-body-bg);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .item-row img, .item-row video {
+            width: 220px;
+            max-width: 100%;
+            border-radius: 12px;
+            border: 1px solid var(--card-border);
+        }
+
+        @media (max-width: 992px) {
+            .item-row {
+                grid-template-columns: 1fr;
+            }
+
+            .item-row img, .item-row video {
+                width: 100%;
+            }
+        }
+
+        .meta-links a {
+            display: inline-flex;
+            align-items: center;
+            gap: .35rem;
+            margin-right: .8rem;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .badge-new {
+            display: inline-block;
+            margin-left: .5rem;
+            padding: .2rem .45rem;
+            border-radius: 6px;
+            font-size: .75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: #fff;
+            background: #dc3545;
+        }
+
+        /* News list */
+        .news-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        .news-list li {
+            padding: 10px 0;
+            border-bottom: 1px dashed var(--card-border);
+        }
+
+        .news-date {
+            font-weight: 600;
+            color: rgba(0, 0, 0, 0.6);
+            margin-right: 8px;
+        }
+
+        [data-bs-theme="dark"] .news-date {
+            color: rgba(255, 255, 255, 0.65);
+        }
+
+        /* Affiliations grid */
+        .aff-grid {
+            display: grid;
+            grid-template-columns: repeat(5, minmax(120px, 1fr));
+            gap: 14px;
+        }
+
+        @media (max-width: 1200px) {
+            .aff-grid {
+                grid-template-columns: repeat(3, minmax(120px, 1fr));
+            }
+        }
+
+        @media (max-width: 576px) {
+            .aff-grid {
+                grid-template-columns: repeat(2, minmax(120px, 1fr));
+            }
+        }
+
+        .aff-card {
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 14px;
+            background: var(--bs-body-bg);
+            box-shadow: var(--shadow-soft);
+            text-align: center;
+            height: 100%;
+        }
+
+        .aff-card img {
+            max-width: 100%;
+            height: 54px;
+            object-fit: contain;
+            margin-bottom: 8px;
+        }
+
+        .aff-degree {
+            font-weight: 700;
+            font-size: .95rem;
+            margin-top: 4px;
+        }
+
+        .aff-year {
+            font-size: .85rem;
+            color: rgba(0, 0, 0, 0.6);
+        }
+
+        [data-bs-theme="dark"] .aff-year {
+            color: rgba(255, 255, 255, 0.65);
+        }
+
+        /* Video embeds */
+        .ratio {
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--card-border);
+            box-shadow: var(--shadow-soft);
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 48px;
+            background: rgba(43, 57, 105, 0.95);
+            color: #fff;
+        }
+
+        footer a {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        /* Back to top */
+        .to-top {
+            position: fixed;
+            right: 18px;
+            bottom: 18px;
+            z-index: 1030;
+            display: none;
+        }
+
+        /* Small helpers */
+        .tight p {
+            margin-bottom: .6rem;
+        }
+
+        .leadish {
+            font-size: 1.02rem;
+        }
+    </style>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#topnav" data-bs-offset="110" tabindex="0">
+
+<header class="fixed-top nav-glass">
+    <nav id="topnav" class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#bio">
+                <img src="images/BU-Batman-Lab-Logo.png" alt="Batman Lab Logo" style="height: 46.464px; width: auto;">
+            </a>
+
+            <div class="d-flex align-items-center gap-2 order-lg-2">
+                <button id="themeToggle" class="btn btn-sm btn-outline-light nav-pill" type="button"
+                        aria-label="Toggle theme">
+                    <i class="bi bi-moon-stars"></i>
+                </button>
+                <button class="navbar-toggler text-white border-0" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navlinks"
+                        aria-controls="navlinks" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="bi bi-list" style="font-size:1.6rem;"></i>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse order-lg-1" id="navlinks">
+                <ul class="navbar-nav ms-lg-auto align-items-lg-center gap-lg-1">
+                    <li class="nav-item"><a class="nav-link" href="#bio">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#publication">Publications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#news">News</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#positions">Positions Available</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#teaching">Teaching</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main class="container">
+
+    <!-- ABOUT / HERO -->
+    <section id="bio" class="my-4">
+        <div class="hero">
+            <!-- Name, Position, Contact -->
+            <div class="row g-4 align-items-start mb-4">
+                <div class="col-lg-auto">
+                    <img class="headshot" src="images/Kayhan2.jpg" alt="Kayhan Batmanghelich headshot"/>
+                </div>
+                <div class="col-lg">
+                    <h2 class="mb-2">Kayhan Batmanghelich</h2>
+                    <p class="mb-1"><strong>Assistant Professor</strong></p>
+                    <p class="mb-1">Department of Electrical and Computer Engineering</p>
+                    <p class="mb-1">Boston University</p>
+                    <p class="mb-1">8 St Mary's St, Office 421<br>Boston, MA 02215</p>
+                    <p class="mb-1">batman@bu.edu</p>
+                    <p class="mb-1">Phone: 617-358-0538</p>
+                    <div class="d-flex flex-wrap gap-2 mt-3">
+                        <a class="chip" href="https://scholar.google.com/citations?user=PvHFAfIAAAAJ&hl=en"><i
+                                class="bi bi-mortarboard"></i> Google Scholar</a>
+                        <a class="chip" href="https://github.com/batmanlab"><i class="bi bi-github"></i> GitHub</a>
+                        <a class="chip" href="https://www.linkedin.com/in/kbatmanghelich/"><i class="bi bi-linkedin"></i>
+                            LinkedIn</a>
+                        <a class="chip" href="https://twitter.com/kbatmang"><i class="bi bi-twitter-x"></i>
+                            Twitter</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Brief Bio and Research in Two Columns -->
+            <div class="row g-4 mb-4">
+                <div class="col-md-6">
+                    <h3 class="mb-3">Brief Bio</h3>
+                    <p>
+                        I am an Assistant Professor in the <a href="https://www.bu.edu/eng/academics/departments-and-divisions/electrical-and-computer-engineering/">Department of Electrical and Computer Engineering</a> at <a href="https://www.bu.edu/">Boston University</a>. My research focuses on medical image analysis and the broader application of artificial intelligence in healthcare. Previously, I was a faculty member in the <a href="http://www.dbmi.pitt.edu/">Department of Biomedical Informatics</a> at the University of Pittsburgh. I received my PhD from the University of Pennsylvania. I am a recipient of the NSF CAREER Award and a Google Academic Research Award.
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <h3 class="mb-3">Research</h3>
+                    <p>
+                        My lab studies the fundamental challenges of AI in healthcare: (1) explainability, (2) data efficiency, (3) multimodal data fusion, and (4) causality. We develop machine learning methods for complex clinical problems, with applications in Breast Cancer, Chronic Obstructive Pulmonary Disease (COPD), and Alzheimer's disease.
+                        Our research is supported by funding from the NIH, NSF, and industry partners.
+                        I am also a co-founder of <a href="http://ml-in-medicine.org/">MLxMed</a>, a multi-campus online seminar series focused on machine learning methods for healthcare, and <a href="http://www.reade.ai/">READE.ai</a>, a startup developing real-time evaluation of adverse events during surgery.
+                    </p>
+                    <!-- <p>
+                        The lab recruits one or two PhD students each year. Prospective PhD students should apply to the 
+                        <a href="https://www.bu.edu/eng/academics/departments-and-divisions/electrical-and-computer-engineering/">PhD program</a>. 
+                        Due to the volume of email we receive, we unfortunately cannot respond to emails about applications.
+                    </p> -->
+                </div>
+            </div>
+
+            <!-- Students and Postdocs -->
+            <div class="mb-4">
+                <h3 class="mb-3">Students and Postdocs</h3>
+                <div class="row g-3">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="text-center">
+                            <img src="images/Shantanu.png" alt="Shantanu Ghosh" style="width: 150px; height: 150px; object-fit: cover; border-radius: 8px; border: 1px solid var(--card-border); margin-bottom: 8px;">
+                            <div><strong><a href="https://shantanu-ai.github.io/">Shantanu Ghosh</a> (PhD)</strong></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="text-center">
+                            <img src="images/Nihal.png" alt="Nihal Murali" style="width: 150px; height: 150px; object-fit: cover; border-radius: 8px; border: 1px solid var(--card-border); margin-bottom: 8px;">
+                            <div><strong><a href="https://nihal-m.github.io">Nihal Murali</a> (PhD)</strong></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="text-center">
+                            <img src="images/Matt.jpg" alt="Matthew Ragoza" style="width: 150px; height: 150px; object-fit: cover; border-radius: 8px; border: 1px solid var(--card-border); margin-bottom: 8px;">
+                            <div><strong><a href="https://mattragoza.github.io">Matthew Ragoza</a> (PhD)</strong></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="text-center">
+                            <img src="images/chenyu.png" alt="Chenyu Wang" style="width: 150px; height: 150px; object-fit: cover; border-radius: 8px; border: 1px solid var(--card-border); margin-bottom: 8px;">
+                            <div><strong><a href="https://chyuwang.com">Chenyu Wang</a> (PhD)</strong></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="text-center">
+                            <img src="images/weicheng.png" alt="Weicheng Dai" style="width: 150px; height: 150px; object-fit: cover; border-radius: 8px; border: 1px solid var(--card-border); margin-bottom: 8px;">
+                            <div><strong><a href="https://weichengdai1.github.io">Weicheng Dai</a> (PhD)</strong></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="text-center">
+                            <img src="images/Aya.png" alt="Aya Kassem" style="width: 150px; height: 150px; object-fit: cover; border-radius: 8px; border: 1px solid var(--card-border); margin-bottom: 8px;">
+                            <div><strong><a href="https://www.linkedin.com/in/aya-kassem/">Aya Kassem</a> (PhD)</strong></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="text-center">
+                            <img src="images/Haozhe.png" alt="Haoze Pang" style="width: 150px; height: 150px; object-fit: cover; border-radius: 8px; border: 1px solid var(--card-border); margin-bottom: 8px;">
+                            <div><strong><a href="https://www.linkedin.com/in/haozhe-pang-9775441b8/">Haoze Pang</a> (MS)</strong></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Former Graduated PhD Students and Postdocs -->
+            <div>
+                <h3 class="mb-3">Former Graduated PhD Students and Postdocs</h3>
+                <div class="row g-2">
+                    <div class="col-md-6">
+                        <div>Yanwu Xu (PhD, Pitt-ISP)</div>
+                        <div>Li Sun (PhD, Pitt-ISP)</div>
+                        <div>Max Raynold (PhD, Pitt-DBMI)</div>
+                        <div>Junxiang Chen (Postdoc)</div>
+                        <div>Mingming Gong (Postdoc)</div>
+                        <div>Rohit Kumar Jena (MS, CMU-RI)</div>
+                        <div>Sead Nikšić (Undergrad, Pitt-ECE)</div>
+                    </div>
+                    <div class="col-md-6">
+                        <div>Brian Pollack (Postdoc) </div>
+                        <div>Sumedha Singla (PhD, Pitt-CS)</div>
+                        <div>Payman Yadollahpour (Postdoc) </div>
+                        <div>Ke Yu (PhD, Pitt-ISP)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AFFILIATIONS - Removed for Kayhan's website -->
+    <!--
+    <section id="universities" class="my-4">
+        <div class="aff-grid">
+            <div class="aff-card">
+                <a href="https://www.amazon.science/"><img src="images/amazon_science.png" alt="Amazon Science"></a>
+                <div class="aff-degree">Applied Scientist Intern, AWS</div>
+                <div class="aff-year">(Summer 2024, 2025)</div>
+            </div>
+
+            <div class="aff-card">
+                <a href="https://www.bu.edu/eng/academics/departments-and-divisions/electrical-and-computer-engineering/">
+                    <img src="images/Boston_University_Terriers_logo.svg.png" alt="Boston University">
+                </a>
+                <div class="aff-degree">Ph.D. Electrical Engineering</div>
+                <div class="aff-year">(2023 – Present)</div>
+            </div>
+
+            <div class="aff-card">
+                <a href="https://www.isp.pitt.edu/"><img src="images/Pittsvg.png" alt="University of Pittsburgh"></a>
+                <div class="aff-degree">Ph.D. Intelligent Systems</div>
+                <div class="aff-year">(2021 – 2023) transferred to BU</div>
+            </div>
+
+            <div class="aff-card">
+                <a href="https://www.cmu.edu/"><img src="images/cmu_logo.png" alt="Carnegie Mellon University"></a>
+                <div class="aff-degree">Cross-Registered Student</div>
+                <div class="aff-year">(2021 – 2023)</div>
+            </div>
+
+            <div class="aff-card">
+                <a href="https://www.ufl.edu/"><img src="images/UF_logo.png" alt="University of Florida"></a>
+                <div class="aff-degree">MS in Computer Science <img src="images/Florida_Gators_gator_logo.svg.png"
+                                                                    alt="Gators"
+                                                                    style="height:18px; width:auto; vertical-align: -3px;">
+                </div>
+                <div class="aff-year">(2019 – 2021)</div>
+            </div>
+        </div>
+    </section>
+    -->
+
+    <!-- RESEARCH - Removed for Kayhan's website -->
+    <!--
+    <section id="research" class="my-4">
+        <h2 class="section-title"><i class="bi bi-lightbulb"></i> Research</h2>
+        <div class="cardx">
+            <div class="cardx-body">
+                <p class="mb-2">
+                    I aim to develop medical imaging AI systems from first principles: systems that do not merely
+                    achieve high benchmark
+                    performance, but that support clinically meaningful reasoning, expose their limitations, and earn
+                    trust
+                    through
+                    transparency. I view scale as a powerful tool, but not a complete solution. Large pretrained models
+                    can encode rich representations,
+                    yet they can also exhibit <em>systematic mistakes</em> driven by spurious
+                    correlations. My
+                    research studies how to detect these failure modes, diagnose their causes, and design interventions
+                    that improve
+                    reliability and robustness in real clinical settings.
+                    I organize my research along two pillars:
+                </p>
+                <ul>
+                    <li>
+                        <strong>Algorithms:</strong>
+                        interpretable and trustworthy ML via vision–language alignment and causal reasoning,
+                        enabling failure mode
+                        discovery of pre-trained blackboxes using free-form clinical language.
+                    </li>
+                    <li>
+                        <strong>Applications:</strong>
+                        breast imaging foundation models, where I study the benefits of domain-specific vision–language
+                        over
+                        generalist models for cancer detection, prognosis, and radiology report generation.
+                    </li>
+                </ul>
+                Throughout my Ph.D., I am to answer the following high-impact questions:
+                <ol class="mb-3">
+                    <li>
+                        Can we decipher the failure modes of a deep model through multimodal vision-language
+                        representations and large language models (LLMs) for improved reliability and debugging?
+                        ([<b>LADDER</b> (<a href="https://shantanu-ai.github.io/projects/ACL-2025-Ladder/index.html">ACL
+                        2025</a>)])
+                    </li>
+                    <li>
+                        Can we learn robust representations in presence of multiple biases for tabular data?
+                        [<b>Amazon internship work</b> (<a href="https://openreview.net/pdf?id=71u8OvjYbZ">TRL
+                        workshop@NeurIPS 2024</a>)]
+                    </li>
+                    <li>
+                        Can we build robust foundation models for breast cancer detection and radiology report
+                        generation?
+                        [<b>Mammo-CLIP</b> (<a href="https://shantanu-ai.github.io/projects/MICCAI-2024-Mammo-CLIP/">MICCAI
+                        2024, top 11%</a>) + <b>Mammo-FM</b> (<a href="https://www.arxiv.org/pdf/2512.00198/">ArXiv,
+                        2025</a>)]
+                    </li>
+                    <li>
+                        Can we extract symbolic rules from the representation of a blackbox model
+                        using human interpretable concepts?
+                        [<b>MoIE</b> (<a href="https://shantanu-ai.github.io/projects/ICML-2023-MoIE/">ICML 2023</a> +
+                        <a href="https://openreview.net/pdf?id=m5vnLHfNy7">SCIS@ICML 2023</a>)]
+                    </li>
+                    <li>
+                        Can we use robust mixture of interpretable models for data and computationally efficient
+                        transfer learning?
+                        [<b>MoIE-CXR</b> (<a href="https://shantanu-ai.github.io/projects/MICCAI-2023-MoIE-CXR/">MICCAI
+                        2023, top 14%</a> + <a href="https://openreview.net/pdf?id=sbOVNiSNY8">IMLH@ICML 2023</a>)]
+                    </li>
+                    <li>
+                        Can we leverage radiology reports localizing a disease and its progression without ground-truth
+                        bounding box annotation?
+                        [<b>AGXNet</b> (<a href="https://link.springer.com/chapter/10.1007/978-3-031-16443-9_63">MICCAI
+                        2022</a> + <a href="https://pubs.rsna.org/doi/10.1148/ryai.230277">RAD: AI</a>)]
+                    </li>
+                </ol>
+
+                For an overview of my Ph.D. thesis refer below:
+                <figure class="my-4">
+                    <img
+                            src="images/aims.png"
+                            class="img-fluid"
+                            style="max-height: 520px; width: 100%; object-fit: contain;"
+                            alt="Overview of thesis aims: Aim 1 explain black box, Aim 2 identify systematic errors using radiology reports, Aim 3 Mammo-FM for risk prediction and report generation via vision-language alignment."
+                    />
+<!--                    <figcaption class="text-muted mt-2" style="font-size: 0.95rem;">-->
+<!--                        <strong>Figure:</strong> Overview of my thesis aims. Vision–language alignment connects (Aim 1)-->
+<!--                        explaining the black box,-->
+<!--                        (Aim 2) identifying systematic errors using radiology reports, and (Aim 3) Mammo-FM for-->
+<!--                        interpretable risk prediction and report generation.-->
+<!--                    </figcaption>-->
+                <!-- </figure>
+
+                <p class="mb-0">
+                    At UF, I was interested broadly in biomedical informatics with a focus on causal inference. I
+                    developed deep learning models, namely
+                    <a href="https://academic.oup.com/jamia/article-abstract/28/6/1197/6139936?redirectedFrom=fulltext">DPN-SA
+                        (JAMIA 2021)</a>,
+                    <a href="https://www.sciencedirect.com/science/article/pii/S2666990021000197?via%3Dihub">PSSAM-GAN
+                        (CMPB-U 2021)</a>
+                    and <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10148269/">DR-VIDAL (AMIA 2022, oral)</a>,
+                    to compute propensity scores
+                    for the efficient estimation of individual treatment effects (ITE). For a detailed overview of my
+                    Master's research, refer to the slides available at this
+                    <a href="https://docs.google.com/presentation/d/1J5rPYsREoZhIQmybDxGy0Q-JVmDu76Kssfi08sMekiY/edit#slide=id.gfa4b813cc6_0_436">link</a>.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    </section> -->
+
+    <!-- NEWS -->
+    <section id="news" class="my-4">
+        <h2 class="section-title"><i class="bi bi-megaphone"></i> News</h2>
+        <div class="cardx">
+            <div class="cardx-body">
+                <div class="mb-3">
+                    <button class="btn btn-sm btn-outline-secondary" type="button" onclick="toggleAllNews()">
+                        Show All News
+                    </button>
+                </div>
+                <div class="mb-3" id="year-2025">
+                    <h4 class="mb-2 fw-bold">2025</h4>
+                    <ul class="news-list" id="news-2025" style="display: block;">
+                        <li><span class="news-date">[Jul 2025]</span>I am honored to have received the NSF CAREER award!</li>
+                        <li><span class="news-date">[May 2025]</span>We are excited that  NIH awarded us $3.1M to continue developing AI technology to study lung COPD.</li>
+                        <li><span class="news-date">[May 2025]</span>Congratulations to <a href="https://shantanu-ai.github.io/">Shantanu</a>! His paper, Ladder,  was accepted at ACL 2025.</li>
+                        <li><span class="news-date">[Jan 2025]</span>Congratulations to <a href="https://chyuwang.com">Chenyu</a> and Wenchao! Our paper has been accepted to NAACL!</li>
+                    </ul>
+                </div>
+                <div class="mb-3" id="year-2024" style="display: none;">
+                    <h4 class="mb-2 fw-bold">2024</h4>
+                    <ul class="news-list" id="news-2024" style="display: block;">
+                        <li><span class="news-date">[Sep 2024]</span><strong>Google Academic Research Award!</strong> Our collaborative project with Dr. Eslami and Dr. Poynton has received a Google Academic Research Award !</li>
+                        <li><span class="news-date">[Aug 2024]</span><strong>Our method to identify the disease change is out in Radiology AI!</strong> RSNA Radiology AI journal accepted our paper about disease change identification using an anatomically informed approach. Congrats to Ke and the rest of the team!</li>
+                        <li><span class="news-date">[Jun 2024]</span><strong>MedSyn paper is accepted to TMI!</strong> Congratulations to Yanwu and Li ! MedSyn is the first prompable 3D diffusion model of lung CT!</li>
+                        <li><span class="news-date">[May 2024]</span><strong>Our lab received Hariri Focus Research Award!</strong> Our collaborative project with Dr. Clare Poynton to develop a Vision Language model to audit risk models for breast cancer has received Hariri Focused Research awards!</li>
+                        <li><span class="news-date">[May 2024]</span><strong>Early accept of Mammo-CLIP in MICCAI!</strong> Vision Language Foundational model for joint embedding of mammogram image and radiology reports is early accepted to MICCAI, congrats to Shantanu !</li>
+                    </ul>
+                </div>
+                <div class="mb-3" id="year-2023" style="display: none;">
+                    <h4 class="mb-2 fw-bold">2023</h4>
+                    <ul class="news-list" id="news-2023" style="display: block;">
+                        <li><span class="news-date">[Dec 2023]</span><strong>Self-Supervised Learning paper is in MedIA!</strong> Congrats to Ke and Li for their recent paper in MedIA ! This is a way to go for Self-Supervised Learning in medical imaging .</li>
+                        <li><span class="news-date">[Sep 2023]</span><strong>Our fast diffusion paper is accepted in NeurIPs!</strong> Congrats to Yanwu for his second NeurIPs paper ! We are going to have more development in this direction soon!</li>
+                        <li><span class="news-date">[Sep 2023]</span><strong>Our paper about shortcut learning is accepted to TMLR!</strong> Congratulations to Niahl for his first journal paper in TMLR ! The pre-print is available here and the final camera-ready, code and video will be out soon!</li>
+                        <li><span class="news-date">[Jul 2023]</span><strong>The harmonization paper is accepted to NeuroImage Clinical!</strong> Congratulation to Max Reynolds for his first journal in NeuroImage Clinical Journal! The paper revisits the COMBAT method from a fully Bayesian point of view.</li>
+                        <li><span class="news-date">[Jun 2023]</span><strong>Two early acceptances in MICCAI 2023!</strong> Congratulations to Shantanu and Matthew for their first papers in MICCAI, both early accept! I am very proud of them. Links to the paper and code are coming out soon.</li>
+                        <li><span class="news-date">[Jun 2023]</span><strong>Imaging-Transcriptomics paper is accept to the COPD journal!</strong> We use DL techniques to define new COPD axes using CT imaging and gene expression data. Congratulation to Junxiang for his paper in the COPD Journal ! The pre-print is here !</li>
+                        <li><span class="news-date">[Apr 2023]</span><strong>One paper is accepted to ICML 23!</strong> Congratulations to Shantanu and Ke ! Their first paper is accepted to ICML 2023. Find the paper, code, and more on the project page .</li>
+                    </ul>
+                </div>
+                <div class="mb-3" id="year-2022" style="display: none;">
+                    <h4 class="mb-2 fw-bold">2022</h4>
+                    <ul class="news-list" id="news-2022" style="display: block;">
+                        <li><span class="news-date">[Oct 2022]</span><strong>One paper is accepted to WACV!</strong> Congrats to Sumedha and Nihal for their paper in WACV ! They showed how our previous work on Counterfactual Explainer could be used to fix an overconfident BlackBox classifier!</li>
+                        <li><span class="news-date">[Sep 2022]</span><strong>Yingci's manuscript is accepted to the oral oncology!</strong> Happy for Yingci! Her manuscript has been accepted to Oral Oncology!</li>
+                        <li><span class="news-date">[Sep 2022]</span><strong>Counterfactual blackbox explanation paper is accepted to MedIA!</strong> Congratulation to Sumedha and her team! Her manuscript on counterfactual model explanation paper is finally accepted for a special issue in MedIA about XAI! The very initial pre-print is here; the full version is coming out soon! I am thankful to Motahare for her amazing contribution to the paper.</li>
+                        <li><span class="news-date">[Jun 2022]</span><strong>Two papers are accepted in MICCAI 2022!</strong> Two papers are accepted in MICCAI 2022 ! Congrats to Ke Yu, Yanwu Xu , and Shantanu Ghosh !</li>
+                        <li><span class="news-date">[Apr 2022]</span><strong>An efficient 3D GANs is finally out!</strong> Congratulations to Li and his team for their big paper in IEEE JBHI that makes volumetric GANs possible for high-resolution medical images. They made a huge effort, and I am proud of them!</li>
+                        <li><span class="news-date">[Mar 2022]</span><strong>Yanwu's Paper about Adversarial Spatial Perturbation is accepted to CVPR!</strong> Congratulations to Yanwu for his CVPR paper! His method uses the Maximal Spatial Perturbation idea that significantly enhances image-to-image translation!</li>
+                    </ul>
+                </div>
+                <div class="mb-3" id="year-2021" style="display: none;">
+                    <h4 class="mb-2 fw-bold">2021</h4>
+                    <ul class="news-list" id="news-2021" style="display: block;">
+                        <li><span class="news-date">[Dec 2021]</span><strong>Our paper about Knowledge Distillation is accepted to AAAI 21!</strong> Congratulations to Ardavan, Li ! Their paper is accepted to AAAI 21! The link and code will be posted soon.</li>
+                        <li><span class="news-date">[Sep 2021]</span><strong>Our collaborative work with MIT is accepted to NeurIPS!</strong> Our collaborative work with Suvrit's group about shortcuts in Self-supervised Learning is accepted to NeurIPS! Congratulations to Joshua , Li , and Ke !</li>
+                        <li><span class="news-date">[Sep 2021]</span><strong>Our paper is accepted to Radiology AI!</strong> Congratulations to Brian ! His paper about estimating liver elastography is accepted to the Radiology AI journal!</li>
+                        <li><span class="news-date">[Jun 2021]</span><strong>Two papers are accepted to MICCAI 2021!</strong> Two papers are accepted in the MICCAI 2021! Congratulations to Sumedha and Rohit !</li>
+                        <li><span class="news-date">[Jun 2021]</span><strong>One paper is accepted to MLHC 2021!</strong> Congrats to Ardavan and Sumedha! Their paper is accepted to the Machine Learning in Healthcare, MLHC 2021 !</li>
+                        <li><span class="news-date">[May 2021]</span><strong>Invited for Senior Vice Chancellor's Research Seminar!</strong> I'm very honored to give Senior Vice Chancellor's Research Seminar today. I'll present research done by brilliant students and postdocs at BatmanLab!</li>
+                        <li><span class="news-date">[May 2021]</span><strong>One Early Acceptance to MICCAI!</strong> I am excited for Rohit Jena ! His paper received Early Acceptance in MICCAI 2021 ! Pre-print is here !</li>
+                    </ul>
+                </div>
+                <div class="mb-3" id="year-2020" style="display: none;">
+                    <h4 class="mb-2 fw-bold">2020</h4>
+                    <ul class="news-list" id="news-2020" style="display: block;">
+                        <li><span class="news-date">[Dec 2020]</span><strong>Our paper is accepted to Medical Physics Journal!</strong> I am happy for Sumedha ! Her first journal is accepted to Medical Physics !</li>
+                        <li><span class="news-date">[Dec 2020]</span><strong>One paper is accepted to AAAI 2021!</strong> Congratulations to Li Sun and Ke Yu for their joint paper in AAAI 2021! Their paper show how to incorporate anatomically relevant context to self-supervised learning!</li>
+                        <li><span class="news-date">[Oct 2020]</span><strong>Ke's journal is accepted to ACM JCIM!</strong> Congratulations to Ke Yu ! His paper is accepted to the Journal of Chemical Information and Modeling . The method integrates drug taxonomy with chemical structure and enables localizing novel molecules in the context of the clinically approved drugs.</li>
+                        <li><span class="news-date">[Oct 2020]</span><strong>Brian and Stephen won an award for the liver project!</strong> Congratulations to Brian ! His collaborative work with Stephen Cai and Amir Borhani on estimating liver stiffness using a machine learning method received Cum Laude Award from the 43rd Society of Body Imaging Conference .</li>
+                        <li><span class="news-date">[Sep 2020]</span><strong>Our paper is accepted to the Oxford Bioinformatics Journal!</strong> Congratulations to Mingming Gong ! His awesome paper ( Preprint ) is accepted to the Oxford Bioinformatics Journal ! Fundamental and rigorous research for inference of statical independence which uses unpaired data!</li>
+                        <li><span class="news-date">[Aug 2020]</span><strong>Giving talk at the Oxford ML Summer School!</strong> I am excited to present at the Oxford ML Summer School ( OxML 2020 )! I will talk about various applications and challenges of Machine Learning in Medical Imaging!</li>
+                        <li><span class="news-date">[Jun 2020]</span><strong>One paper is accepted to ICML 2020!</strong> Our paper ( Label-Noise Robust Domain Adaptation ) is accepted to ICML 2020! Congrats to Xiyu Yu and the team!</li>
+                        <li><span class="news-date">[Jan 2020]</span><strong>Giving a talk in DeepMind about XAI for Healthcare!</strong> Excited to give a talk in DeepMind about Real-World Applications of Explainable Models in Medical Imaging!</li>
+                    </ul>
+                </div>
+                <div class="mb-3" id="year-2019" style="display: none;">
+                    <h4 class="mb-2 fw-bold">2019</h4>
+                    <ul class="news-list" id="news-2019" style="display: block;">
+                        <li><span class="news-date">[Dec 2019]</span><strong>One paper is accepted to ICLR as a spotlight!</strong> Our paper ( Explanation by Progressive Exaggeration ) is accepted as a Spotlight paper to ICLR 2020 ! Congrats to Sumedha !</li>
+                        <li><span class="news-date">[Nov 2019]</span><strong>Two papers are accepted to the AAAI!</strong> Two papers ( #1 , #2 ) are accepted to AAAI 2020 ! Big congrats to Junxiang Chen , Yanwu Xu , and Mingming Gong !</li>
+                        <li><span class="news-date">[Oct 2019]</span><strong>Giving a talk at SAP Machine Learning Retreat!</strong> Excited to give a talk about our recent NeurIPS paper at SAP Research Retreat !</li>
+                        <li><span class="news-date">[Sep 2019]</span><strong>Our paper is accepted to NeurIPs as a spotlight paper!</strong> Our manuscript is accepted to NeurIPS 2019 (Spotlight 2.4%)! Big congrats to Mingming and Yanwu ! The code is in this repo .</li>
+                        <li><span class="news-date">[Feb 2019]</span><strong>Mingming will be Lecturer at Stat Department in Melbourne University!</strong> First BatmanLab alumni! Congratulation to Mingming for accepting a new position as a lecturer (Assistant Professor) at the School of Mathematics and Statistics at the University of Melbourne!</li>
+                    </ul>
+                </div>
+                <div class="mb-3" id="year-2018" style="display: none;">
+                    <h4 class="mb-2 fw-bold">2018</h4>
+                    <ul class="news-list" id="news-2018" style="display: block;">
+                        <li><span class="news-date">[Sep 2018]</span>Our collaborative proposal with Suvrit Sra (MIT) received $600K from the NSF Division of Mathematical Sciences !</li>
+                        <li><span class="news-date">[Jun 2018]</span>Mingming 's team won the single image depth prediction competition in Robust Vision Challenge 2018 !</li>
+                        <li><span class="news-date">[May 2018]</span>We are awarded a large R01 ($2.8M with indirect) to develop an approach to integrate Radiomic data with Genetic for characterization of Chronic Obstructive Pulmonary Disease (COPD).</li>
+                        <li><span class="news-date">[Apr 2018]</span>Congratulations to Sumedha for the Early Acceptance of her first paper to MICCAI !</li>
+                        <li><span class="news-date">[Apr 2018]</span>We are awarded $390K to develop methods for multimodal learning in collaboration with SAP research .</li>
+                        <li><span class="news-date">[Feb 2018]</span>Congratulations to Mingming Gong –two CVPR papers have been accepted!</li>
+                    </ul>
+                </div>
+                <div class="mb-3" id="year-2017" style="display: none;">
+                    <h4 class="mb-2 fw-bold">2017</h4>
+                    <ul class="news-list" id="news-2017" style="display: block;">
+                        <li><span class="news-date">[May 2017]</span>Congrats to Yashin ! A coalition of the BatmanLab (ourLab) and MedGIFT won the tuberculosis Multi-drug resistance competition .</li>
+                    </ul>
+                </div>
+                <div class="mt-3 text-center">
+                    <button class="btn btn-sm btn-outline-secondary" type="button" onclick="toggleAllNews()">
+                        Show All News
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PUBLICATIONS -->
+    <section id="publication" class="my-4">
+        <h2 class="section-title"><i class="bi bi-journal-richtext"></i> Publications</h2>
+
+        <div class="d-grid gap-3">
+            <div class="mb-3">
+                <button class="btn btn-sm btn-outline-secondary" type="button" onclick="toggleAllPublications()">
+                    Show All Publications
+                </button>
+            </div>
+            
+            <div id="year-pub-2025">
+            <h4 class="mt-4 mb-3 fw-bold">2025</h4>
+            <article class="item-row">
+                <img src="images/publications/2025_01_LADDER_Language_Driven_Slice_Discovery.png" alt="LADDER: Language-Driven Slice Discovery and Error Rectification in Vision Classifiers thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">LADDER: Language-Driven Slice Discovery and Error Rectification in Vision Classifiers</h5>
+                    <div class="muted mb-2">
+                        Shantanu Ghosh, Rayan Syed, Chenyu Wang, Vaibhav Choudhary, Binxu Li, Clare B. Poynton, Shyam Visweswaran, <b>Kayhan Batmanghelich</b>
+                    </div>
+                    <div class="mb-1"><span class="fw-semibold">Venue:</span> Findings of the Association for Computational Linguistics: ACL 2025</div>
+                    <div class="meta-links mb-2"><a href="https://aclanthology.org/2025.findings-acl.1177/"><i class="bi bi-file-earmark-text"></i> Paper</a> <a href="https://arxiv.org/abs/2408.07832"><i class="bi bi-cloud-download"></i> Preprint</a> <a href="https://github.com/batmanlab/Ladder"><i class="bi bi-github"></i> Code</a> <a href="https://shantanu-ai.github.io/projects/ACL-2025-Ladder/index.html"><i class="bi bi-box-arrow-up-right"></i> Project</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_ghosh2025ladder')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_ghosh2025ladder" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@inproceedings{ghosh-etal-2025-ladder,
+  title = "{LADDER}: Language-Driven Slice Discovery and Error Rectification in Vision Classifiers",
+  author = "Ghosh, Shantanu  and
+    Syed, Rayan  and
+    Wang, Chenyu  and
+    Choudhary, Vaibhav  and
+    Li, Binxu  and
+    Poynton, Clare B  and
+    Visweswaran, Shyam  and
+    Batmanghelich, Kayhan",
+  editor = "Che, Wanxiang  and
+    Nabende, Joyce  and
+    Shutova, Ekaterina  and
+    Pilehvar, Mohammad Taher",
+  booktitle = "Findings of the Association for Computational Linguistics: ACL 2025",
+  month = jul,
+  year = "2025",
+  address = "Vienna, Austria",
+  publisher = "Association for Computational Linguistics",
+  url = "https://aclanthology.org/2025.findings-acl.1177/",
+  pages = "22935--22970",
+  ISBN = "979-8-89176-256-5"
+}</code></pre>
+                </div>
+                </div>
+            </article>
+            <article class="item-row">
+                <img src="images/publications/naacl_2025.png" alt="Semantic Consistency-Based Uncertainty Quantification for Factuality in Radiology Report Generation thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">Semantic Consistency-Based Uncertainty Quantification for Factuality in Radiology Report Generation</h5>
+                    <div class="muted mb-2">
+                        Chenyu Wang, Weichao Zhou, Shantanu Ghosh, <b>Kayhan Batmanghelich</b>, Wenchao Li
+                    </div>
+                    <div class="mb-1"><span class="fw-semibold">Venue:</span> Findings of NAACL, 2025</div>
+                    <div class="meta-links mb-2"><a href="https://arxiv.org/abs/2412.04606"><i class="bi bi-cloud-download"></i> Preprint</a> <a href="https://github.com/BU-DEPEND-Lab/SCUQ-RRG"><i class="bi bi-github"></i> Code</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_wang2025semantic')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_wang2025semantic" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@inproceedings{wang2025semantic,
+  title={Semantic Consistency-Based Uncertainty Quantification for Factuality in Radiology Report Generation},
+  author={Wang, Chenyu and Zhou, Weichao and Ghosh, Shantanu and Batmanghelich, Kayhan and Li, Wenchao},
+  booktitle={Findings of the Association for Computational Linguistics: NAACL 2025},
+  year={2025},
+  url={https://arxiv.org/abs/2412.04606}
+}</code></pre>
+                </div>
+                </div>
+            </article>
+            <article class="item-row">
+                <img src="images/publications/HCI_paper25.png" alt="A Human-Centered Approach to Identifying Promises, Risks, \&amp; Challenges of Text-to-Image Generative AI in Radiology thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">A Human-Centered Approach to Identifying Promises, Risks, \&amp; Challenges of Text-to-Image Generative AI in Radiology</h5>
+                    <div class="muted mb-2">
+                        Katelyn Morrison, Arpit Mathur, Aidan Bradshaw, Tom Wartmann, Steven Lundi, Afrooz Zandifar, Weichang Dai, <b>Kayhan Batmanghelich</b>, Motahhare Eslami, Adam Perer
+                    </div>
+                    <div class="mb-1"><span class="fw-semibold">Venue:</span> Proceedings of the AAAI/ACM Conference on AI, Ethics, and Society</div>
+                    <div class="meta-links mb-2"><a href="https://ojs.aaai.org/index.php/AIES/article/view/36672/38810"><i class="bi bi-file-earmark-text"></i> Paper</a> <a href="https://arxiv.org/abs/2507.16207"><i class="bi bi-cloud-download"></i> Preprint</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_morrison2025')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_morrison2025" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@inproceedings{morrison2025human,
+  title={A Human-centered approach to identifying promises, risks, \&amp; challenges of text-to-image generative AI in radiology},
+  author={Morrison, Katelyn and Mathur, Arpit and Bradshaw, Aidan and Wartmann, Tom and Lundi, Steven and Zandifar, Afrooz and Dai, Weichang and Batmanghelich, Kayhan and Eslami, Motahhare and Perer, Adam},
+  booktitle={Proceedings of the AAAI/ACM Conference on AI, Ethics, and Society},
+  volume={8},
+  number={2},
+  pages={1758--1770},
+  year={2025}
+}</code></pre>
+                </div>
+                </div>
+            </article>
+            <article class="item-row">
+                <img src="images/publications/Bioinf_mediation.png" alt="High-dimensional causal mediation analysis by partial sum statistic and sample splitting strategy in imaging genetics application thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">High-dimensional causal mediation analysis by partial sum statistic and sample splitting strategy in imaging genetics application</h5>
+                    <div class="muted mb-2">
+                        Hung-Ching Chang, Yusi Fang, Michael T Gorczyca, <b>Kayhan Batmanghelich</b>, George C Tseng
+                    </div>
+                    <div class="mb-1"><span class="fw-semibold">Venue:</span> Bioinformatics</div>
+                    <div class="meta-links mb-2"><a href="https://academic.oup.com/bioinformatics/article/41/10/btaf493/8250682"><i class="bi bi-file-earmark-text"></i> Paper</a> <a href="https://www.medrxiv.org/content/10.1101/2024.06.23.24309362v1"><i class="bi bi-cloud-download"></i> Preprint</a> <a href="https://github.com/hung-ching-chang/PS5Med"><i class="bi bi-github"></i> Code</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_chang2025')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_chang2025" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@article{chang2025high,
+  title={High-dimensional causal mediation analysis by partial sum statistic and sample splitting strategy in imaging genetics application},
+  author={Chang, Hung-Ching and Fang, Yusi and Gorczyca, Michael T and Batmanghelich, Kayhan and Tseng, George C},
+  journal={Bioinformatics},
+  volume={41},
+  number={10},
+  pages={btaf493},
+  year={2025},
+  publisher={Oxford University Press}
+}</code></pre>
+                </div>
+                </div>
+            </article>
+            <article class="item-row">
+                <img src="images/publications/JMIR_2025.png" alt="Performance of Natural Language Processing versus International Classification of Diseases Codes in Building Registries for Patients With Fall Injury: Retrospective Analysis thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">Performance of Natural Language Processing versus International Classification of Diseases Codes in Building Registries for Patients With Fall Injury: Retrospective Analysis</h5>
+                    <div class="muted mb-2">
+                        Atta Taseh, Souri Sasanfar, Michelle Chan, Evan Sirls, Ara Nazarian, <b>Kayhan Batmanghelich</b>, Jonathan F Bean, Soheil Ashkani-Esfahani
+                    </div>
+                    <div class="mb-1"><span class="fw-semibold">Venue:</span> JMIR Medical Informatics</div>
+                    <div class="meta-links mb-2"><a href="https://medinform.jmir.org/2025/1/e66973/"><i class="bi bi-file-earmark-text"></i> Paper</a> <a href="https://www.medrxiv.org/content/10.1101/2024.09.26.24314444v1.full.pdf"><i class="bi bi-cloud-download"></i> Preprint</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_taseh2025')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_taseh2025" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@article{taseh2025performance,
+  title={Performance of Natural Language Processing versus International Classification of Diseases Codes in Building Registries for Patients With Fall Injury: Retrospective Analysis},
+  author={Taseh, Atta and Sasanfar, Souri and Chan, Michelle and Sirls, Evan and Nazarian, Ara and Batmanghelich, Kayhan and Bean, Jonathan F and Ashkani-Esfahani, Soheil},
+  journal={JMIR Medical Informatics},
+  volume={13},
+  number={1},
+  pages={e66973},
+  year={2025},
+  publisher={JMIR Publications Inc., Toronto, Canada}
+}</code></pre>
+                </div>
+                </div>
+            </article>
+            <article class="item-row">
+                <img src="images/publications/Li2025_WACV.png" alt="Multi-Modal Large Language Models are Effective Vision Learners thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">Multi-Modal Large Language Models are Effective Vision Learners</h5>
+                    <div class="muted mb-2">
+                        Li Sun, Chaitanya Ahuja, Peng Chen, Matt D&#x27;Zmura, <b>Kayhan Batmanghelich</b>, Philip Bontrager
+                    </div>
+                    <div class="mb-1"><span class="fw-semibold">Venue:</span> 2025 IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)</div>
+                    <div class="meta-links mb-2"><a href="https://ieeexplore.ieee.org/document/10943608"><i class="bi bi-file-earmark-text"></i> Paper</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_sun2025')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_sun2025" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@inproceedings{sun2025multi,
+  title={Multi-Modal Large Language Models are Effective Vision Learners},
+  author={Sun, Li and Ahuja, Chaitanya and Chen, Peng and D'Zmura, Matt and Batmanghelich, Kayhan and Bontrager, Philip},
+  booktitle={2025 IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},
+  pages={8617--8626},
+  year={2025},
+  organization={IEEE}
+}</code></pre>
+                </div>
+                </div>
+            </article>
+            </div>
+            <div id="year-pub-2024">
+            <h4 class="mt-4 mb-3 fw-bold">2024</h4>
+            <article class="item-row">
+                <img src="images/publications/2024_01_MedSyn_Text_guided_Anatomy_aware_Synthesis_of_High_Fidelity_3D_CT_Images.png" alt="MedSyn: Text-guided Anatomy-aware Synthesis of High-Fidelity 3D CT Images thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">MedSyn: Text-guided Anatomy-aware Synthesis of High-Fidelity 3D CT Images</h5>
+                    <div class="muted mb-2">
+                        Yanwu Xu, Li Sun, Wei Peng, Shuyue Jia, Katelyn Morrison, Adam Perer, Afrooz Zandifar, Shyam Visweswaran, Motahhare Eslami, <b>Kayhan Batmanghelich</b>
+                    </div>
+                    <div class="mb-1"><span class="fw-semibold">Venue:</span> IEEE Transactions on Medical Imaging</div>
+                    <div class="meta-links mb-2"><a href="https://ieeexplore.ieee.org/document/10566053"><i class="bi bi-file-earmark-text"></i> Paper</a> <a href="https://arxiv.org/abs/2310.03559"><i class="bi bi-cloud-download"></i> Preprint</a> <a href="https://github.com/batmanlab/MedSyn"><i class="bi bi-github"></i> Code</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_16299')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_16299" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@article{xu2024medsyn,
+  title={MedSyn: text-guided anatomy-aware synthesis of high-fidelity 3-D CT images},
+  author={Xu, Yanwu and Sun, Li and Peng, Wei and Jia, Shuyue and Morrison, Katelyn and Perer, Adam and Zandifar, Afrooz and Visweswaran, Shyam and Eslami, Motahhare and Batmanghelich, Kayhan},
+  journal={IEEE Transactions on Medical Imaging},
+  volume={43},
+  number={10},
+  pages={3648--3660},
+  year={2024},
+  publisher={IEEE}
+}</code></pre>
+                </div>
+                    
+                </div>
+            </article>
+            <article class="item-row">
+                <img src="images/publications/2024_02_Mammo_CLIP_A_Vision_Language_Foundation_Model_to_Enhance_Data_Efficiency_and_Rob.png" alt="Mammo-CLIP: A Vision Language Foundation Model to Enhance Data Efficiency and Robustness in Mammography thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">Mammo-CLIP: A Vision Language Foundation Model to Enhance Data Efficiency and Robustness in Mammography</h5>
+                    <div class="muted mb-2">
+                        Shantanu Ghosh, Clare B Poynton, Shyam Visweswaran, <b>Kayhan Batmanghelich</b>
+                    </div>
+                    <div class="mb-1"><span class="fw-semibold">Venue:</span> International conference on medical image computing and computer-assisted intervention</div>
+                    <div class="meta-links mb-2"><a href="https://papers.miccai.org/miccai-2024/488-Paper0926.html"><i class="bi bi-file-earmark-text"></i> Paper</a> <a href="https://arxiv.org/abs/2405.12255"><i class="bi bi-cloud-download"></i> Preprint</a> <a href="https://github.com/batmanlab/Mammo-CLIP"><i class="bi bi-github"></i> Code</a> <a href="https://shantanu-ai.github.io/projects/MICCAI-2024-Mammo-CLIP/"><i class="bi bi-box-arrow-up-right"></i> Project</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_87971')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_87971" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@inproceedings{ghosh2024mammo,
+  title={Mammo-clip: A vision language foundation model to enhance data efficiency and robustness in mammography},
+  author={Ghosh, Shantanu and Poynton, Clare B and Visweswaran, Shyam and Batmanghelich, Kayhan},
+  booktitle={International conference on medical image computing and computer-assisted intervention},
+  pages={632--642},
+  year={2024},
+  organization={Springer Nature Switzerland Cham}
+}</code></pre>
+                </div>
+                    
+                </div>
+            </article>
+            <article class="item-row">
+                <img src="images/publications/2024_03_Anatomy_specific_Progression_Classification_in_Chest_Radiographs_via_Weakly_Supe.png" alt="Anatomy-specific Progression Classification in Chest Radiographs via Weakly Supervised Learning thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">Anatomy-specific Progression Classification in Chest Radiographs via Weakly Supervised Learning</h5>
+                    <div class="muted mb-2">
+                        Ke Yu, Shantanu Ghosh, Zhexiong Liu, Christopher Deible, Clare B Poynton, <b>Kayhan Batmanghelich</b>
+                    </div>
+                    <div class="mb-1"><span class="fw-semibold">Venue:</span> Radiology: Artificial Intelligence</div>
+                    <div class="meta-links mb-2"><a href="https://pubmed.ncbi.nlm.nih.gov/39046325/"><i class="bi bi-file-earmark-text"></i> Paper</a> <a href="https://github.com/batmanlab/SiameseAGXNet"><i class="bi bi-github"></i> Code</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_54965')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_54965" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@article{yu2024anatomy,
+  title={Anatomy-specific Progression Classification in Chest Radiographs via Weakly Supervised Learning},
+  author={Yu, Ke and Ghosh, Shantanu and Liu, Zhexiong and Deible, Christopher and Poynton, Clare B and Batmanghelich, Kayhan},
+  journal={Radiology: Artificial Intelligence},
+  volume={6},
+  number={5},
+  pages={e230277},
+  year={2024},
+  publisher={Radiological Society of North America}
+}</code></pre>
+                </div>
+                    
+                </div>
+            </article>
+            </div>
+            <div id="year-pub-2023" style="display: none;">
+            <h4 class="mt-4 mb-3 fw-bold">2023</h4>
+            <article class="item-row">
+                <img src="images/publications/2023_01_Semi_Implicit_Denoising_Diffusion_Models_SIDDMs.png" alt="Semi-Implicit Denoising Diffusion Models (SIDDMs) thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">Semi-Implicit Denoising Diffusion Models (SIDDMs)</h5>
+                    <div class="muted mb-2">
+                        Mingming Gong, Shaoan Xie, Wei Wei, Matthias Grundmann, <b>Kayhan Batmanghelich</b>, Tingbo Hou, others
+                    </div>
+                    <div class="mb-1"><span class="fw-semibold">Venue:</span> Advances in Neural Information Processing Systems</div>
+                    <div class="meta-links mb-2"><a href="https://openreview.net/forum?id=gaktiSjatl"><i class="bi bi-file-earmark-text"></i> Paper</a> <a href="https://arxiv.org/abs/2306.12511"><i class="bi bi-cloud-download"></i> Preprint</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_94727')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_94727" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@inproceedings{gong2023semi,
+  title={Semi-implicit denoising diffusion models (siddms)},
+  author={Gong, Mingming and Xie, Shaoan and Wei, Wei and Grundmann, Matthias and Batmanghelich, Kayhan and Hou, Tingbo and others},
+  booktitle={Advances in Neural Information Processing Systems},
+  volume={36},
+  pages={17383--17394},
+  year={2023}
+}</code></pre>
+                </div>
+                    
+                </div>
+            </article>
+            <article class="item-row">
+                <img src="images/publications/2023_02_DrasCLR_Self_Supervised_Representation_Learning_via_Disentangled_Representations.png" alt="DrasCLR: Self-Supervised Representation Learning via Disentangled Representations and Spectral Clustering thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">DrasCLR: Self-Supervised Representation Learning via Disentangled Representations and Spectral Clustering</h5>
+                    <div class="muted mb-2">
+                        Li Sun, Ke Yu, <b>Kayhan Batmanghelich</b>
+                    </div>
+                    <div class="mb-1"><span class="fw-semibold">Venue:</span> Proceedings of the AAAI Conference on Artificial Intelligence</div>
+                    <div class="meta-links mb-2"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10872608/"><i class="bi bi-file-earmark-text"></i> Paper</a> <a href="https://arxiv.org/abs/2302.10390"><i class="bi bi-cloud-download"></i> Preprint</a> <a href="https://github.com/batmanlab/DrasCLR"><i class="bi bi-github"></i> Code</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_21197')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_21197" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@inproceedings{sun2021context,
+  title={Context matters: Graph-based self-supervised representation learning for medical images},
+  author={Sun, Li and Yu, Ke and Batmanghelich, Kayhan},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={35},
+  number={6},
+  pages={4874--4882},
+  year={2021}
+}
+</code></pre>
+                </div>
+                </div>
+            </article>
+            <article class="item-row">
+                <img src="images/publications/2023_kmnist_expts-600x321.jpg" alt="Beyond Distribution Shift: Spurious Features Through the Lens of Training Dynamics thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">Beyond Distribution Shift: Spurious Features Through the Lens of Training Dynamics</h5>
+                    <div class="muted mb-2">
+                        Nihal Murali, Aahlad Puli, Ke Yu, Rajesh Ranganath, <b>Kayhan Batmanghelich</b>
+                    </div>
+                    <div class="mb-1"><span class="fw-semibold">Venue:</span> Transactions on machine learning research</div>
+                    <div class="meta-links mb-2"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11029547/"><i class="bi bi-file-earmark-text"></i> Paper</a> <a href="https://arxiv.org/abs/2302.09344"><i class="bi bi-cloud-download"></i> Preprint</a> <a href="https://github.com/batmanlab/TMLR23_Dynamics_of_Spurious_Features"><i class="bi bi-github"></i> Code</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_29576')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_29576" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@article{murali2023beyond,
+  title={Beyond distribution shift: Spurious features through the lens of training dynamics},
+  author={Murali, Nihal and Puli, Aahlad and Yu, Ke and Ranganath, Rajesh and Batmanghelich, Kayhan},
+  journal={Transactions on machine learning research},
+  volume={2023},
+  pages={https--openreview},
+  year={2023}
+}</code></pre>
+                </div>
+                    
+                </div>
+            </article>
+            <article class="item-row">
+                <img src="images/publications/2023_04_ComBat_Harmonization_Empirical_Bayes_versus_fully_Bayes_approaches.png" alt="ComBat Harmonization: Empirical Bayes versus fully Bayes approaches thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">ComBat Harmonization: Empirical Bayes versus fully Bayes approaches</h5>
+                    <div class="muted mb-2">
+                        Maxwell Reynolds, Tigmanshu Chaudhary, Mahbaneh Eshaghzadeh Torbati, Dana L Tudorascu, <b>Kayhan Batmanghelich</b>, Alzheimer&#x27;s Disease Neuroimaging Initiative, others
+                    </div>
+                    <div class="mb-1"><span class="fw-semibold">Venue:</span> NeuroImage: Clinical</div>
+                    <div class="meta-links mb-2"><a href="https://www.sciencedirect.com/science/article/pii/S2213158223001638"><i class="bi bi-file-earmark-text"></i> Paper</a> <a href="https://www.biorxiv.org/content/10.1101/2022.07.13.499561v1.full.pdf"><i class="bi bi-cloud-download"></i> Preprint</a> <a href="https://github.com/batmanlab/BayesComBat"><i class="bi bi-github"></i> Code</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_29320')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_29320" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@article{reynolds2023combat,
+  title={Combat harmonization: Empirical bayes versus fully bayes approaches},
+  author={Reynolds, Maxwell and Chaudhary, Tigmanshu and Torbati, Mahbaneh Eshaghzadeh and Tudorascu, Dana L and Batmanghelich, Kayhan and Alzheimer&#x27;s Disease Neuroimaging Initiative and others},
+  journal={NeuroImage: Clinical},
+  volume={39},
+  pages={103472},
+  year={2023},
+  publisher={Elsevier}
+}</code></pre>
+                </div>
+                    
+                </div>
+            </article>
+            <article class="item-row">
+                <img src="images/publications/2023_05_Distilling_Blackbox_to_Interpretable_Models_for_Efficient_Transfer_Learning.png" alt="Distilling Blackbox to Interpretable Models for Efficient Transfer Learning thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">Distilling Blackbox to Interpretable Models for Efficient Transfer Learning</h5>
+                    <div class="muted mb-2">
+                        Shantanu Ghosh, Ke Yu, <b>Kayhan Batmanghelich</b>
+                    </div>
+                    <div class="mb-1"><span class="fw-semibold">Venue:</span> International Conference on Medical Image Computing and Computer-Assisted Intervention</div>
+                    <div class="meta-links mb-2"><a href="https://link.springer.com/chapter/10.1007/978-3-031-43895-0_59"><i class="bi bi-file-earmark-text"></i> Paper</a> <a href="https://github.com/batmanlab/MICCAI-2023-Route-interpret-repeat-CXRs"><i class="bi bi-github"></i> Code</a> <a href="https://shantanu-ai.github.io/projects/MICCAI-2023-MoIE-CXR/"><i class="bi bi-box-arrow-up-right"></i> Project</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_82583')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_82583" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@inproceedings{ghosh2023distilling,
+  title={Distilling blackbox to interpretable models for efficient transfer learning},
+  author={Ghosh, Shantanu and Yu, Ke and Batmanghelich, Kayhan},
+  booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention},
+  pages={628--638},
+  year={2023},
+  organization={Springer Nature Switzerland Cham}
+}</code></pre>
+                </div>
+                    
+                </div>
+            </article>
+            <article class="item-row">
+                <img src="images/publications/2023_06_Physics_Informed_Neural_Networks_for_Tissue_Elasticity_Reconstruction_in_Magneti.png" alt="Physics-Informed Neural Networks for Tissue Elasticity Reconstruction in Magnetic Resonance Elastography thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">Physics-Informed Neural Networks for Tissue Elasticity Reconstruction in Magnetic Resonance Elastography</h5>
+                    <div class="muted mb-2">
+                        Matthew Ragoza, <b>Kayhan Batmanghelich</b>
+                    </div>
+                    <div class="mb-1"><span class="fw-semibold">Venue:</span> International Conference on Medical Image Computing and Computer-Assisted Intervention</div>
+                    <div class="meta-links mb-2"><a href="https://link.springer.com/chapter/10.1007/978-3-031-43999-5_32"><i class="bi bi-file-earmark-text"></i> Paper</a> <a href="https://github.com/batmanlab/MRE-PINN"><i class="bi bi-github"></i> Code</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_52510')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_52510" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@inproceedings{ragoza2023physics,
+  title={Physics-informed neural networks for tissue elasticity reconstruction in magnetic resonance elastography},
+  author={Ragoza, Matthew and Batmanghelich, Kayhan},
+  booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention},
+  pages={333--343},
+  year={2023},
+  organization={Springer Nature Switzerland Cham}
+}</code></pre>
+                </div>
+                    
+                </div>
+            </article>
+            <article class="item-row">
+                <img src="images/publications/2023_07_Deep_Learning_Integration_of_Chest_CT_Imaging_and_Gene_Expression_Identifies_Nov.png" alt="Deep Learning Integration of Chest CT Imaging and Gene Expression Identifies Novel Aspects of COPD thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">Deep Learning Integration of Chest CT Imaging and Gene Expression Identifies Novel Aspects of COPD</h5>
+                    <div class="muted mb-2">
+                        Junxiang Chen, Zhonghui Xu, Li Sun, Ke Yu, Craig P Hersh, Adel Boueiz, John E Hokanson, Frank C Sciurba, Edwin K Silverman, Peter J Castaldi, others
+                    </div>
+                    <div class="mb-1"><span class="fw-semibold">Venue:</span> Chronic Obstructive Pulmonary Diseases: Journal of the COPD Foundation</div>
+                    <div class="meta-links mb-2"><a href="https://pubmed.ncbi.nlm.nih.gov/37413999/"><i class="bi bi-file-earmark-text"></i> Paper</a> <a href="https://www.medrxiv.org/content/10.1101/2022.09.26.22280242v2"><i class="bi bi-cloud-download"></i> Preprint</a> <a href="https://github.com/batmanlab/IEA"><i class="bi bi-github"></i> Code</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_75092')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_75092" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@article{chen2023deep,
+  title={Deep learning integration of chest computed tomography imaging and gene expression identifies novel aspects of copd},
+  author={Chen, Junxiang and Xu, Zhonghui and Sun, Li and Yu, Ke and Hersh, Craig P and Boueiz, Adel and Hokanson, John E and Sciurba, Frank C and Silverman, Edwin K and Castaldi, Peter J and others},
+  journal={Chronic Obstructive Pulmonary Diseases: Journal of the COPD Foundation},
+  volume={10},
+  number={4},
+  pages={355},
+  year={2023}
+}</code></pre>
+                </div>
+                    
+                </div>
+            </article>
+            <article class="item-row">
+                <img src="images/publications/2023_08_Dividing_and_Conquering_a_BlackBox_to_a_Mixture_of_Interpretable_Models_Route_In.png" alt="Dividing and Conquering a BlackBox to a Mixture of Interpretable Models: Route, Interpret, Repeat thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">Dividing and Conquering a BlackBox to a Mixture of Interpretable Models: Route, Interpret, Repeat</h5>
+                    <div class="muted mb-2">
+                        Shantanu Ghosh, Ke Yu, <b>Kayhan Batmanghelich</b>
+                    </div>
+                    <div class="mb-1"><span class="fw-semibold">Venue:</span> International Conference on Medical Image Computing and Computer-Assisted Intervention</div>
+                    <div class="meta-links mb-2"><a href="https://openreview.net/forum?id=0SgBUsL4W0"><i class="bi bi-file-earmark-text"></i> Paper</a> <a href="https://github.com/batmanlab/ICML-2023-Route-interpret-repeat"><i class="bi bi-github"></i> Code</a> <a href="https://shantanu48114860.github.io/projects/ICML-2023-MoIE/"><i class="bi bi-box-arrow-up-right"></i> Project</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_20351')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_20351" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@inproceedings{ghosh2023distilling,
+  title={Distilling blackbox to interpretable models for efficient transfer learning},
+  author={Ghosh, Shantanu and Yu, Ke and Batmanghelich, Kayhan},
+  booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention},
+  pages={628--638},
+  year={2023},
+  organization={Springer Nature Switzerland Cham}
+}
+</code></pre>
+                </div>
+                    
+                </div>
+            </article>
+            <article class="item-row">
+                <img src="images/publications/2023_09_Augmentation_by_Counterfactual_Explanation_Fixing_an_Overconfident_Classifier.png" alt="Augmentation by Counterfactual Explanation — Fixing an Overconfident Classifier thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">Augmentation by Counterfactual Explanation — Fixing an Overconfident Classifier</h5>
+                    <div class="muted mb-2">
+                        Sumedha Singla, Nihal Murali, Forough Arabshahi, Sofia Triantafyllou, <b>Kayhan Batmanghelich</b>
+                    </div>
+                    <div class="mb-1"><span class="fw-semibold">Venue:</span> Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision</div>
+                    <div class="meta-links mb-2"><a href="https://openaccess.thecvf.com/content/WACV2023/papers/Singla_Augmentation_by_Counterfactual_Explanation_-_Fixing_an_Overconfident_Classifier_WACV_2023_paper.pdf"><i class="bi bi-file-earmark-text"></i> Paper</a> <a href="https://arxiv.org/abs/2210.12196"><i class="bi bi-cloud-download"></i> Preprint</a> <a href="https://github.com/batmanlab/Augmentation_By_Counterfactual_Explanation"><i class="bi bi-github"></i> Code</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_82436')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_82436" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@inproceedings{singla2023augmentation,
+  title={Augmentation by counterfactual explanation-fixing an overconfident classifier},
+  author={Singla, Sumedha and Murali, Nihal and Arabshahi, Forough and Triantafyllou, Sofia and Batmanghelich, Kayhan},
+  booktitle={Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision},
+  pages={4720--4730},
+  year={2023}
+}</code></pre>
+                </div>
+                    
+                </div>
+            </article>
+            <article class="item-row">
+                <img src="images/publications/2023_10_Explaining_the_Black_box_Smoothly_A_Counterfactual_Approach.png" alt="Explaining the Black-box Smoothly – A Counterfactual Approach thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">Explaining the Black-box Smoothly – A Counterfactual Approach</h5>
+                    <div class="muted mb-2">
+                        Sumedha Singla, Motahhare Eslami, Brian Pollack, Stephen Wallace, <b>Kayhan Batmanghelich</b>
+                    </div>
+                    <div class="mb-1"><span class="fw-semibold">Venue:</span> Medical Image Analysis</div>
+                    <div class="meta-links mb-2"><a href="https://www.sciencedirect.com/science/article/abs/pii/S1361841522003498"><i class="bi bi-file-earmark-text"></i> Paper</a> <a href="https://arxiv.org/abs/2101.04230"><i class="bi bi-cloud-download"></i> Preprint</a> <a href="https://github.com/sumedhasingla/ExplainingBBSmoothly"><i class="bi bi-github"></i> Code</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_25738')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_25738" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@article{singla2023explaining,
+  title={Explaining the black-box smoothly—a counterfactual approach},
+  author={Singla, Sumedha and Eslami, Motahhare and Pollack, Brian and Wallace, Stephen and Batmanghelich, Kayhan},
+  journal={Medical Image Analysis},
+  volume={84},
+  pages={102721},
+  year={2023},
+  publisher={Elsevier}
+}</code></pre>
+                </div>
+                    
+                </div>
+            </article>
+            </div>
+            <div id="year-pub-2022" style="display: none;">
+            <h4 class="mt-4 mb-3 fw-bold">2022</h4>
+            <article class="item-row">
+                <img src="images/publications/2022_HE.png" alt="Automated Detection of Premalignant Oral Lesions on Whole Slide Images Using CNN thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">Automated Detection of Premalignant Oral Lesions on Whole Slide Images Using CNN</h5>
+                    <div class="muted mb-2">
+                        Yingci Liu, Elizabeth Bilodeau, Brian Pollack, <b>Kayhan Batmanghelich</b>
+                    </div>
+                    <div class="mb-1"><span class="fw-semibold">Venue:</span> Oral Oncology</div>
+                    <div class="meta-links mb-2"><a href="https://pubmed.ncbi.nlm.nih.gov/36126604/"><i class="bi bi-file-earmark-text"></i> Paper</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_37946')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_37946" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@article{liu2022automated,
+  title={Automated detection of premalignant oral lesions on whole slide images using convolutional neural networks},
+  author={Liu, Yingci and Bilodeau, Elizabeth and Pollack, Brian and Batmanghelich, Kayhan},
+  journal={Oral Oncology},
+  volume={134},
+  pages={106109},
+  year={2022},
+  publisher={Pergamon}
+}</code></pre>
+                </div>
+                    
+                </div>
+            </article>
+            <article class="item-row">
+                <img src="images/publications/2022_02_Anatomy_Guided_Weakly_Supervised_Abnormality_Localization_in_Chest_X_rays.png" alt="Anatomy-Guided Weakly-Supervised Abnormality Localization in Chest X-rays thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">Anatomy-Guided Weakly-Supervised Abnormality Localization in Chest X-rays</h5>
+                    <div class="muted mb-2">
+                        Ke Yu, Shantanu Ghosh, Zhexiong Liu, Christopher Deible, <b>Kayhan Batmanghelich</b>
+                    </div>
+                    <div class="mb-1"><span class="fw-semibold">Venue:</span> International Conference on Medical Image Computing and Computer-Assisted Intervention</div>
+                    <div class="meta-links mb-2"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11215940/"><i class="bi bi-file-earmark-text"></i> Paper</a> <a href="https://arxiv.org/abs/2206.12704"><i class="bi bi-cloud-download"></i> Preprint</a> <a href="https://github.com/batmanlab/AGXNet"><i class="bi bi-github"></i> Code</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_39745')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_39745" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@inproceedings{yu2022anatomy,
+  title={Anatomy-guided weakly-supervised abnormality localization in chest x-rays},
+  author={Yu, Ke and Ghosh, Shantanu and Liu, Zhexiong and Deible, Christopher and Batmanghelich, Kayhan},
+  booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention},
+  pages={658--668},
+  year={2022},
+  organization={Springer Nature Switzerland Cham}
+}</code></pre>
+                </div>
+                    
+                </div>
+            </article>
+            <article class="item-row">
+                <img src="images/publications/2022_advSeg.png" alt="Adversarial Consistency for Single Domain Generalization in Medical Image Segmentation thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">Adversarial Consistency for Single Domain Generalization in Medical Image Segmentation</h5>
+                    <div class="muted mb-2">
+                        Yanwu Xu, Shaoan Xie, Maxwell Reynolds, Matthew Ragoza, Mingming Gong, <b>Kayhan Batmanghelich</b>
+                    </div>
+                    <div class="mb-1"><span class="fw-semibold">Venue:</span> International Conference on Medical Image Computing and Computer-Assisted Intervention</div>
+                    <div class="meta-links mb-2"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11164048/"><i class="bi bi-file-earmark-text"></i> Paper</a> <a href="https://arxiv.org/abs/2206.13737"><i class="bi bi-cloud-download"></i> Preprint</a> <a href="https://github.com/batmanlab/Adversarial-Single-Domain-Generalization"><i class="bi bi-github"></i> Code</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_32670')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_32670" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@inproceedings{xu2022adversarial,
+  title={Adversarial consistency for single domain generalization in medical image segmentation},
+  author={Xu, Yanwu and Xie, Shaoan and Reynolds, Maxwell and Ragoza, Matthew and Gong, Mingming and Batmanghelich, Kayhan},
+  booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention},
+  pages={671--681},
+  year={2022},
+  organization={Springer Nature Switzerland Cham}
+}</code></pre>
+                </div>
+                    
+                </div>
+            </article>
+            <article class="item-row">
+                <img src="images/publications/2022_HAGAN.png" alt="Hierarchical Amortized Training for Memory-efficient High-Resolution 3D GAN thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">Hierarchical Amortized Training for Memory-efficient High-Resolution 3D GAN</h5>
+                    <div class="muted mb-2">
+                        Li Sun, Junxiang Chen, Yanwu Xu, Mingming Gong, Ke Yu, <b>Kayhan Batmanghelich</b>
+                    </div>
+                    <div class="mb-1"><span class="fw-semibold">Venue:</span> IEEE journal of biomedical and health informatics</div>
+                    <div class="meta-links mb-2"><a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9770375"><i class="bi bi-file-earmark-text"></i> Paper</a> <a href="https://arxiv.org/abs/2008.01910"><i class="bi bi-cloud-download"></i> Preprint</a> <a href="https://github.com/batmanlab/HA-GAN"><i class="bi bi-github"></i> Code</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_13526')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_13526" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@article{sun2022hierarchical,
+  title={Hierarchical amortized GAN for 3D high resolution medical image synthesis},
+  author={Sun, Li and Chen, Junxiang and Xu, Yanwu and Gong, Mingming and Yu, Ke and Batmanghelich, Kayhan},
+  journal={IEEE journal of biomedical and health informatics},
+  volume={26},
+  number={8},
+  pages={3966--3975},
+  year={2022},
+  publisher={IEEE}
+}
+</code></pre>
+                </div>
+                    
+                </div>
+            </article>
+            <article class="item-row">
+                <img src="images/publications/2022_Yanwu_CVPR22.png" alt="Maximum Spatial Perturbation Consistency for Unpaired Image-to-Image Translation thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">Maximum Spatial Perturbation Consistency for Unpaired Image-to-Image Translation</h5>
+                    <div class="muted mb-2">
+                        Yanwu Xu, Shaoan Xie, Wenhao Wu, Kun Zhang, Mingming Gong, <b>Kayhan Batmanghelich</b>
+                    </div>
+                    <div class="mb-1"><span class="fw-semibold">Venue:</span> Proceedings of the IEEE/CVF conference on computer vision and pattern recognition</div>
+                    <div class="meta-links mb-2"><a href="https://openaccess.thecvf.com/content/CVPR2022/papers/Xu_Maximum_Spatial_Perturbation_Consistency_for_Unpaired_Image-to-Image_Translation_CVPR_2022_paper.pdf"><i class="bi bi-file-earmark-text"></i> Paper</a> <a href="https://arxiv.org/abs/2203.12707"><i class="bi bi-cloud-download"></i> Preprint</a> <a href="https://github.com/batmanlab/MSPC"><i class="bi bi-github"></i> Code</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_77172')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_77172" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@inproceedings{xu2022maximum,
+  title={Maximum spatial perturbation consistency for unpaired image-to-image translation},
+  author={Xu, Yanwu and Xie, Shaoan and Wu, Wenhao and Zhang, Kun and Gong, Mingming and Batmanghelich, Kayhan},
+  booktitle={Proceedings of the IEEE/CVF conference on computer vision and pattern recognition},
+  pages={18311--18320},
+  year={2022}
+}</code></pre>
+                </div>
+                    
+                </div>
+            </article>
+            <article class="item-row">
+                <img src="images/publications/2022_ardavan_aaai22-1024x423.png" alt="Knowledge Distillation via Constrained Variational Inference thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">Knowledge Distillation via Constrained Variational Inference</h5>
+                    <div class="muted mb-2">
+                        Ardavan Saeedi, Yuria Utsumi, Li Sun, <b>Kayhan Batmanghelich</b>, Li-wei Lehman
+                    </div>
+                    <div class="mb-1"><span class="fw-semibold">Venue:</span> Proceedings of the AAAI Conference on Artificial Intelligence</div>
+                    <div class="meta-links mb-2"><a href="https://ojs.aaai.org/index.php/AAAI/article/view/20786"><i class="bi bi-file-earmark-text"></i> Paper</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_84447')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_84447" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@inproceedings{saeedi2022knowledge,
+  title={Knowledge distillation via constrained variational inference},
+  author={Saeedi, Ardavan and Utsumi, Yuria and Sun, Li and Batmanghelich, Kayhan and Lehman, Li-wei},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={36},
+  number={7},
+  pages={8132--8140},
+  year={2022}
+}</code></pre>
+                </div>
+                    
+                </div>
+            </article>
+            </div>
+            <div id="year-pub-2021" style="display: none;">
+            <h4 class="mt-4 mb-3 fw-bold">2021</h4>
+            <article class="item-row">
+                <img src="images/publications/2021_01_Can_Contrastive_Learning_Avoid_Shortcut_Solutions.png" alt="Can Contrastive Learning Avoid Shortcut Solutions? thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">Can Contrastive Learning Avoid Shortcut Solutions?</h5>
+                    <div class="muted mb-2">
+                        Joshua Robinson, Li Sun, Ke Yu, <b>Kayhan Batmanghelich</b>, Stefanie Jegelka, Suvrit Sra
+                    </div>
+                    <div class="mb-1"><span class="fw-semibold">Venue:</span> Advances in neural information processing systems</div>
+                    <div class="meta-links mb-2"><a href="https://arxiv.org/pdf/2106.11230.pdf"><i class="bi bi-file-earmark-text"></i> Paper</a> <a href="https://github.com/joshr17/IFM"><i class="bi bi-github"></i> Code</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_87662')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_87662" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@inproceedings{robinson2021can,
+  title={Can contrastive learning avoid shortcut solutions?},
+  author={Robinson, Joshua and Sun, Li and Yu, Ke and Batmanghelich, Kayhan and Jegelka, Stefanie and Sra, Suvrit},
+  journal={Advances in neural information processing systems},
+  volume={34},
+  pages={4974--4986},
+  year={2021}
+}</code></pre>
+                </div>
+                    
+                </div>
+            </article>
+            <article class="item-row">
+                <img src="images/publications/2021_02_Deep_Learning_Prediction_of_Voxel_Level_Liver_Stiffness_in_Patients_with_Nonalco.png" alt="Deep Learning Prediction of Voxel-Level Liver Stiffness in Patients with Nonalcoholic Fatty Liver Disease thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">Deep Learning Prediction of Voxel-Level Liver Stiffness in Patients with Nonalcoholic Fatty Liver Disease</h5>
+                    <div class="muted mb-2">
+                        Brian L Pollack, <b>Kayhan Batmanghelich</b>, Stephen S Cai, Emile Gordon, Stephen Wallace, Roberta Catania, Carlos Morillo-Hernandez, Alessandro Furlan, Amir A Borhani
+                    </div>
+                    <div class="mb-1"><span class="fw-semibold">Venue:</span> Radiology: Artificial Intelligence</div>
+                    <div class="meta-links mb-2"><a href="https://pubs.rsna.org/doi/10.1148/ryai.2021200274"><i class="bi bi-file-earmark-text"></i> Paper</a> <a href="https://github.com/batmanlab/vessel-flow-consistency-ssl"><i class="bi bi-github"></i> Code</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_76805')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_76805" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@article{pollack2021deep,
+  title={Deep learning prediction of voxel-level liver stiffness in patients with nonalcoholic fatty liver disease},
+  author={Pollack, Brian L and Batmanghelich, Kayhan and Cai, Stephen S and Gordon, Emile and Wallace, Stephen and Catania, Roberta and Morillo-Hernandez, Carlos and Furlan, Alessandro and Borhani, Amir A},
+  journal={Radiology: Artificial Intelligence},
+  volume={3},
+  number={6},
+  pages={e200274},
+  year={2021},
+  publisher={Radiological Society of North America}
+}</code></pre>
+                </div>
+                    
+                </div>
+            </article>
+            <article class="item-row">
+                <img src="images/publications/2021_03_Self_Supervised_Vessel_Enhancement_Using_Flow_Based_Consistencies.png" alt="Self-Supervised Vessel Enhancement Using Flow-Based Consistencies thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">Self-Supervised Vessel Enhancement Using Flow-Based Consistencies</h5>
+                    <div class="muted mb-2">
+                        Rohit Jena, Sumedha Singla, <b>Kayhan Batmanghelich</b>
+                    </div>
+                    <div class="mb-1"><span class="fw-semibold">Venue:</span> International Conference on Medical Image Computing and Computer-Assisted Intervention</div>
+                    <div class="meta-links mb-2"><a href="https://arxiv.org/pdf/2101.05145.pdf"><i class="bi bi-file-earmark-text"></i> Paper</a> <a href="https://github.com/batmanlab/vessel-flow-consistency-ssl"><i class="bi bi-github"></i> Code</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_10960')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_10960" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@inproceedings{jena2021self,
+  title={Self-supervised vessel enhancement using flow-based consistencies},
+  author={Jena, Rohit and Singla, Sumedha and Batmanghelich, Kayhan},
+  booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention},
+  pages={242--251},
+  year={2021},
+  organization={Springer International Publishing Cham}
+}</code></pre>
+                </div>
+                    
+                </div>
+            </article>
+            <article class="item-row">
+                <img src="images/publications/2021_04_Using_Causal_Analysis_for_Conceptual_Deep_Learning_Explanation.png" alt="Using Causal Analysis for Conceptual Deep Learning Explanation thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">Using Causal Analysis for Conceptual Deep Learning Explanation</h5>
+                    <div class="muted mb-2">
+                        Sumedha Singla, Stephen Wallace, Sofia Triantafillou, <b>Kayhan Batmanghelich</b>
+                    </div>
+                    <div class="mb-1"><span class="fw-semibold">Venue:</span> International Conference on Medical Image Computing and Computer-Assisted Intervention</div>
+                    <div class="meta-links mb-2"><a href="https://arxiv.org/pdf/2107.06098.pdf"><i class="bi bi-file-earmark-text"></i> Paper</a> <a href="https://github.com/sumedhasingla/ExplainingBBSmoothly"><i class="bi bi-github"></i> Code</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_57617')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_57617" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@inproceedings{singla2021using,
+  title={Using causal analysis for conceptual deep learning explanation},
+  author={Singla, Sumedha and Wallace, Stephen and Triantafillou, Sofia and Batmanghelich, Kayhan},
+  booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention},
+  pages={519--528},
+  year={2021},
+  organization={Springer International Publishing Cham}
+}</code></pre>
+                </div>
+                    
+                </div>
+            </article>
+            <article class="item-row">
+                <img src="images/publications/2021_05_Empowering_Variational_Inference_with_Predictive_Features_Application_to_Disease.png" alt="Empowering Variational Inference with Predictive Features: Application to Disease Subtyping thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">Empowering Variational Inference with Predictive Features: Application to Disease Subtyping</h5>
+                    <div class="meta-links mb-2"><a href="files/MLHC21.pdf"><i class="bi bi-file-earmark-text"></i> Paper</a></div>
+                    <div class="muted mb-2">
+                        A. Saeedi, P. Yadollahpour, S. Singla, W. Wells, F. Sciurba, <b>Kayhan Batmanghelich</b>
+                    </div>
+                </div>
+            </article>
+            <article class="item-row">
+                <img src="images/publications/2021_06_Improving_Clinical_Disease_Sub_typing_and_Future_Events_Prediction_through_a_Che.png" alt="Improving Clinical Disease Sub-typing and Future Events Prediction through a Chest CT based Deep Learning Approach thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">Improving Clinical Disease Sub-typing and Future Events Prediction through a Chest CT based Deep Learning Approach</h5>
+                    <div class="muted mb-2">
+                        Sumedha Singla, Mingming Gong, Craig Riley, Frank Sciurba, <b>Kayhan Batmanghelich</b>
+                    </div>
+                    <div class="mb-1"><span class="fw-semibold">Venue:</span> Medical physics</div>
+                    <div class="meta-links mb-2"><a href="files/MLHC21.pdf"><i class="bi bi-file-earmark-text"></i> Paper</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_28034')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_28034" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@article{singla2021improving,
+  title={Improving clinical disease subtyping and future events prediction through a chest CT-based deep learning approach},
+  author={Singla, Sumedha and Gong, Mingming and Riley, Craig and Sciurba, Frank and Batmanghelich, Kayhan},
+  journal={Medical physics},
+  volume={48},
+  number={3},
+  pages={1168--1181},
+  year={2021}
+}</code></pre>
+                </div>
+                    
+                </div>
+            </article>
+            <article class="item-row">
+                <img src="images/publications/2021_07_Context_Matters_Graph_based_Self_supervised_Representation_Learning_for_Medical_.png" alt="Context Matters: Graph-based Self-supervised Representation Learning for Medical Images thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">Context Matters: Graph-based Self-supervised Representation Learning for Medical Images</h5>
+                    <div class="muted mb-2">
+                        Li Sun, Ke Yu, <b>Kayhan Batmanghelich</b>
+                    </div>
+                    <div class="mb-1"><span class="fw-semibold">Venue:</span> Proceedings of the AAAI Conference on Artificial Intelligence</div>
+                    <div class="meta-links mb-2"><a href="https://arxiv.org/pdf/2012.06457.pdf"><i class="bi bi-file-earmark-text"></i> Paper</a> <a href="https://github.com/batmanlab/Context_Aware_SSL"><i class="bi bi-github"></i> Code</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_91569')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_91569" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@inproceedings{sun2021context,
+  title={Context matters: Graph-based self-supervised representation learning for medical images},
+  author={Sun, Li and Yu, Ke and Batmanghelich, Kayhan},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={35},
+  number={6},
+  pages={4874--4882},
+  year={2021}
+}</code></pre>
+                </div>
+                    
+                </div>
+            </article>
+            </div>
+            <div id="year-pub-2020" style="display: none;">
+            <h4 class="mt-4 mb-3 fw-bold">2020</h4>
+            <article class="item-row">
+                <img src="images/publications/2020_01_Unpaired_Data_Empowers_Association_Tests.png" alt="Unpaired Data Empowers Association Tests thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">Unpaired Data Empowers Association Tests</h5>
+                    <div class="muted mb-2">
+                        Mingming Gong, Peng Liu, Frank C Sciurba, Petar Stojanov, Dacheng Tao, George Tseng, Kun Zhang, <b>Kayhan Batmanghelich</b>
+                    </div>
+                    <div class="mb-1"><span class="fw-semibold">Venue:</span> Bioinformatics</div>
+                    <div class="meta-links mb-2"><a href="files/839159v1.full_.pdf"><i class="bi bi-file-earmark-text"></i> Paper</a> <a href="https://github.com/batmanlab/Semi-paired-Association-Test"><i class="bi bi-github"></i> Code</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_15952')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_15952" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@article{gong2019unpaired,
+  title={Unpaired Data Empowers Association Tests},
+  author={Gong, Mingming and Liu, Peng and Sciurba, Frank C and Stojanov, Petar and Tao, Dacheng and Tseng, George and Zhang, Kun and Batmanghelich, Kayhan},
+  journal={Bioinformatics},
+  pages={839159},
+  year={2019},
+  publisher={Cold Spring Harbor Laboratory}
+}</code></pre>
+                </div>
+                    
+                </div>
+            </article>
+            <article class="item-row">
+                <img src="images/publications/2020_02_Label_Noise_Robust_Domain_Adaptation.png" alt="Label-Noise Robust Domain Adaptation thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">Label-Noise Robust Domain Adaptation</h5>
+                    <div class="muted mb-2">
+                        Xiyu Yu, Tongliang Liu, Mingming Gong, Kun Zhang, <b>Kayhan Batmanghelich</b>, Dacheng Tao
+                    </div>
+                    <div class="mb-1"><span class="fw-semibold">Venue:</span> International conference on machine learning</div>
+                    <div class="meta-links mb-2"><a href="https://proceedings.icml.cc/static/paper_files/icml/2020/1942-Paper.pdf"><i class="bi bi-file-earmark-text"></i> Paper</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_86338')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_86338" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@inproceedings{yu2020label,
+  title={Label-noise robust domain adaptation},
+  author={Yu, Xiyu and Liu, Tongliang and Gong, Mingming and Zhang, Kun and Batmanghelich, Kayhan and Tao, Dacheng},
+  booktitle={International conference on machine learning},
+  pages={10913--10924},
+  year={2020},
+  organization={PMLR}
+}</code></pre>
+                </div>
+                    
+                </div>
+            </article>
+            <article class="item-row">
+                <img src="images/publications/2020_03_Semi_Supervised_Hierarchical_Drug_Embedding.png" alt="Semi-Supervised Hierarchical Drug Embedding thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">Semi-Supervised Hierarchical Drug Embedding</h5>
+                    <div class="muted mb-2">
+                        Ke Yu, Shyam Visweswaran, <b>Kayhan Batmanghelich</b>
+                    </div>
+                    <div class="mb-1"><span class="fw-semibold">Venue:</span> Journal of chemical information and modeling</div>
+                    <div class="meta-links mb-2"><a href="https://pubs.acs.org/doi/abs/10.1021/acs.jcim.0c00681"><i class="bi bi-file-earmark-text"></i> Paper</a> <a href="https://arxiv.org/pdf/2006.00986.pdf"><i class="bi bi-cloud-download"></i> Preprint</a> <a href="https://github.com/batmanlab/drugEmbedding"><i class="bi bi-github"></i> Code</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_33934')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_33934" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@article{yu2020semi,
+  title={Semi-supervised hierarchical drug embedding in hyperbolic space},
+  author={Yu, Ke and Visweswaran, Shyam and Batmanghelich, Kayhan},
+  journal={Journal of chemical information and modeling},
+  volume={60},
+  number={12},
+  pages={5647--5657},
+  year={2020},
+  publisher={ACS Publications}
+}</code></pre>
+                </div>
+                    
+                </div>
+            </article>
+            <article class="item-row">
+                <img src="images/publications/2020_04_3D_BoxSup_Positive_Unlabeled_Learning_of_Brain_Tumor_Segmentation_Networks_From_.png" alt="3D-BoxSup: Positive-Unlabeled Learning of Brain Tumor Segmentation Networks From 3D Bounding Boxes thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">3D-BoxSup: Positive-Unlabeled Learning of Brain Tumor Segmentation Networks From 3D Bounding Boxes</h5>
+                    <div class="muted mb-2">
+                        Yanwu Xu, Mingming Gong, Junxiang Chen, Ziye Chen, <b>Kayhan Batmanghelich</b>
+                    </div>
+                    <div class="mb-1"><span class="fw-semibold">Venue:</span> Frontiers in Neuroscience</div>
+                    <div class="meta-links mb-2"><a href="https://www.frontiersin.org/articles/10.3389/fnins.2020.00350/full"><i class="bi bi-file-earmark-text"></i> Paper</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_42239')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_42239" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@article{xu20203d,
+  title={3d-boxsup: Positive-unlabeled learning of brain tumor segmentation networks from 3d bounding boxes},
+  author={Xu, Yanwu and Gong, Mingming and Chen, Junxiang and Chen, Ziye and Batmanghelich, Kayhan},
+  journal={Frontiers in Neuroscience},
+  volume={14},
+  pages={350},
+  year={2020},
+  publisher={Frontiers Media SA}
+}</code></pre>
+                </div>
+                    
+                </div>
+            </article>
+            <article class="item-row">
+                <img src="images/publications/2020_05_Human_Machine_Collaboration_for_Medical_Image_Segmentation.png" alt="Human-Machine Collaboration for Medical Image Segmentation thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">Human-Machine Collaboration for Medical Image Segmentation</h5>
+                    <div class="muted mb-2">
+                        Mahdyar Ravanbakhsh, Vadim Tschernezki, Felix Last, Tassilo Klein, <b>Kayhan Batmanghelich</b>, Volker Tresp, Moin Nabi
+                    </div>
+                    <div class="mb-1"><span class="fw-semibold">Venue:</span> ICASSP 2020 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)</div>
+                    <div class="meta-links mb-2"><a href="https://ieeexplore.ieee.org/abstract/document/9053555"><i class="bi bi-file-earmark-text"></i> Paper</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_57306')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_57306" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@inproceedings{ravanbakhsh2020human,
+  title={Human-machine collaboration for medical image segmentation},
+  author={Ravanbakhsh, Mahdyar and Tschernezki, Vadim and Last, Felix and Klein, Tassilo and Batmanghelich, Kayhan and Tresp, Volker and Nabi, Moin},
+  booktitle={ICASSP 2020 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  pages={1040--1044},
+  year={2020},
+  organization={IEEE}
+}</code></pre>
+                </div>
+                    
+                </div>
+            </article>
+            <article class="item-row">
+                <img src="images/publications/2020_06_Explanation_by_Progressive_Exaggeration.png" alt="Explanation by Progressive Exaggeration thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">Explanation by Progressive Exaggeration</h5>
+                    <div class="muted mb-2">
+                        Sumedha Singla, Brian Pollack, Junxiang Chen, <b>Kayhan Batmanghelich</b>
+                    </div>
+                    <div class="mb-1"><span class="fw-semibold">Venue:</span> International Conference on Learning Representations</div>
+                    <div class="meta-links mb-2"><a href="https://arxiv.org/pdf/1911.00483.pdf"><i class="bi bi-file-earmark-text"></i> Paper</a> <a href="https://github.com/batmanlab/Explanation_by_Progressive_Exaggeration"><i class="bi bi-github"></i> Code</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_62735')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_62735" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@inproceedings{singla2019explanation,
+  title={Explanation by Progressive Exaggeration},
+  author={Singla, Sumedha and Pollack, Brian and Chen, Junxiang and Batmanghelich, Kayhan},
+  booktitle={International Conference on Learning Representations},
+  year={2019}
+}</code></pre>
+                </div>
+                    
+                </div>
+            </article>
+            <article class="item-row">
+                <img src="images/publications/2020_07_Generative_Discriminative_Complementary_Learning.png" alt="Generative-Discriminative Complementary Learning thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">Generative-Discriminative Complementary Learning</h5>
+                    <div class="muted mb-2">
+                        Yanwu Xu, Mingming Gong, Junxiang Chen, Tongliang Liu, Kun Zhang, <b>Kayhan Batmanghelich</b>
+                    </div>
+                    <div class="mb-1"><span class="fw-semibold">Venue:</span> Proceedings of the AAAI conference on artificial intelligence</div>
+                    <div class="meta-links mb-2"><a href="https://arxiv.org/pdf/1904.01612.pdf"><i class="bi bi-file-earmark-text"></i> Paper</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_81493')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_81493" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@inproceedings{xu2020generative,
+  title={Generative-discriminative complementary learning},
+  author={Xu, Yanwu and Gong, Mingming and Chen, Junxiang and Liu, Tongliang and Zhang, Kun and Batmanghelich, Kayhan},
+  booktitle={Proceedings of the AAAI conference on artificial intelligence},
+  volume={34},
+  number={04},
+  pages={6526--6533},
+  year={2020}
+}</code></pre>
+                </div>
+                    
+                </div>
+            </article>
+            <article class="item-row">
+                <img src="images/publications/2020_08_Weakly_Supervised_Disentanglement_by_Pairwise_Similarities.png" alt="Weakly Supervised Disentanglement by Pairwise Similarities thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">Weakly Supervised Disentanglement by Pairwise Similarities</h5>
+                    <div class="muted mb-2">
+                        Junxiang Chen, <b>Kayhan Batmanghelich</b>
+                    </div>
+                    <div class="mb-1"><span class="fw-semibold">Venue:</span> Proceedings of the AAAI Conference on Artificial Intelligence</div>
+                    <div class="meta-links mb-2"><a href="https://arxiv.org/pdf/1906.01044.pdf"><i class="bi bi-file-earmark-text"></i> Paper</a> <a href="https://github.com/batmanlab/VAE_pairwise"><i class="bi bi-github"></i> Code</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_38633')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_38633" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@inproceedings{chen2020weakly,
+  title={Weakly supervised disentanglement by pairwise similarities},
+  author={Chen, Junxiang and Batmanghelich, Kayhan},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={34},
+  number={04},
+  pages={3495--3502},
+  year={2020}
+}</code></pre>
+                </div>
+                    
+                </div>
+            </article>
+            </div>
+            <div id="year-pub-2019" style="display: none;">
+            <h4 class="mt-4 mb-3 fw-bold">2019</h4>
+            <article class="item-row">
+                <img src="images/publications/2019_01_Geometry_Consistent_Adversarial_Networks_for_One_Sided_Unsupervised_Domain_Mappi.png" alt="Geometry-Consistent Adversarial Networks for One-Sided Unsupervised Domain Mapping (GcGAN) thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">Geometry-Consistent Adversarial Networks for One-Sided Unsupervised Domain Mapping (GcGAN)</h5>
+                    <div class="muted mb-2">
+                        Huan Fu, Mingming Gong, Chaohui Wang, <b>Kayhan Batmanghelich</b>, Kun Zhang, Dacheng Tao
+                    </div>
+                    <div class="mb-1"><span class="fw-semibold">Venue:</span> Proceedings of the IEEE/CVF conference on computer vision and pattern recognition</div>
+                    <div class="meta-links mb-2"><a href="https://arxiv.org/pdf/1809.05852.pdf"><i class="bi bi-file-earmark-text"></i> Paper</a> <a href="https://github.com/hufu6371/GcGAN"><i class="bi bi-github"></i> Code</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_84149')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_84149" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@inproceedings{fu2019geometry,
+  title={Geometry-consistent generative adversarial networks for one-sided unsupervised domain mapping},
+  author={Fu, Huan and Gong, Mingming and Wang, Chaohui and Batmanghelich, Kayhan and Zhang, Kun and Tao, Dacheng},
+  booktitle={Proceedings of the IEEE/CVF conference on computer vision and pattern recognition},
+  pages={2427--2436},
+  year={2019}
+}</code></pre>
+                </div>
+                    
+                </div>
+            </article>
+            <article class="item-row">
+                <img src="images/publications/2019_02_Twin_Auxiliary_Classifiers_GAN.png" alt="Twin Auxiliary Classifiers GAN thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">Twin Auxiliary Classifiers GAN</h5>
+                    <div class="muted mb-2">
+                        Mingming Gong, Yanwu Xu, Chunyuan Li, Kun Zhang, <b>Kayhan Batmanghelich</b>
+                    </div>
+                    <div class="mb-1"><span class="fw-semibold">Venue:</span> Advances in neural information processing systems</div>
+                    <div class="meta-links mb-2"><a href="https://arxiv.org/pdf/1907.02690.pdf"><i class="bi bi-file-earmark-text"></i> Paper</a> <a href="https://github.com/batmanlab/twin-auxiliary-classifiers-gan"><i class="bi bi-github"></i> Code</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_74595')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_74595" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@inproceedings{gong2019twin,
+  title={Twin auxilary classifiers gan},
+  author={Gong, Mingming and Xu, Yanwu and Li, Chunyuan and Zhang, Kun and Batmanghelich, Kayhan},
+  booktitle={Advances in neural information processing systems},
+  volume={32},
+  year={2019}
+}</code></pre>
+                </div>
+                    
+                </div>
+            </article>
+            <article class="item-row">
+                <img src="images/publications/2019_03_Generative_Interpretability_Application_in_Disease_Subtyping.png" alt="Generative Interpretability: Application in Disease Subtyping thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">Generative Interpretability: Application in Disease Subtyping</h5>
+                    <div class="meta-links mb-2"><a href="files/main_0.pdf"><i class="bi bi-file-earmark-text"></i> Paper</a></div>
+                    <div class="muted mb-2">
+                        P. Yadollahpour, A. Saeedi, S. Singla, F. C. Sciurba, <b>Kayhan Batmanghelich</b>
+                    </div>
+                </div>
+            </article>
+            <article class="item-row">
+                <img src="images/publications/2019_04_Robust_Ordinal_VAE_Employing_Noisy_Pairwise_Comparisons_for_Disentanglement.png" alt="Robust Ordinal VAE: Employing Noisy Pairwise Comparisons for Disentanglement thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">Robust Ordinal VAE: Employing Noisy Pairwise Comparisons for Disentanglement</h5>
+                    <div class="meta-links mb-2"><a href="https://arxiv.org/pdf/1910.05898.pdf"><i class="bi bi-file-earmark-text"></i> Paper</a> <a href="https://github.com/batmanlab/VAE_pairwise"><i class="bi bi-github"></i> Code</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_40591')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_40591" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@online{chen2019robust,
+  author       = {Chen, Junxiang and Batmanghelich, Kayhan},
+  title        = {Robust ordinal VAE: employing noisy pairwise comparisons for disentanglement},
+  year         = {2019},
+  eprint       = {1910.05898},
+  eprinttype   = {arXiv},
+  eprintclass   = {cs.LG},
+  url          = {https://arxiv.org/abs/1910.05898},
+  note         = {Preprint},
+  keywords     = {preprint}
+}</code></pre>
+                </div>
+                    <div class="muted mb-2">
+                        Junxiang Chen, <b>Kayhan Batmanghelich</b>
+                    </div>
+                </div>
+            </article>
+            </div>
+            <div id="year-pub-2018" style="display: none;">
+            <h4 class="mt-4 mb-3 fw-bold">2018</h4>
+            <article class="item-row">
+                <img src="images/publications/2018_01_Subject2Vec_Generative_Discriminative_Approach_from_a_Set_of_Image_Patches_to_a_.png" alt="Subject2Vec: Generative-Discriminative Approach from a Set of Image Patches to a Vector thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">Subject2Vec: Generative-Discriminative Approach from a Set of Image Patches to a Vector</h5>
+                    <div class="muted mb-2">
+                        Sumedha Singla, Mingming Gong, Siamak Ravanbakhsh, Frank Sciurba, Barnabas Poczos, Kayhan N Batmanghelich
+                    </div>
+                    <div class="mb-1"><span class="fw-semibold">Venue:</span> International Conference on Medical Image Computing and Computer-Assisted Intervention</div>
+                    <div class="meta-links mb-2"><a href="https://arxiv.org/pdf/1806.11217.pdf"><i class="bi bi-file-earmark-text"></i> Paper</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_95033')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_95033" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@inproceedings{singla2018subject2vec,
+  title={Subject2Vec: generative-discriminative approach from a set of image patches to a vector},
+  author={Singla, Sumedha and Gong, Mingming and Ravanbakhsh, Siamak and Sciurba, Frank and Poczos, Barnabas and Batmanghelich, Kayhan N},
+  booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention},
+  pages={502--510},
+  year={2018},
+  organization={Springer International Publishing Cham}
+}</code></pre>
+                </div>
+                    
+                </div>
+            </article>
+            <article class="item-row">
+                <img src="images/publications/2018_02_A_structural_equation_model_for_imaging_genetics_using_spatial_transcriptomics.png" alt="A structural equation model for imaging genetics using spatial transcriptomics thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">A structural equation model for imaging genetics using spatial transcriptomics</h5>
+                    <div class="muted mb-2">
+                        Sjoerd MH Huisman, Ahmed Mahfouz, Nematollah K Batmanghelich, Boudewijn PF Lelieveldt, Marcel JT Reinders, Alzheimer’s Disease Neuroimaging Initiative
+                    </div>
+                    <div class="mb-1"><span class="fw-semibold">Venue:</span> Brain informatics</div>
+                    <div class="meta-links mb-2"><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6429169/pdf/40708_2018_Article_91.pdf"><i class="bi bi-file-earmark-text"></i> Paper</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_97014')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_97014" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@article{huisman2018structural,
+  title={A structural equation model for imaging genetics using spatial transcriptomics},
+  author={Huisman, Sjoerd MH and Mahfouz, Ahmed and Batmanghelich, Nematollah K and Lelieveldt, Boudewijn PF and Reinders, Marcel JT and Alzheimer&#x27;s Disease Neuroimaging Initiative},
+  journal={Brain informatics},
+  volume={5},
+  number={2},
+  pages={13},
+  year={2018},
+  publisher={Springer Berlin Heidelberg Berlin/Heidelberg}
+}</code></pre>
+                </div>
+                    
+                </div>
+            </article>
+            <article class="item-row">
+                <img src="images/publications/2018_03_Causal_Generative_Domain_Adaptation_Networks.png" alt="Causal Generative Domain Adaptation Networks thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">Causal Generative Domain Adaptation Networks</h5>
+                    <div class="meta-links mb-2"><a href="https://arxiv.org/pdf/1804.04333.pdf"><i class="bi bi-file-earmark-text"></i> Paper</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_59733')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_59733" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@online{gong2018causal,
+  author       = {Gong, Mingming and Zhang, Kun and Huang, Biwei and Glymour, Clark and Tao, Dacheng and Batmanghelich, Kayhan},
+  title        = {Causal generative domain adaptation networks},
+  year         = {2018},
+  eprint       = {1804.04333},
+  eprinttype   = {arXiv},
+  eprintclass   = {cs.LG},
+  url          = {https://arxiv.org/abs/1804.04333},
+  note         = {Preprint},
+  keywords     = {preprint}
+}</code></pre>
+                </div>
+                    <div class="muted mb-2">
+                        Mingming Gong, Kun Zhang, Biwei Huang, Clark Glymour, Dacheng Tao, <b>Kayhan Batmanghelich</b>
+                    </div>
+                </div>
+            </article>
+            <article class="item-row">
+                <img src="images/publications/2018_04_Deep_Diffeomorphic_Normalizing_Flows.png" alt="Deep Diffeomorphic Normalizing Flows thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">Deep Diffeomorphic Normalizing Flows</h5>
+                    <div class="meta-links mb-2"><a href="https://arxiv.org/pdf/1810.03256.pdf"><i class="bi bi-file-earmark-text"></i> Paper</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_33545')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_33545" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@online{salman2018deep,
+  author       = {Salman, Hadi and Yadollahpour, Payman and Fletcher, Tom and Batmanghelich, Kayhan},
+  title        = {Deep diffeomorphic normalizing flows},
+  year         = {2018},
+  eprint       = {1810.03256},
+  eprinttype   = {arXiv},
+  eprintclass   = {cs.LG},
+  url          = {https://arxiv.org/abs/1810.03256},
+  note         = {Preprint},
+  keywords     = {preprint}
+}</code></pre>
+                </div>
+                    <div class="muted mb-2">
+                        Hadi Salman, Payman Yadollahpour, Tom Fletcher, <b>Kayhan Batmanghelich</b>
+                    </div>
+                </div>
+            </article>
+            <article class="item-row">
+                <img src="images/publications/2018_05_An_Efficient_and_Provable_Approach_for_Mixture_Proportion_Estimation_Using_Linea.png" alt="An Efficient and Provable Approach for Mixture Proportion Estimation Using Linear Independence Assumption thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">An Efficient and Provable Approach for Mixture Proportion Estimation Using Linear Independence Assumption</h5>
+                    <div class="muted mb-2">
+                        Xiyu Yu, Tongliang Liu, Mingming Gong, <b>Kayhan Batmanghelich</b>, Dacheng Tao
+                    </div>
+                    <div class="mb-1"><span class="fw-semibold">Venue:</span> Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition</div>
+                    <div class="meta-links mb-2"><a href="https://arxiv.org/pdf/1804.04333.pdf"><i class="bi bi-file-earmark-text"></i> Paper</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_12170')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_12170" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@inproceedings{yu2018efficient,
+  title={An efficient and provable approach for mixture proportion estimation using linear independence assumption},
+  author={Yu, Xiyu and Liu, Tongliang and Gong, Mingming and Batmanghelich, Kayhan and Tao, Dacheng},
+  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
+  pages={4480--4489},
+  year={2018}
+}</code></pre>
+                </div>
+                    
+                </div>
+            </article>
+            <article class="item-row">
+                <img src="images/publications/2018_06_Deep_Ordinal_Regression_Network_for_Monocular_Depth_Estimation.png" alt="Deep Ordinal Regression Network for Monocular Depth Estimation thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">Deep Ordinal Regression Network for Monocular Depth Estimation</h5>
+                    <div class="muted mb-2">
+                        Huan Fu, Mingming Gong, Chaohui Wang, <b>Kayhan Batmanghelich</b>, Dacheng Tao
+                    </div>
+                    <div class="mb-1"><span class="fw-semibold">Venue:</span> Proceedings of the IEEE conference on computer vision and pattern recognition</div>
+                    <div class="meta-links mb-2"><a href="https://arxiv.org/pdf/1806.02446.pdf"><i class="bi bi-file-earmark-text"></i> Paper</a> <a href="https://github.com/hufu6371/DORN"><i class="bi bi-github"></i> Code</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_90089')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_90089" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@inproceedings{fu2018deep,
+  title={Deep ordinal regression network for monocular depth estimation},
+  author={Fu, Huan and Gong, Mingming and Wang, Chaohui and Batmanghelich, Kayhan and Tao, Dacheng},
+  booktitle={Proceedings of the IEEE conference on computer vision and pattern recognition},
+  pages={2002--2011},
+  year={2018}
+}</code></pre>
+                </div>
+                    
+                </div>
+            </article>
+            <article class="item-row">
+                <img src="images/publications/2018_07_Textured_Graph_Based_Model_of_the_Lungs_Application_on_Tuberculosis_Type_Classif.png" alt="Textured Graph-Based Model of the Lungs: Application on Tuberculosis Type Classification and Multi-drug Resistance Detection thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">Textured Graph-Based Model of the Lungs: Application on Tuberculosis Type Classification and Multi-drug Resistance Detection</h5>
+                    <div class="meta-links mb-2"><a href="files/paper_114.pdf"><i class="bi bi-file-earmark-text"></i> Paper</a></div>
+                    <div class="muted mb-2">
+                        Y. D. Cid, <b>Kayhan Batmanghelich</b>, H. Müller
+                    </div>
+                </div>
+            </article>
+            </div>
+            <div id="year-pub-2017" style="display: none;">
+            <h4 class="mt-4 mb-3 fw-bold">2017</h4>
+            <article class="item-row">
+                <img src="images/publications/2017_01_Transformations_Based_on_Continuous_Piecewise_Affine_Velocity_Fields.png" alt="Transformations Based on Continuous Piecewise-Affine Velocity Fields thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">Transformations Based on Continuous Piecewise-Affine Velocity Fields</h5>
+                    <div class="muted mb-2">
+                        Oren Freifeld, S{\o Hauberg
+                    </div>
+                    <div class="mb-1"><span class="fw-semibold">Venue:</span> IEEE transactions on pattern analysis and machine intelligence</div>
+                    <div class="meta-links mb-2"><a href="files/07814343.pdf"><i class="bi bi-file-earmark-text"></i> Paper</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_82172')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_82172" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@article{freifeld2017transformations,
+  title={Transformations based on continuous piecewise-affine velocity fields},
+  author={Freifeld, Oren and Hauberg, S{\o}ren and Batmanghelich, Kayhan and Fisher, Jonn W},
+  journal={IEEE transactions on pattern analysis and machine intelligence},
+  volume={39},
+  number={12},
+  pages={2496--2509},
+  year={2017},
+  publisher={IEEE}
+}</code></pre>
+                </div>
+                    
+                </div>
+            </article>
+            <article class="item-row">
+                <img src="images/publications/2017_02_A_Likelihood_Free_Approach_for_Characterizing_Heterogeneous_Diseases_in_Large_Sc.png" alt="A Likelihood-Free Approach for Characterizing Heterogeneous Diseases in Large-Scale Studies thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">A Likelihood-Free Approach for Characterizing Heterogeneous Diseases in Large-Scale Studies</h5>
+                    <div class="muted mb-2">
+                        Jenna Schabdach, William M Wells III, Michael Cho, Kayhan N Batmanghelich
+                    </div>
+                    <div class="mb-1"><span class="fw-semibold">Venue:</span> International Conference on Information Processing in Medical Imaging</div>
+                    <div class="meta-links mb-2"><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5679301/pdf/nihms917872.pdf"><i class="bi bi-file-earmark-text"></i> Paper</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_17723')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_17723" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@inproceedings{schabdach2017likelihood,
+  title={A likelihood-free approach for characterizing heterogeneous diseases in large-scale studies},
+  author={Schabdach, Jenna and Wells III, William M and Cho, Michael and Batmanghelich, Kayhan N},
+  booktitle={International Conference on Information Processing in Medical Imaging},
+  pages={170--183},
+  year={2017},
+  organization={Springer International Publishing Cham}
+}</code></pre>
+                </div>
+                    
+                </div>
+            </article>
+            </div>
+            <div id="year-pub-2016" style="display: none;">
+            <h4 class="mt-4 mb-3 fw-bold">2016</h4>
+            <article class="item-row">
+                <img src="images/publications/2016_01_Unsupervised_Discovery_of_Emphysema_Subtypes_in_a_Large_Clinical_Cohort.png" alt="Unsupervised Discovery of Emphysema Subtypes in a Large Clinical Cohort thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">Unsupervised Discovery of Emphysema Subtypes in a Large Clinical Cohort</h5>
+                    <div class="muted mb-2">
+                        Polina Binder, Nematollah K Batmanghelich, Raul San Jose Estepar, Polina Golland
+                    </div>
+                    <div class="mb-1"><span class="fw-semibold">Venue:</span> International Workshop on Machine Learning in Medical Imaging</div>
+                    <div class="meta-links mb-2"><a href="files/Binder2016_Chapter_UnsupervisedDiscoveryOfEmphyse.pdf"><i class="bi bi-file-earmark-text"></i> Paper</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_30816')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_30816" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@inproceedings{binder2016unsupervised,
+  title={Unsupervised discovery of emphysema subtypes in a large clinical cohort},
+  author={Binder, Polina and Batmanghelich, Nematollah K and Estepar, Raul San Jose and Golland, Polina},
+  booktitle={International Workshop on Machine Learning in Medical Imaging},
+  pages={180--187},
+  year={2016},
+  keywords={workshop},
+  organization={Springer International Publishing Cham}
+}</code></pre>
+                </div>
+                    
+                </div>
+            </article>
+            <article class="item-row">
+                <img src="images/publications/2016_02_Probabilistic_Modeling_of_Imaging_Genetics_and_the_Diagnosis.png" alt="Probabilistic Modeling of Imaging, Genetics and the Diagnosis thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">Probabilistic Modeling of Imaging, Genetics and the Diagnosis</h5>
+                    <div class="muted mb-2">
+                        Nematollah K Batmanghelich, Adrian Dalca, Gerald Quon, Mert Sabuncu, Polina Golland
+                    </div>
+                    <div class="mb-1"><span class="fw-semibold">Venue:</span> IEEE transactions on medical imaging</div>
+                    <div class="meta-links mb-2"><a href="files/batmanghelich_cameraReady.pdf"><i class="bi bi-file-earmark-text"></i> Paper</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_50083')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_50083" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@article{batmanghelich2016probabilistic,
+  title={Probabilistic modeling of imaging, genetics and diagnosis},
+  author={Batmanghelich, Nematollah K and Dalca, Adrian and Quon, Gerald and Sabuncu, Mert and Golland, Polina},
+  journal={IEEE transactions on medical imaging},
+  volume={35},
+  number={7},
+  pages={1765--1779},
+  year={2016},
+  publisher={IEEE}
+}</code></pre>
+                </div>
+                    
+                </div>
+            </article>
+            <article class="item-row">
+                <img src="images/publications/2016_03_Nonparametric_Spherical_Topic_Modeling_with_Word_Embeddings.png" alt="Nonparametric Spherical Topic Modeling with Word Embeddings thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">Nonparametric Spherical Topic Modeling with Word Embeddings</h5>
+                    <div class="muted mb-2">
+                        <b>Kayhan Batmanghelich</b>, Ardavan Saeedi, Karthik Narasimhan, Sam Gershman
+                    </div>
+                    <div class="mb-1"><span class="fw-semibold">Venue:</span> Bayesian and grAphical Models for Biomedical Imaging</div>
+                    <div class="meta-links mb-2"><a href="https://www.aclweb.org/anthology/P16-2087.pdf"><i class="bi bi-file-earmark-text"></i> Paper</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_19947')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_19947" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@inproceedings{batmanghelich-etal-2016-nonparametric,
+    title = &quot;Nonparametric Spherical Topic Modeling with Word Embeddings&quot;,
+    author = &quot;Batmanghelich, Kayhan  and
+      Saeedi, Ardavan  and
+      Narasimhan, Karthik  and
+      Gershman, Sam&quot;,
+    editor = &quot;Erk, Katrin  and
+      Smith, Noah A.&quot;,
+    booktitle = &quot;Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics (Volume 2: Short Papers)&quot;,
+    month = aug,
+    year = &quot;2016&quot;,
+    address = &quot;Berlin, Germany&quot;,
+    publisher = &quot;Association for Computational Linguistics&quot;,
+    url = &quot;https://aclanthology.org/P16-2087/&quot;,
+    doi = &quot;10.18653/v1/P16-2087&quot;,
+    pages = &quot;537--542&quot;
+}
+</code></pre>
+                </div>
+                    
+                </div>
+            </article>
+            <article class="item-row">
+                <img src="images/publications/2016_04_Inferring_Disease_Status_by_non_Parametric_Probabilistic_Embedding.png" alt="Inferring Disease Status by non-Parametric Probabilistic Embedding thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">Inferring Disease Status by non-Parametric Probabilistic Embedding</h5>
+                    <div class="muted mb-2">
+                        <b>Nematollah Kayhan Batmanghelich</b>, Ardavan Saeedi, Raul San Jose Estepar, Michael Cho, William M Wells III
+                    </div>
+                    <div class="mb-1"><span class="fw-semibold">Venue:</span> Bayesian and grAphical Models for Biomedical Imaging</div>
+                    <div class="meta-links mb-2"><a href="files/inferringdiseasestatus.pdf"><i class="bi bi-file-earmark-text"></i> Paper</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_21200')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_21200" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@inproceedings{batmanghelich2016inferring,
+  title={Inferring Disease Status by Non-parametric Probabilistic Embedding},
+  author={Batmanghelich, Nematollah Kayhan and Saeedi, Ardavan and Estepar, Raul San Jose and Cho, Michael and Wells III, William M},
+  booktitle={Bayesian and grAphical Models for Biomedical Imaging},
+  pages={49--57},
+  year={2016},
+  keywords={workshop},
+  publisher={Springer International Publishing Cham}
+}</code></pre>
+                </div>
+                    
+                </div>
+            </article>
+            </div>
+            <div id="year-pub-2015" style="display: none;">
+            <h4 class="mt-4 mb-3 fw-bold">2015</h4>
+            <article class="item-row">
+                <img src="images/publications/2015_01_Highly_Expressive_Spaces_of_Well_Behaved_Transformations_Keeping_It_Simple.png" alt="Highly-Expressive Spaces of Well-Behaved Transformations: Keeping It Simple thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">Highly-Expressive Spaces of Well-Behaved Transformations: Keeping It Simple</h5>
+                    <div class="muted mb-2">
+                        Oren Freifeld, Soren Hauberg, <b>Kayhan Batmanghelich</b>, John W Fisher
+                    </div>
+                    <div class="mb-1"><span class="fw-semibold">Venue:</span> Proceedings of the IEEE International Conference on Computer Vision</div>
+                    <div class="meta-links mb-2"><a href="https://openaccess.thecvf.com/content_iccv_2015/papers/Freifeld_Highly-Expressive_Spaces_of_ICCV_2015_paper.pdf"><i class="bi bi-file-earmark-text"></i> Paper</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_11900')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_11900" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@inproceedings{freifeld2015highly,
+  title={Highly-expressive spaces of well-behaved transformations: Keeping it simple},
+  author={Freifeld, Oren and Hauberg, Soren and Batmanghelich, Kayhan and Fisher, John W},
+  booktitle={Proceedings of the IEEE International Conference on Computer Vision},
+  pages={2911--2919},
+  year={2015}
+}</code></pre>
+                </div>
+                    
+                </div>
+            </article>
+            <article class="item-row">
+                <img src="images/publications/2015_02_Generative_Method_to_Discover_Genetically_Driven_Image_Biomarkers.png" alt="Generative Method to Discover Genetically Driven Image Biomarkers thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">Generative Method to Discover Genetically Driven Image Biomarkers</h5>
+                    <div class="muted mb-2">
+                        Nematollah K Batmanghelich, Ardavan Saeedi, Michael Cho, Raul San Jose Estepar, Polina Golland
+                    </div>
+                    <div class="mb-1"><span class="fw-semibold">Venue:</span> International Conference on Information Processing in Medical Imaging</div>
+                    <div class="meta-links mb-2"><a href="files/200.pdf"><i class="bi bi-file-earmark-text"></i> Paper</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_62349')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_62349" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@inproceedings{batmanghelich2015generative,
+  title={Generative method to discover genetically driven image biomarkers},
+  author={Batmanghelich, Nematollah K and Saeedi, Ardavan and Cho, Michael and Estepar, Raul San Jose and Golland, Polina},
+  booktitle={International Conference on Information Processing in Medical Imaging},
+  pages={30--42},
+  year={2015},
+  organization={Springer International Publishing Cham}
+}</code></pre>
+                </div>
+                    
+                </div>
+            </article>
+            </div>
+            <div id="year-pub-2014" style="display: none;">
+            <h4 class="mt-4 mb-3 fw-bold">2014</h4>
+            <article class="item-row">
+                <img src="images/publications/2014_01_Spherical_Topic_Models_for_Imaging_Phenotype_Discovery_in_Genetic_Studies.png" alt="Spherical Topic Models for Imaging Phenotype Discovery in Genetic Studies thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">Spherical Topic Models for Imaging Phenotype Discovery in Genetic Studies</h5>
+                    <div class="muted mb-2">
+                        Kayhan N Batmanghelich, Michael Cho, Raul San Jose, Polina Golland
+                    </div>
+                    <div class="mb-1"><span class="fw-semibold">Venue:</span> Bayesian and grAphical Models for Biomedical Imaging: First International Workshop, BAMBI 2014, Cambridge, MA, USA, September 18, 2014, Revised Selected Papers</div>
+                    <div class="meta-links mb-2"><a href="files/Batmanghelich2014_Chapter_SphericalTopicModelsForImaging.pdf"><i class="bi bi-file-earmark-text"></i> Paper</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_39619')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_39619" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@inproceedings{batmanghelich2014spherical,
+  title={Spherical topic models for imaging phenotype discovery in genetic studies},
+  author={Batmanghelich, Kayhan N and Cho, Michael and Jose, Raul San and Golland, Polina},
+  booktitle={Bayesian and grAphical Models for Biomedical Imaging: First International Workshop, BAMBI 2014, Cambridge, MA, USA, September 18, 2014, Revised Selected Papers},
+  pages={107--117},
+  year={2014},
+  keywords={workshop},
+  organization={Springer International Publishing Cham}
+}</code></pre>
+                </div>
+                    
+                </div>
+            </article>
+            <article class="item-row">
+                <img src="images/publications/2014_02_Diversifying_Sparsity_Using_Variational_Determinantal_Point_Processes.png" alt="Diversifying Sparsity Using Variational Determinantal Point Processes thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">Diversifying Sparsity Using Variational Determinantal Point Processes</h5>
+                    <div class="meta-links mb-2"><a href="files/1411.6307.pdf"><i class="bi bi-file-earmark-text"></i> Paper</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_54667')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_54667" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@online{batmanghelich2014diversifying,
+  author       = {Batmanghelich, Nematollah Kayhan and Quon, Gerald and Kulesza, Alex and Kellis, Manolis and Golland, Polina and Bornn, Luke},
+  title        = {Diversifying sparsity using variational determinantal point processes},
+  year         = {2014},
+  eprint       = {1411.6307},
+  eprinttype   = {arXiv},
+  eprintclass   = {stat.ML},
+  url          = {https://arxiv.org/abs/1411.6307},
+  note         = {Preprint},
+  keywords     = {preprint}
+}</code></pre>
+                </div>
+                    <div class="muted mb-2">
+                        <b>Nematollah Kayhan Batmanghelich</b>, Gerald Quon, Alex Kulesza, Manolis Kellis, Polina Golland, Luke Bornn
+                    </div>
+                </div>
+            </article>
+            <article class="item-row">
+                <img src="images/publications/2010_02_Application_of_Trace_Norm_and_Low_Rank_Matrix_Decomposition_for_Computational_An.png" alt="BrainPrint in the Computer-Aided Diagnosis of Alzheimer’s Disease thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">BrainPrint in the Computer-Aided Diagnosis of Alzheimer’s Disease</h5>
+                    <div class="muted mb-2">
+                        Christian Wachinger, K Batmanghelich, Polina Golland, Martin Reuter
+                    </div>
+                    <div class="mb-1"><span class="fw-semibold">Venue:</span> Proceedings MICCAI workshop challenge on computer-aided diagnosis of dementia based on structural MRI data, Boston, MA, USA</div>
+                    <div class="meta-links mb-2"><a href="files/1411.6307.pdf"><i class="bi bi-file-earmark-text"></i> Paper</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_56596')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_56596" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@inproceedings{wachinger2014brainprint,
+  title={BrainPrint in the computer-aided diagnosis of Alzheimer&#x27;s disease},
+  author={Wachinger, Christian and Batmanghelich, K and Golland, Polina and Reuter, Martin},
+  booktitle={Proceedings MICCAI workshop challenge on computer-aided diagnosis of dementia based on structural MRI data, Boston, MA, USA},
+  keywords={workshop},
+  year={2014}
+}</code></pre>
+                </div>
+                    
+                </div>
+            </article>
+            </div>
+            <div id="year-pub-2013" style="display: none;">
+            <h4 class="mt-4 mb-3 fw-bold">2013</h4>
+            <article class="item-row">
+                <img src="images/publications/2013_01_Joint_Modeling_of_Imaging_and_Genetics.png" alt="Joint Modeling of Imaging and Genetics thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">Joint Modeling of Imaging and Genetics</h5>
+                    <div class="muted mb-2">
+                        Nematollah K Batmanghelich, Adrian V Dalca, Mert R Sabuncu, Polina Golland
+                    </div>
+                    <div class="mb-1"><span class="fw-semibold">Venue:</span> International Conference on Information Processing in Medical Imaging</div>
+                    <div class="meta-links mb-2"><a href="files/cameraReady.pdf"><i class="bi bi-file-earmark-text"></i> Paper</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_75602')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_75602" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@inproceedings{batmanghelich2013joint,
+  title={Joint modeling of imaging and genetics},
+  author={Batmanghelich, Nematollah K and Dalca, Adrian V and Sabuncu, Mert R and Golland, Polina},
+  booktitle={International Conference on Information Processing in Medical Imaging},
+  pages={766--777},
+  year={2013},
+  organization={Springer Berlin Heidelberg Berlin, Heidelberg}
+}</code></pre>
+                </div>
+                    
+                </div>
+            </article>
+            </div>
+            <div id="year-pub-2012" style="display: none;">
+            <h4 class="mt-4 mb-3 fw-bold">2012</h4>
+            <article class="item-row">
+                <img src="images/publications/2012_01_Dominant_Component_Analysis_of_Electro_Physiological_Connectivity_Network.png" alt="Dominant Component Analysis of Electro-Physiological Connectivity Network thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">Dominant Component Analysis of Electro-Physiological Connectivity Network</h5>
+                    <div class="muted mb-2">
+                        Yasser Ghanbari, Luke Bloy, <b>Kayhan Batmanghelich</b>, Timothy PL Roberts, Ragini Verma
+                    </div>
+                    <div class="mb-1"><span class="fw-semibold">Venue:</span> International Conference on Medical Image Computing and Computer-Assisted Intervention</div>
+                    <div class="meta-links mb-2"><a href="files/Ghanbari2012_Chapter_DominantComponentAnalysisOfEle.pdf"><i class="bi bi-file-earmark-text"></i> Paper</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_41537')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_41537" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@inproceedings{ghanbari2012dominant,
+  title={Dominant component analysis of electrophysiological connectivity networks},
+  author={Ghanbari, Yasser and Bloy, Luke and Batmanghelich, Kayhan and Roberts, Timothy PL and Verma, Ragini},
+  booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention},
+  pages={231--238},
+  year={2012},
+  organization={Springer Berlin Heidelberg Berlin, Heidelberg}
+}</code></pre>
+                </div>
+                    
+                </div>
+            </article>
+            <article class="item-row">
+                <img src="images/publications/2012_02_An_integrated_Framework_for_High_Angular_Resolution_Diffusion_Imaging_Based_Inve.png" alt="An integrated Framework for High Angular Resolution Diffusion Imaging-Based Investigation of Structural Connectivity thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">An integrated Framework for High Angular Resolution Diffusion Imaging-Based Investigation of Structural Connectivity</h5>
+                    <div class="muted mb-2">
+                        Luke Bloy, Madhura Ingalhalikar, Nematollah K Batmanghelich, Robert T Schultz, Timothy PL Roberts, Ragini Verma
+                    </div>
+                    <div class="mb-1"><span class="fw-semibold">Venue:</span> Brain connectivity</div>
+                    <div class="meta-links mb-2"><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3380149/pdf/brain.2011.0070.pdf"><i class="bi bi-file-earmark-text"></i> Paper</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_19282')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_19282" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@article{bloy2012integrated,
+  title={An Integrated Framework for High Angular Resolution Diffusion Imaging--Based Investigation of Structural Connectivity},
+  author={Bloy, Luke and Ingalhalikar, Madhura and Batmanghelich, Nematollah K and Schultz, Robert T and Roberts, Timothy PL and Verma, Ragini},
+  journal={Brain connectivity},
+  volume={2},
+  number={2},
+  pages={69--79},
+  year={2012},
+  publisher={Mary Ann Liebert, Inc. 140 Huguenot Street, 3rd Floor New Rochelle, NY 10801 USA}
+}</code></pre>
+                </div>
+                    
+                </div>
+            </article>
+            <article class="item-row">
+                <img src="images/publications/2012_03_Generative_Discriminative_Basis_Learning_for_Medical_Imaging.png" alt="Generative-Discriminative Basis Learning for Medical Imaging thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">Generative-Discriminative Basis Learning for Medical Imaging</h5>
+                    <div class="muted mb-2">
+                        Nematollah K Batmanghelich, Ben Taskar, Christos Davatzikos
+                    </div>
+                    <div class="mb-1"><span class="fw-semibold">Venue:</span> IEEE transactions on medical imaging</div>
+                    <div class="meta-links mb-2"><a href="files/tmi2012.pdf"><i class="bi bi-file-earmark-text"></i> Paper</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_98010')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_98010" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@article{batmanghelich2011generative,
+  title={Generative-discriminative basis learning for medical imaging},
+  author={Batmanghelich, Nematollah K and Taskar, Ben and Davatzikos, Christos},
+  journal={IEEE transactions on medical imaging},
+  volume={31},
+  number={1},
+  pages={51--69},
+  year={2011},
+  publisher={IEEE}
+}</code></pre>
+                </div>
+                    
+                </div>
+            </article>
+            </div>
+            <div id="year-pub-2011" style="display: none;">
+            <h4 class="mt-4 mb-3 fw-bold">2011</h4>
+            <article class="item-row">
+                <img src="images/publications/2011_01_Regularized_Tensor_Factorization_for_Multi_Modality_Medical_Image_Classification.png" alt="Regularized Tensor Factorization for Multi-Modality Medical Image Classification thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">Regularized Tensor Factorization for Multi-Modality Medical Image Classification</h5>
+                    <div class="muted mb-2">
+                        Nematollah Batmanghelich, Aoyan Dong, Ben Taskar, Christos Davatzikos
+                    </div>
+                    <div class="mb-1"><span class="fw-semibold">Venue:</span> International Conference on Medical Image Computing and Computer-Assisted Intervention</div>
+                    <div class="meta-links mb-2"><a href="files/miccai2011.pdf"><i class="bi bi-file-earmark-text"></i> Paper</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_93890')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_93890" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@inproceedings{batmanghelich2011regularized,
+  title={Regularized tensor factorization for multi-modality medical image classification},
+  author={Batmanghelich, Nematollah and Dong, Aoyan and Taskar, Ben and Davatzikos, Christos},
+  booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention},
+  pages={17--24},
+  year={2011},
+  organization={Springer Berlin Heidelberg Berlin, Heidelberg}
+}</code></pre>
+                </div>
+                    
+                </div>
+            </article>
+            <article class="item-row">
+                <img src="images/publications/2011_02_Disease_Classification_and_Prediction_via_Semi_Supervised_Dimensionality_Reducti.png" alt="Disease Classification and Prediction via Semi-Supervised Dimensionality Reduction thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">Disease Classification and Prediction via Semi-Supervised Dimensionality Reduction</h5>
+                    <div class="muted mb-2">
+                        Kayhan N Batmanghelich, H Ye Dong, Kilian M Pohl, Ben Taskar, Christos Davatzikos, others
+                    </div>
+                    <div class="mb-1"><span class="fw-semibold">Venue:</span> 2011 IEEE International Symposium on Biomedical Imaging: From Nano to Macro</div>
+                    <div class="meta-links mb-2"><a href="files/isbi2011.pdf"><i class="bi bi-file-earmark-text"></i> Paper</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_27077')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_27077" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@inproceedings{batmanghelich2011disease,
+  title={Disease classification and prediction via semi-supervised dimensionality reduction},
+  author={Batmanghelich, Kayhan N and Dong, H Ye and Pohl, Kilian M and Taskar, Ben and Davatzikos, Christos and others},
+  booktitle={2011 IEEE International Symposium on Biomedical Imaging: From Nano to Macro},
+  pages={1086--1090},
+  year={2011},
+  organization={IEEE}
+}</code></pre>
+                </div>
+                    
+                </div>
+            </article>
+            </div>
+            <div id="year-pub-2010" style="display: none;">
+            <h4 class="mt-4 mb-3 fw-bold">2010</h4>
+            <article class="item-row">
+                <img src="images/publications/2010_01_Prediction_of_MCI_Conversion_via_MRI_CSF_Biomarkers_and_Pattern_Classification.png" alt="Prediction of MCI Conversion via MRI, CSF Biomarkers, and Pattern Classification thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">Prediction of MCI Conversion via MRI, CSF Biomarkers, and Pattern Classification</h5>
+                    <div class="muted mb-2">
+                        Christos Davatzikos, Priyanka Bhatt, Leslie M Shaw, Kayhan N Batmanghelich, John Q Trojanowski
+                    </div>
+                    <div class="mb-1"><span class="fw-semibold">Venue:</span> Neurobiology of aging</div>
+                    <div class="meta-links mb-2"><a href="files/1-s2.0-S019745801000237X-main.pdf"><i class="bi bi-file-earmark-text"></i> Paper</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_27277')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_27277" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@article{davatzikos2011prediction,
+  title={Prediction of MCI to AD conversion, via MRI, CSF biomarkers, and pattern classification},
+  author={Davatzikos, Christos and Bhatt, Priyanka and Shaw, Leslie M and Batmanghelich, Kayhan N and Trojanowski, John Q},
+  journal={Neurobiology of aging},
+  volume={32},
+  number={12},
+  pages={2322--e19},
+  year={2011},
+  publisher={Elsevier}
+}</code></pre>
+                </div>
+                    
+                </div>
+            </article>
+            <article class="item-row">
+                <img src="images/publications/2010_02_Application_of_Trace_Norm_and_Low_Rank_Matrix_Decomposition_for_Computational_An.png" alt="Application of Trace-Norm and Low-Rank Matrix Decomposition for Computational Anatomy thumbnail" onerror="this.src='images/bu-logo.png'">
+                <div>
+                    <h5 class="mb-1 fw-bold">Application of Trace-Norm and Low-Rank Matrix Decomposition for Computational Anatomy</h5>
+                    <div class="muted mb-2">
+                        Nematollah Batmanghelich, Ali Gooya, Stathis Kanterakis, Ben Taskar, Christos Davatzikos
+                    </div>
+                    <div class="mb-1"><span class="fw-semibold">Venue:</span> 2010 IEEE Computer Society Conference on Computer Vision and Pattern Recognition-Workshops</div>
+                    <div class="meta-links mb-2"><a href="files/mmbia11.pdf"><i class="bi bi-file-earmark-text"></i> Paper</a></div>
+                    <div class="bibtex-section mt-2">
+                    <button class="btn btn-sm btn-outline-secondary mb-2" type="button" onclick="toggleBibtex('bibtex_10788')">
+                        Show BibTeX
+                    </button>
+                    <pre id="bibtex_10788" style="display: none; background: var(--bg-soft); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.85rem; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code>@inproceedings{batmanghelich2010application,
+  title={Application of trace-norm and low-rank matrix decomposition for computational anatomy},
+  author={Batmanghelich, Nematollah and Gooya, Ali and Kanterakis, Stathis and Taskar, Ben and Davatzikos, Christos},
+  booktitle={2010 IEEE Computer Society Conference on Computer Vision and Pattern Recognition-Workshops},
+  pages={146--153},
+  year={2010},
+  keywords={workshop},
+  organization={IEEE}
+}</code></pre>
+                </div>
+                    
+                </div>
+            </article>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- POSITIONS AVAILABLE -->
+    <section id="positions" class="my-4">
+        <h2 class="section-title"><i class="bi bi-briefcase"></i> Positions Available</h2>
+        <div class="cardx">
+            <div class="cardx-body">
+                <p class="mb-0">Please check back for available positions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Remove old publications and projects sections -->
+    <!--
+            <article class="item-row">
+                <img src="images/Mammo-CLIP_large.png" alt="MICCAI 2024 Mammo-CLIP thumbnail">
+                <div>
+                    <h5 class="mb-1 fw-bold">Mammo-CLIP: A Vision Language Foundation Model to Enhance Data Efficiency
+                        and Robustness in Mammography</h5>
+                    <div class="muted mb-2">
+                        <b>Shantanu Ghosh</b>,
+                        <a href="https://www.bumc.bu.edu/camed/profile/clare-poynton/">Clare B. Poynton</a>,
+                        <a href="https://www.thevislab.com/lab/doku.php">Shyam Visweswaran</a>,
+                        <a href="https://www.batman-lab.com/">Kayhan Batmanghelich</a>
+                    </div>
+
+                    <div class="meta-links mb-2">
+                        <a href="https://shantanu-ai.github.io/projects/MICCAI-2024-Mammo-CLIP"><i
+                                class="bi bi-box-arrow-up-right"></i> Project Page</a>
+                        <a href="https://link.springer.com/chapter/10.1007/978-3-031-72390-2_59"><i
+                                class="bi bi-file-earmark-text"></i> Paper</a>
+                        <a href="https://arxiv.org/pdf/2405.12255"><i class="bi bi-cloud-download"></i> arXiv</a>
+                        <a href="https://github.com/batmanlab/Mammo-CLIP"><i class="bi bi-github"></i> Code</a>
+                        <a href="https://github.com/shantanu-ai/shantanu-ai.github.io/tree/main/projects/MICCAI-2024-Mammo-CLIP/static/data/Mammo-CLIP-MICCAI-24-poster-v1.pdf"><i
+                                class="bi bi-image"></i> Poster</a>
+                        <a href="https://papers.miccai.org/miccai-2024/488-Paper0926.html"><i
+                                class="bi bi-card-checklist"></i> Reviews</a>
+                    </div>
+
+                    <div class="mb-1"><span class="fw-semibold">Venue:</span> MICCAI 2024 (Top 11%, Early Accept)</div>
+                    <div><span class="fw-semibold">TL;DR:</span> Mammo-CLIP is a vision–language model for mammography
+                        that supports breast cancer detection and sentence-level feature attribution via Mammo-FActOR.
+                    </div>
+                </div>
+            </article>
+
+
+
+    <!-- TEACHING -->
+    <section id="teaching" class="my-4">
+        <h2 class="section-title"><i class="bi bi-easel"></i> Teaching</h2>
+        <div class="cardx">
+            <div class="cardx-body">
+                <div class="d-flex justify-content-between flex-wrap gap-2 py-2 border-bottom">
+                    <div><strong>Deep Learning (EC 523) - Fall 2023</strong><br><span
+                            class="muted">Instructor</span></div>
+                    <div class="muted">Boston University</div>
+                </div>
+                <div class="d-flex justify-content-between flex-wrap gap-2 py-2 border-bottom">
+                    <div><strong>Medical Imaging With AI (EC 500) - Spring 2024</strong><br><span
+                            class="muted">Instructor</span></div>
+                    <div class="muted">Boston University</div>
+                </div>
+                <div class="d-flex justify-content-between flex-wrap gap-2 py-2 border-bottom">
+                    <div><strong>Deep Learning (EC 523) - Fall 2024</strong><br><span
+                            class="muted">Instructor</span></div>
+                    <div class="muted">Boston University</div>
+                </div>
+                <div class="d-flex justify-content-between flex-wrap gap-2 py-2 border-bottom">
+                    <div><strong>Machine Learning (EC 414) - Spring 2025</strong><br><span
+                            class="muted">Instructor</span></div>
+                    <div class="muted">Boston University</div>
+                </div>
+                <div class="d-flex justify-content-between flex-wrap gap-2 py-2">
+                    <div><strong>Medical Imaging With AI (EC 500) - Fall 2025</strong><br><span
+                            class="muted">Instructor</span></div>
+                    <div class="muted">Boston University</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- Back to top -->
+<button id="toTop" class="btn btn-primary to-top" type="button" aria-label="Back to top">
+    <i class="bi bi-arrow-up"></i>
+</button>
+
+<footer id="contact">
+    <div class="container py-4">
+        <div class="row g-3">
+            <div class="col-md-6">
+                <h5 class="fw-bold">CONTACT INFORMATION</h5>
+                <div>8 St Mary's St, Office 421<br>Boston, MA 02215</div>
+                <div class="mt-2"><span class="opacity-75">Email:</span> batman@bu.edu</div>
+                <div><span class="opacity-75">Phone:</span> (617) 358-0538</div>
+                <div class="mt-2"><a href="https://scholar.google.com/citations?user=kbatmanghelich">Google Scholar</a></div>
+            </div>
+            <div class="col-md-6">
+                <h5 class="fw-bold">HELPFUL LINKS</h5>
+                <a href="https://www.bu.edu/eng/academics/departments-and-divisions/electrical-and-computer-engineering/">ECE Department @ BU</a><br/>
+                <a href="https://www.isp.pitt.edu/">ISP @ Pitt</a><br/>
+                <a href="https://www.batman-lab.com/">DBMI @ Pitt</a><br/>
+                <div class="mt-3" style="font-size:.92rem;">
+                    © Kayhan Batmanghelich. All Rights Reserved.
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+<script>
+    // Theme toggle (remembers preference)
+    (function () {
+        const root = document.documentElement;
+        const btn = document.getElementById("themeToggle");
+        const saved = localStorage.getItem("theme");
+        const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+        function setTheme(mode) {
+            root.setAttribute("data-bs-theme", mode);
+            localStorage.setItem("theme", mode);
+            btn.innerHTML = (mode === "dark")
+                ? '<i class="bi bi-sun"></i>'
+                : '<i class="bi bi-moon-stars"></i>';
+        }
+
+        setTheme(saved || (prefersDark ? "dark" : "light"));
+
+        btn.addEventListener("click", () => {
+            const current = root.getAttribute("data-bs-theme");
+            setTheme(current === "dark" ? "light" : "dark");
+        });
+    })();
+
+    // Back-to-top button
+    (function () {
+        const btn = document.getElementById("toTop");
+
+        function onScroll() {
+            btn.style.display = (window.scrollY > 600) ? "inline-flex" : "none";
+        }
+
+        window.addEventListener("scroll", onScroll, {passive: true});
+        onScroll();
+        btn.addEventListener("click", () => window.scrollTo({top: 0, behavior: "smooth"}));
+    })();
+</script>
+
+<script>
+function toggleBibtex(id) {
+    const element = document.getElementById(id);
+    const button = element.previousElementSibling;
+    if (element.style.display === 'none') {
+        element.style.display = 'block';
+        button.textContent = 'Hide BibTeX';
+    } else {
+        element.style.display = 'none';
+        button.textContent = 'Show BibTeX';
+    }
+}
+
+function toggleAllNews() {
+    const allYearContainers = document.querySelectorAll('[id^="year-"]');
+    const toggleAllButtons = document.querySelectorAll('button[onclick="toggleAllNews()"]');
+    
+    // Check if all are visible
+    let allVisible = true;
+    for (const container of allYearContainers) {
+        if (container.style.display === 'none') {
+            allVisible = false;
+            break;
+        }
+    }
+    
+    // Toggle all sections
+    if (allVisible) {
+        // Hide all except current year (2025)
+        for (const container of allYearContainers) {
+            const year = container.id.replace('year-', '');
+            if (year !== '2025') {
+                container.style.display = 'none';
+            }
+        }
+        // Update all toggle buttons
+        for (const btn of toggleAllButtons) {
+            btn.textContent = 'Show All News';
+        }
+    } else {
+        // Show all
+        for (const container of allYearContainers) {
+            container.style.display = 'block';
+        }
+        // Update all toggle buttons
+        for (const btn of toggleAllButtons) {
+            btn.textContent = 'Hide All News';
+        }
+    }
+}
+
+function toggleAllPublications() {
+    const allYearContainers = document.querySelectorAll('[id^="year-pub-"]');
+    const toggleAllButtons = document.querySelectorAll('button[onclick="toggleAllPublications()"]');
+    
+    // Check if all are visible
+    let allVisible = true;
+    for (const container of allYearContainers) {
+        if (container.style.display === 'none') {
+            allVisible = false;
+            break;
+        }
+    }
+    
+    // Toggle all sections
+    if (allVisible) {
+        // Hide all except 2025 and 2024
+        for (const container of allYearContainers) {
+            const year = container.id.replace('year-pub-', '');
+            if (year !== '2025' && year !== '2024') {
+                container.style.display = 'none';
+            }
+        }
+        // Update all toggle buttons
+        for (const btn of toggleAllButtons) {
+            btn.textContent = 'Show All Publications';
+        }
+    } else {
+        // Show all
+        for (const container of allYearContainers) {
+            container.style.display = 'block';
+        }
+        // Update all toggle buttons
+        for (const btn of toggleAllButtons) {
+            btn.textContent = 'Hide All Publications';
+        }
+    }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+{
+  "2025": [
+    {
+      "title": "A Human-Centered Approach to Identifying Promises, Risks, & Challenges of Text-to-Image Generative AI in Radiology",
+      "authors": ["Katelyn Morrison", "Arpit Mathur", "Aidan Bradshaw", "Tom Wartmann", "Steven Lundi", "Afrooz Zandifar", "Weichang Dai", "Kayhan Batmanghelich", "Motahhare Eslami", "Adam Perer"],
+      "paper_link": "",
+      "code_link": "",
+      "preprint_link": "",
+      "image_icon_link": "",
+      "bibtex": "@inproceedings{morrison2025human,\n  title={A Human-Centered Approach to Identifying Promises, Risks, \\& Challenges of Text-to-Image Generative AI in Radiology},\n  author={Morrison, Katelyn and Mathur, Arpit and Bradshaw, Aidan and Wartmann, Tom and Lundi, Steven and Zandifar, Afrooz and Dai, Weichang and Batmanghelich, Kayhan and Eslami, Motahhare and Perer, Adam},\n  booktitle={Proceedings of the AAAI/ACM Conference on AI, Ethics, and Society},\n  volume={8},\n  number={2},\n  pages={1758--1770},\n  year={2025}\n}",
+      "venue": "Proceedings of the AAAI/ACM Conference on AI, Ethics, and Society"
+    },
+    {
+      "title": "High-dimensional causal mediation analysis by partial sum statistic and sample splitting strategy in imaging genetics application",
+      "authors": ["Hung-Ching Chang", "Yusi Fang", "Michael T Gorczyca", "Kayhan Batmanghelich", "George C Tseng"],
+      "paper_link": "",
+      "code_link": "",
+      "preprint_link": "",
+      "image_icon_link": "",
+      "bibtex": "@article{chang2025high,\n  title={High-dimensional causal mediation analysis by partial sum statistic and sample splitting strategy in imaging genetics application},\n  author={Chang, Hung-Ching and Fang, Yusi and Gorczyca, Michael T and Batmanghelich, Kayhan and Tseng, George C},\n  journal={Bioinformatics},\n  pages={btaf493},\n  year={2025},\n  publisher={Oxford University Press}\n}",
+      "venue": "Bioinformatics"
+    },
+    {
+      "title": "Performance of Natural Language Processing versus International Classification of Diseases Codes in Building Registries for Patients With Fall Injury: Retrospective Analysis",
+      "authors": ["Atta Taseh", "Souri Sasanfar", "Michelle Chan", "Evan Sirls", "Ara Nazarian", "Kayhan Batmanghelich", "Jonathan F Bean", "Soheil Ashkani-Esfahani"],
+      "paper_link": "",
+      "code_link": "",
+      "preprint_link": "",
+      "image_icon_link": "",
+      "bibtex": "@article{taseh2025performance,\n  title={Performance of Natural Language Processing versus International Classification of Diseases Codes in Building Registries for Patients With Fall Injury: Retrospective Analysis},\n  author={Taseh, Atta and Sasanfar, Souri and Chan, Michelle and Sirls, Evan and Nazarian, Ara and Batmanghelich, Kayhan and Bean, Jonathan F and Ashkani-Esfahani, Soheil},\n  journal={JMIR Medical Informatics},\n  volume={13},\n  number={1},\n  pages={e66973},\n  year={2025},\n  publisher={JMIR Publications Inc., Toronto, Canada}\n}",
+      "venue": "JMIR Medical Informatics"
+    },
+    {
+      "title": "Multi-Modal Large Language Models are Effective Vision Learners",
+      "authors": ["Li Sun", "Chaitanya Ahuja", "Peng Chen", "Matt D'Zmura", "Kayhan Batmanghelich", "Philip Bontrager"],
+      "paper_link": "",
+      "code_link": "",
+      "preprint_link": "",
+      "image_icon_link": "",
+      "bibtex": "@inproceedings{sun2025multi,\n  title={Multi-Modal Large Language Models are Effective Vision Learners},\n  author={Sun, Li and Ahuja, Chaitanya and Chen, Peng and D'Zmura, Matt and Batmanghelich, Kayhan and Bontrager, Philip},\n  booktitle={2025 IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},\n  pages={8617--8626},\n  year={2025},\n  organization={IEEE}\n}",
+      "venue": "2025 IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)"
+    }
+  ],
+  "2024": [
+    {
+      "title": "MedSyn: Text-guided Anatomy-aware Synthesis of High-Fidelity 3D CT Images",
+      "authors": ["Yanwu Xu", "Li Sun", "Wei Peng", "Shuyue Jia", "Katelyn Morrison", "Adam Perer", "Afrooz Zandifar", "Shyam Visweswaran", "Motahhare Eslami", "Kayhan Batmanghelich"],
+      "paper_link": "https://ieeexplore.ieee.org/document/10566053",
+      "code_link": "https://github.com/batmanlab/MedSyn",
+      "preprint_link": "https://arxiv.org/abs/2310.03559",
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2024/10/Screenshot-2024-10-17-at-10.39.24%E2%80%AFPM-600x178.png",
+      "bibtex": "@article{xu2024medsyn,\n  title={MedSyn: text-guided anatomy-aware synthesis of high-fidelity 3-D CT images},\n  author={Xu, Yanwu and Sun, Li and Peng, Wei and Jia, Shuyue and Morrison, Katelyn and Perer, Adam and Zandifar, Afrooz and Visweswaran, Shyam and Eslami, Motahhare and Batmanghelich, Kayhan},\n  journal={IEEE Transactions on Medical Imaging},\n  volume={43},\n  number={10},\n  pages={3648--3660},\n  year={2024},\n  publisher={IEEE}\n}",
+      "venue": "IEEE Transactions on Medical Imaging"
+    },
+    {
+      "title": "Mammo-CLIP: A Vision Language Foundation Model to Enhance Data Efficiency and Robustness in Mammography",
+      "authors": ["Shantanu Ghosh", "Clare B Poynton", "Shyam Visweswaran", "Kayhan Batmanghelich"],
+      "paper_link": "https://papers.miccai.org/miccai-2024/488-Paper0926.html",
+      "code_link": "https://github.com/batmanlab/Mammo-CLIP",
+      "preprint_link": "https://arxiv.org/abs/2405.12255",
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2024/10/Screenshot-2024-10-17-at-10.43.25%E2%80%AFPM-600x435.png",
+      "bibtex": "@inproceedings{ghosh2024mammo,\n  title={Mammo-clip: A vision language foundation model to enhance data efficiency and robustness in mammography},\n  author={Ghosh, Shantanu and Poynton, Clare B and Visweswaran, Shyam and Batmanghelich, Kayhan},\n  booktitle={International conference on medical image computing and computer-assisted intervention},\n  pages={632--642},\n  year={2024},\n  organization={Springer Nature Switzerland Cham}\n}",
+      "venue": "International conference on medical image computing and computer-assisted intervention"
+    },
+    {
+      "title": "Anatomy-specific Progression Classification in Chest Radiographs via Weakly Supervised Learning",
+      "authors": ["Ke Yu", "Shantanu Ghosh", "Zhexiong Liu", "Christopher Deible", "Clare B Poynton", "Kayhan Batmanghelich"],
+      "paper_link": "https://pubs.rsna.org/doi/10.1148/ryai.230277",
+      "code_link": null,
+      "preprint_link": null,
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2024/10/Screenshot-2024-10-17-at-10.59.40%E2%80%AFPM-600x230.png",
+      "bibtex": "@article{yu2024anatomy,\n  title={Anatomy-specific Progression Classification in Chest Radiographs via Weakly Supervised Learning},\n  author={Yu, Ke and Ghosh, Shantanu and Liu, Zhexiong and Deible, Christopher and Poynton, Clare B and Batmanghelich, Kayhan},\n  journal={Radiology: Artificial Intelligence},\n  volume={6},\n  number={5},\n  pages={e230277},\n  year={2024},\n  publisher={Radiological Society of North America}\n}",
+      "venue": "Radiology: Artificial Intelligence"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "2024": [
+    {
+      "title": "MedSyn: Text-guided Anatomy-aware Synthesis of High-Fidelity 3D CT Images",
+      "authors": ["Yanwu Xu", "Li Sun", "Wei Peng", "Shuyue Jia", "Katelyn Morrison", "Adam Perer", "Afrooz Zandifar", "Shyam Visweswaran", "Motahhare Eslami", "Kayhan Batmanghelich"],
+      "paper_link": "https://ieeexplore.ieee.org/document/10566053",
+      "code_link": "https://github.com/batmanlab/MedSyn",
+      "preprint_link": "https://arxiv.org/abs/2310.03559",
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2024/10/Screenshot-2024-10-17-at-10.39.24%E2%80%AFPM-600x178.png",
+      "bibtex": "@article{xu2024medsyn,\n  title={MedSyn: text-guided anatomy-aware synthesis of high-fidelity 3-D CT images},\n  author={Xu, Yanwu and Sun, Li and Peng, Wei and Jia, Shuyue and Morrison, Katelyn and Perer, Adam and Zandifar, Afrooz and Visweswaran, Shyam and Eslami, Motahhare and Batmanghelich, Kayhan},\n  journal={IEEE Transactions on Medical Imaging},\n  volume={43},\n  number={10},\n  pages={3648--3660},\n  year={2024},\n  publisher={IEEE}\n}",
+      "venue": "IEEE Transactions on Medical Imaging"
+    },
+    {
+      "title": "Mammo-CLIP: A Vision Language Foundation Model to Enhance Data Efficiency and Robustness in Mammography",
+      "authors": ["Shantanu Ghosh", "Clare B Poynton", "Shyam Visweswaran", "Kayhan Batmanghelich"],
+      "paper_link": "https://papers.miccai.org/miccai-2024/488-Paper0926.html",
+      "code_link": "https://github.com/batmanlab/Mammo-CLIP",
+      "preprint_link": "https://arxiv.org/abs/2405.12255",
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2024/10/Screenshot-2024-10-17-at-10.43.25%E2%80%AFPM-600x435.png",
+      "bibtex": "@inproceedings{ghosh2024mammo,\n  title={Mammo-clip: A vision language foundation model to enhance data efficiency and robustness in mammography},\n  author={Ghosh, Shantanu and Poynton, Clare B and Visweswaran, Shyam and Batmanghelich, Kayhan},\n  booktitle={International conference on medical image computing and computer-assisted intervention},\n  pages={632--642},\n  year={2024},\n  organization={Springer Nature Switzerland Cham}\n}",
+      "venue": "International conference on medical image computing and computer-assisted intervention"
+    },
+    {
+      "title": "Anatomy-specific Progression Classification in Chest Radiographs via Weakly Supervised Learning",
+      "authors": ["Ke Yu", "Shantanu Ghosh", "Zhexiong Liu", "Christopher Deible", "Clare B Poynton", "Kayhan Batmanghelich"],
+      "paper_link": "https://pubs.rsna.org/doi/10.1148/ryai.230277",
+      "code_link": null,
+      "preprint_link": null,
+      "image_icon_link": "https://www.batman-lab.com/wp-content/uploads/2024/10/Screenshot-2024-10-17-at-10.59.40%E2%80%AFPM-600x230.png",
+      "bibtex": "@article{yu2024anatomy,\n  title={Anatomy-specific Progression Classification in Chest Radiographs via Weakly Supervised Learning},\n  author={Yu, Ke and Ghosh, Shantanu and Liu, Zhexiong and Deible, Christopher and Poynton, Clare B and Batmanghelich, Kayhan},\n  journal={Radiology: Artificial Intelligence},\n  volume={6},\n  number={5},\n  pages={e230277},\n  year={2024},\n  publisher={Radiological Society of North America}\n}",
+      "venue": "Radiology: Artificial Intelligence"
+    }
+  ]
+}
